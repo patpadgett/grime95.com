@@ -418,6 +418,9 @@ function mugHTML(r, i, readSet) {
     store.setLast(id);
     els.routeStatus.textContent = `Record ${row.c.arrests[0].booking} opened: ${row.c.name}`;
     paintTransport(id);
+    const back = els.recordView.querySelector('[data-back]'), rv = returnView();
+    back.innerHTML = `<kbd>ESC</kbd> ${rv === 'lineup' ? 'LINEUP' : 'LEDGER'}`;
+    back.setAttribute('aria-label', rv === 'lineup' ? 'Back to the lineup' : 'Back to the ledger');
     const top = els.recordView.getBoundingClientRect().top + scrollY - 40;
     window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
     els.recName.focus({ preventScroll: true });
@@ -427,8 +430,8 @@ function mugHTML(r, i, readSet) {
   function closeRecord({ push = true } = {}) {
     openId = null;
     document.title = BASE_TITLE;
-    els.routeStatus.textContent = 'Back to the ledger';
-    showView(localStorage.getItem('grime95:view') === 'lineup' ? 'lineup' : 'ledger');
+    els.routeStatus.textContent = returnView() === 'lineup' ? 'Back to the lineup' : 'Back to the ledger';
+    showView(returnView());
     if (push && location.hash) history.pushState(null, '', location.pathname + location.search);
     renderLedger();
     const wanted = lastOpened && (view === 'lineup' ? els.lineupGrid : els.rows).querySelector(`[data-id="${CSS.escape(lastOpened)}"]`);
@@ -436,6 +439,7 @@ function mugHTML(r, i, readSet) {
     if (target) { target.focus({ preventScroll: true }); if (target !== els.q) target.scrollIntoView({ block: 'center' }); }
   }
 
+  const returnView = () => { try { return localStorage.getItem('grime95:view') === 'lineup' ? 'lineup' : 'ledger'; } catch { return 'ledger'; } };
   function paintTransport(id) {
     const seq = byBooking(); const i = seq.findIndex(r => r.c.id === id);
     const prev = els.recordView.querySelector('[data-prev]'), next = els.recordView.querySelector('[data-next]');
@@ -459,7 +463,7 @@ function mugHTML(r, i, readSet) {
     els.viewList.setAttribute('aria-pressed', String(v === 'ledger'));
     els.viewLineup.setAttribute('aria-pressed', String(v === 'lineup'));
     els.sbarKeys.innerHTML = v === 'record'
-      ? '<kbd>ESC</kbd> LEDGER &nbsp;<kbd>&larr;&rarr;</kbd> PREV/NEXT BOOKING &nbsp;<kbd>/</kbd> FIND'
+      ? `<kbd>ESC</kbd> ${returnView() === 'lineup' ? 'LINEUP' : 'LEDGER'} &nbsp;<kbd>&larr;&rarr;</kbd> PREV/NEXT BOOKING &nbsp;<kbd>/</kbd> FIND`
       : '<kbd>&uarr;&darr;</kbd> MOVE &nbsp;<kbd>ENTER</kbd> OPEN &nbsp;<kbd>/</kbd> FIND &nbsp;<kbd>F1</kbd> LEDGER &nbsp;<kbd>F2</kbd> LINEUP';
     if (v === 'lineup') renderLineup();
     if (v !== 'record') { try { localStorage.setItem('grime95:view', v); } catch { /* noop */ } }
