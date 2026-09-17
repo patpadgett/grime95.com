@@ -30,7 +30,8 @@
   let view = 'ledger';    // 'ledger' | 'lineup' | 'record'
   let openId = null;
   let returnFocus = null;
-  let feedNext = false;   // set by in-site opens; direct/deep-link routes render the paper settled
+  let feedNext = false;
+  let lastOpened = null;   // set by in-site opens; direct/deep-link routes render the paper settled
 
   /* ---------- storage ---------- */
   const store = {
@@ -394,7 +395,7 @@ function mugHTML(r, i, readSet) {
     if (idx < 0) return;
     const row = ROWS[idx];
     if (view !== 'record') returnFocus = document.activeElement;
-    openId = id;
+    openId = id; lastOpened = id;
     // cursor follows the opened record when it's visible
     const vi = VISIBLE.findIndex(r => r.c.id === id);
     if (vi >= 0) cursor = vi;
@@ -416,6 +417,7 @@ function mugHTML(r, i, readSet) {
     row.c.arrests.forEach(a => store.markRead(a.booking));
     store.setLast(id);
     els.routeStatus.textContent = `Record ${row.c.arrests[0].booking} opened: ${row.c.name}`;
+    paintTransport(id);
     const top = els.recordView.getBoundingClientRect().top + scrollY - 40;
     window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
     els.recName.focus({ preventScroll: true });
@@ -429,11 +431,20 @@ function mugHTML(r, i, readSet) {
     showView(localStorage.getItem('grime95:view') === 'lineup' ? 'lineup' : 'ledger');
     if (push && location.hash) history.pushState(null, '', location.pathname + location.search);
     renderLedger();
-    const target = els.rows.children[cursor] || els.q;
-    if (target) target.focus({ preventScroll: true });
-    if (els.rows.children[cursor]) els.rows.children[cursor].scrollIntoView({ block: 'center' });
+    const wanted = lastOpened && (view === 'lineup' ? els.lineupGrid : els.rows).querySelector(`[data-id="${CSS.escape(lastOpened)}"]`);
+    const target = wanted || (view === 'lineup' ? els.lineupGrid.querySelector('.mug') : els.rows.children[cursor]) || els.q;
+    if (target) { target.focus({ preventScroll: true }); if (target !== els.q) target.scrollIntoView({ block: 'center' }); }
   }
 
+  function paintTransport(id) {
+    const seq = byBooking(); const i = seq.findIndex(r => r.c.id === id);
+    const prev = els.recordView.querySelector('[data-prev]'), next = els.recordView.querySelector('[data-next]');
+    const first = i === 0, last = i === seq.length - 1;
+    prev.innerHTML = first ? '<kbd>\u21ba</kbd> <span class="key__long">LATEST BOOKING</span><span class="key__short">LAST</span>' : '<kbd>\u2190</kbd> <span class="key__long">PREV BOOKING</span><span class="key__short">PREV</span>';
+    prev.setAttribute('aria-label', first ? 'Jump to the latest booking' : 'Previous booking');
+    next.innerHTML = last ? '<span class="key__long">START OVER</span><span class="key__short">FIRST</span> <kbd>\u21ba</kbd>' : '<span class="key__long">NEXT BOOKING</span><span class="key__short">NEXT</span> <kbd>\u2192</kbd>';
+    next.setAttribute('aria-label', last ? 'Start over at the first booking' : 'Next booking');
+  }
   function step(dir) {
     if (!ROWS.length || !openId) return;
     openRecord(neighbour(openId, dir).c.id);
@@ -494,6 +505,8 @@ function mugHTML(r, i, readSet) {
     if (e.target.closest('[data-next]')) { step(1); return; }
     const go = e.target.closest('[data-goto]');
     if (go) openRecord(go.dataset.goto);
+    const tail = e.target.closest('.paper__next a[href^="#/rec/"]');
+    if (tail) { e.preventDefault(); openRecord(decodeURIComponent(tail.getAttribute('href').slice(6))); }
   });
 
   document.addEventListener('keydown', (e) => {
@@ -514,8 +527,8 @@ function mugHTML(r, i, readSet) {
     }
     if (e.target === els.sort) return;
     const cols = view === 'lineup' ? Math.max(1, Math.round(els.lineupGrid.clientWidth / (els.lineupGrid.firstElementChild?.offsetWidth || 1))) : 1;
-    if (e.key === 'ArrowDown') { e.preventDefault(); setCursor(cursor + cols); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); setCursor(cursor - cols); }
+    if (e.key === 'ArrowDown' && !inField) { e.preventDefault(); setCursor(cursor + cols); }
+    else if (e.key === 'ArrowUp' && !inField) { e.preventDefault(); setCursor(cursor - cols); }
     else if (e.key === 'ArrowRight' && view === 'lineup' && !inField) { e.preventDefault(); setCursor(cursor + 1); }
     else if (e.key === 'ArrowLeft' && view === 'lineup' && !inField) { e.preventDefault(); setCursor(cursor - 1); }
     else if (e.key === 'PageDown') { e.preventDefault(); setCursor(cursor + 10); }
@@ -525,6 +538,7 @@ function mugHTML(r, i, readSet) {
     else if (e.key === 'Enter' && (inField || e.target.tagName !== 'BUTTON')) { e.preventDefault(); if (VISIBLE[cursor]) openRecord(VISIBLE[cursor].c.id); }
   });
 
+  els.latest.addEventListener('click', (e) => { const k = els.latest.getAttribute('href'); if (k && k.startsWith('#/rec/')) { e.preventDefault(); openRecord(decodeURIComponent(k.slice(6))); } });
   window.addEventListener('hashchange', route);
 
   /* ---------- boot ---------- */
