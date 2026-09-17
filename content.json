@@ -62,6 +62,35 @@
           ]
         }
       ]
+    },
+    {
+      "id": "norma-june-wiley",
+      "first": "Norma June",
+      "last": "Wiley",
+      "name": "Norma June Wiley",
+      "alias": "Miss Twirl 1973",
+      "arrests": [
+        {
+          "booking": "95-12-0003",
+          "date": "1995-12-02",
+          "charge": "Criminal trespass; resisting",
+          "location": "High School Gymnasium",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/image08.jpg",
+          "tags": [
+            "trespass",
+            "high school",
+            "pep band"
+          ],
+          "story": [
+            "Norma June Wiley never actually opened her eyes the entire time she was in custody.",
+            "She was found in the high school gym, passed out in the trophy case, clutching a glittery baton and whispering, “Miss Twirl 1973 never dies.”",
+            "When asked how she got in, she said she had “unfinished business” with the pep band. No one could confirm what that meant, but a flute was missing, and the janitor’s bucket was full of peppermint Schnapps.",
+            "Deputies said she briefly fought them off using only her elbow and an empty lipstick tube.",
+            "She finally bonded out when her ex-husband’s cousin recognized her and muttered, “Ah hell, not again.”"
+          ]
+        }
+      ]
     }
   ]
 }
