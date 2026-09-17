@@ -33,6 +33,35 @@
           ]
         }
       ]
+    },
+    {
+      "id": "floyd-danner",
+      "first": "Floyd",
+      "last": "Danner",
+      "name": "Floyd Danner",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0002",
+          "date": "1995-12-02",
+          "charge": "Aggressive loitering; unauthorized sandwich distribution",
+          "location": "County DMV",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/image10.jpg",
+          "tags": [
+            "loitering",
+            "dmv",
+            "food service"
+          ],
+          "story": [
+            "Floyd Danner got picked up at precisely 5:47 p.m., halfway through his fourth Schlitz and mid-lecture on “the sacred geometry of horseshoe pits.”",
+            "According to the report, Floyd was arrested for “aggressive loitering and unauthorized sandwich distribution” after setting up a card table in front of the DMV and trying to sell baloney sandwiches wrapped in used napkins.",
+            "He told the deputy, “I’m providing a service, son. You ever sat through a title transfer sober?”",
+            "When they took his mugshot, Floyd leaned in and asked, “Is this going in the Newsletter? ’Cause I want my good side.”",
+            "He doesn’t have a good side."
+          ]
+        }
+      ]
     }
   ]
 }
