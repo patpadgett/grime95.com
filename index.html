@@ -29,14 +29,14 @@
 <b> ██████  ██   ██ ██ ██      ██ ███████ </b><i> █████  ███████ ██ </i></pre>
     <h1 class="sr">grime95!</h1>
     <p class="banner__line"><span id="tagline">SMALL-TOWN STORIES FROM SATURDAY, DECEMBER 2, 1995</span></p>
-    <p class="banner__meta"><span>LATEST ENTRY: <b id="latestEntry">&mdash;</b></span><span>ROLL 95-12</span><span>ARCHIVE: FICTION</span><b id="totalCount" hidden></b></p>
-    <p class="banner__help">TYPE AT <kbd>FIND</kbd> OR ARROW THE LEDGER. <kbd>ENTER</kbd> PRINTS THE REPORT.<br>ONE NEW BOOKING IS FILED EVERY DAY.</p>
+    <p class="banner__meta"><span>LATEST ENTRY: <a id="latestEntry" href="#">&mdash;</a></span><span id="bookingCount"></span><span>ARCHIVE: FICTION</span><b id="totalCount" hidden></b></p>
+    <p class="banner__help"><span class="banner__help--kbd">TYPE AT <kbd>FIND</kbd> OR ARROW THE LEDGER. <kbd>ENTER</kbd> OPENS THE REPORT.</span><span class="banner__help--touch">TAP A ROW TO OPEN ITS REPORT. TYPE AT <kbd>FIND</kbd> TO SEARCH.</span><br><span id="nextBooking">ONE NEW BOOKING IS FILED EVERY DAY AT 12:00 NOON EASTERN.</span></p>
   </section>
 
   <!-- Find bar -->
   <section class="find" aria-label="Find a record">
     <label class="find__q">
-      <span class="lab">FIND:</span>
+      <span class="lab"><label for="q">FIND:</label></span>
       <span class="field"><input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="NAME, AKA, CHARGE, PLACE" aria-label="Find a record by name, alias, charge or place"><i class="caret" aria-hidden="true"></i></span>
     </label>
     <label class="find__sort">
@@ -53,6 +53,7 @@
       <button type="button" class="key" id="viewLineup" aria-pressed="false"><kbd>F2</kbd> LINEUP</button>
     </div>
     <p class="find__status" id="resultStatus" role="status" aria-live="polite"></p>
+    <p class="sr" id="routeStatus" role="status" aria-live="polite"></p>
   </section>
 
   <!-- Main screen -->
@@ -89,6 +90,10 @@
 
     <!-- RECORD VIEW -->
     <article class="record" id="recordView" hidden aria-labelledby="recName">
+      <header class="record__hd">
+        <h2 id="recName" tabindex="-1"></h2>
+        <p class="record__sub"><span id="recBkgTop"></span><span>PONDER CO. &middot; SAT 12-02-1995</span><span>FICTION</span></p>
+      </header>
       <div class="record__left">
         <p class="imaging__hd"><span>IMAGING</span><span id="recBkg"></span></p>
         <div class="imaging__frame"><canvas id="recCanvas" width="334" height="418" aria-hidden="true"></canvas></div>

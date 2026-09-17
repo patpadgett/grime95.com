@@ -20,7 +20,7 @@
     imaging: $('imaging'), imgBkg: $('imgBkg'), imgCanvas: $('imgCanvas'), imgFallback: $('imgFallback'), imgFields: $('imgFields'), imgCue: $('imgCue'),
     lineupView: $('lineupView'), lineupGrid: $('lineupGrid'),
     recordView: $('recordView'), recBkg: $('recBkg'), recCanvas: $('recCanvas'), recFields: $('recFields'), paper: $('paper'),
-    sbarKeys: $('sbarKeys'), eof: $('eof'), latest: $('latestEntry')
+    sbarKeys: $('sbarKeys'), eof: $('eof'), latest: $('latestEntry'), count: $('bookingCount'), next: $('nextBooking'), routeStatus: $('routeStatus'), recName: $('recName'), recBkgTop: $('recBkgTop')
   };
 
   let DATA = null;
@@ -168,6 +168,17 @@
     return out.map(([k, v]) => `<dt>${k}</dt><dd class="${k === 'PRIORS' && row.priors > 1 ? 'is-alert' : ''}">${k === 'TAGS' && !full ? hl(v, terms) : hl(v, terms)}</dd>`).join('');
   }
 
+  /* ---------- cadence: one booking a day at noon Eastern ---------- */
+  const TOTAL = 313;
+  function nextLine() {
+    const now = new Date();
+    const et = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+    const beforeNoon = et.getHours() < 12;
+    const n = ROWS.length;
+    if (n >= TOTAL) return 'ROLL 95-12 COMPLETE \u00b7 ' + TOTAL + ' BOOKINGS ON FILE';
+    return `BOOKING ${n + 1} OF ${TOTAL} IS FILED ${beforeNoon ? 'TODAY' : 'TOMORROW'} AT 12:00 NOON EASTERN.`;
+  }
+
   /* ---------- LEDGER ---------- */
   function renderLedger() {
     const terms = norm(els.q.value).split(' ').filter(Boolean);
@@ -200,6 +211,10 @@
     } else els.hint.textContent = '';
 
     els.eof.textContent = VISIBLE.length ? `END OF FILE \u00b7 ${VISIBLE.length} RECORD${VISIBLE.length === 1 ? '' : 'S'}` : '';
+    let nx = document.getElementById('nextLine');
+    if (!nx) { nx = document.createElement('p'); nx.id = 'nextLine'; nx.className = 'ledger__next'; els.eof.after(nx); }
+    nx.textContent = terms.length ? '' : nextLine();
+    nx.hidden = !nx.textContent;
     els.status.innerHTML = terms.length
       ? `<b>${VISIBLE.length}</b> OF ${ROWS.length} RECORDS MATCH "${esc(up(els.q.value.trim()))}"`
       : `<b>${ROWS.length}</b> RECORDS ON FILE &nbsp;&middot;&nbsp; SORTED BY ${esc(els.sort.selectedOptions[0].textContent)}`;
@@ -310,7 +325,7 @@ function mugHTML(r, i, readSet) {
         <small>Records inquiry &middot; Terminal 03<i><span class="sep"> &middot; </span>${multi ? `${c.arrests.length} bookings on file` : `Booking ${esc(c.arrests[0].booking)}`}</i></small>
       </p>
       <dl class="paper__grid">
-        <dt>Subject</dt><dd id="recName">${esc(up(c.name))}</dd>
+        <dt>Subject</dt><dd>${esc(up(c.name))}</dd>
         <dt>AKA</dt><dd>${c.alias ? `<span class="aka">&ldquo;${esc(c.alias)}&rdquo;</span>` : '&mdash;'}</dd>
         ${multi ? '' : `
         <dt>Charge</dt><dd>${esc(c.arrests[0].charge)}</dd>
@@ -363,6 +378,9 @@ function mugHTML(r, i, readSet) {
     if (vi >= 0) cursor = vi;
 
     els.recBkg.textContent = row.c.arrests[0].booking;
+    els.recBkgTop.textContent = 'BOOKING ' + row.c.arrests[0].booking;
+    els.recName.textContent = up(row.c.name) + (row.c.alias ? ` \u201c${up(row.c.alias)}\u201d` : '');
+    document.title = `${row.c.name} \u00b7 ${row.c.arrests[0].booking} \u00b7 grime95!`;
     els.recFields.innerHTML = fieldsHTML(row, true);
     paint(els.recCanvas, row.c.arrests[0].mugshot, null);
     els.paper.className = 'paper' + (row.c.arrests.length > 1 ? ' paper--multi' : '');
@@ -374,12 +392,17 @@ function mugHTML(r, i, readSet) {
     if (push) location.hash = `/rec/${encodeURIComponent(row.c.arrests[0].booking)}`;
     row.c.arrests.forEach(a => store.markRead(a.booking));
     store.setLast(id);
-    els.recordView.querySelector('[data-back]').focus({ preventScroll: true });
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    els.routeStatus.textContent = `Record ${row.c.arrests[0].booking} opened: ${row.c.name}`;
+    const top = els.recordView.getBoundingClientRect().top + scrollY - 40;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
+    els.recName.focus({ preventScroll: true });
   }
 
+  const BASE_TITLE = document.title;
   function closeRecord({ push = true } = {}) {
     openId = null;
+    document.title = BASE_TITLE;
+    els.routeStatus.textContent = 'Back to the ledger';
     showView(localStorage.getItem('grime95:view') === 'lineup' ? 'lineup' : 'ledger');
     if (push && location.hash) history.pushState(null, '', location.pathname + location.search);
     renderLedger();
@@ -416,7 +439,7 @@ function mugHTML(r, i, readSet) {
     if (m) {
       const key = decodeURIComponent(m[1]);
       if (resolveId(key)) openRecord(key, { push: false });
-      else if (ROWS.length) { closeRecord({ push: false }); els.status.innerHTML = `NO RECORD <b>${esc(up(key))}</b> ON FILE`; }
+      else if (ROWS.length) { closeRecord({ push: false }); els.status.innerHTML = `NO RECORD <b>${esc(up(key))}</b> ON FILE`; els.routeStatus.textContent = `No record ${key} on file`; }
     }
     else if (view === 'record') closeRecord({ push: false });
   }
@@ -426,8 +449,8 @@ function mugHTML(r, i, readSet) {
   els.q.addEventListener('input', () => { clearTimeout(tid); tid = setTimeout(() => { cursor = 0; renderLedger(); }, 80); });
   els.sort.addEventListener('change', () => { cursor = 0; renderLedger(); });
   els.clear.addEventListener('click', () => { els.q.value = ''; cursor = 0; renderLedger(); els.q.focus(); });
-  els.viewList.addEventListener('click', () => showView('ledger'));
-  els.viewLineup.addEventListener('click', () => showView('lineup'));
+  els.viewList.addEventListener('click', () => { if (view === 'record') closeRecord(); showView('ledger'); });
+  els.viewLineup.addEventListener('click', () => { if (view === 'record') closeRecord(); showView('lineup'); });
 
   const onPick = (e) => {
     const b = e.target.closest('[data-id]');
@@ -458,6 +481,7 @@ function mugHTML(r, i, readSet) {
     if (e.key === '/' && !inField) { e.preventDefault(); if (view === 'record') closeRecord(); els.q.focus(); els.q.select(); return; }
     if (view === 'record') {
       if (e.key === 'Escape') { e.preventDefault(); closeRecord(); }
+      if (inField) return;                       // arrows edit the field, not the record
       if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
       if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
       return;
@@ -489,7 +513,9 @@ function mugHTML(r, i, readSet) {
       ROWS = buildRows(data);
       els.total.textContent = ROWS.length;
       const latest = ROWS.reduce((m, r) => { const b = r.c.arrests[r.c.arrests.length - 1].booking; return !m || b > m.b ? { b, r } : m; }, null);
-      if (latest) els.latest.textContent = `${latest.b} ${up(latest.r.c.last)}`;
+      if (latest) { els.latest.textContent = `${latest.b} ${up(latest.r.c.last)}`; els.latest.href = `#/rec/${encodeURIComponent(latest.b)}`; els.latest.setAttribute('aria-label', `Open latest record ${latest.b}, ${latest.r.c.name}`); }
+      els.count.textContent = `BOOKING ${ROWS.length} OF ${TOTAL}`;
+      els.next.textContent = nextLine();
       if (data.tagline) els.tagline.textContent = up(data.tagline);
       els.motd.textContent = data.closing || '';
       let v = 'ledger';

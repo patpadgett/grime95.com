@@ -6,8 +6,8 @@
   <title>NO RECORD ON FILE — grime95! — Ponder County booking records inquiry, Dec 2 1995</title>
   <meta name="description" content="Serialized small-town fiction: the Ponder County Sheriff's booking records terminal for Saturday, December 2, 1995. All persons and events are fiction.">
   <meta name="theme-color" content="#0000aa">
-  <link rel="preload" href="assets/fonts/vga/IBMVGA8x16.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="/assets/fonts/vga/IBMVGA8x16.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
@@ -110,6 +110,15 @@
 
 </div>
 
-<script src="script.js" defer></script>
-<script>location.replace("/"+location.hash)</script></body>
+<script src="/script.js" defer></script>
+<script>
+  // Old record links (/rec/95-12-0003 or ?rec=) go home to their hash route; anything else stays here with a message.
+  const m = /\/rec\/([^/?#]+)/.exec(location.pathname) || /[?&]rec=([^&]+)/.exec(location.search);
+  if (m) location.replace('/#/rec/' + m[1]);
+  else {
+    const s = document.getElementById('resultStatus'); if (s) s.innerHTML = 'NO PAGE <b>' + location.pathname.replace(/[<>&]/g,'').toUpperCase() + '</b> ON FILE. THE LEDGER IS AT <a href="/" style="color:#ffff55">GRIME95.COM</a>.';
+    const e = document.getElementById('empty'); if (e) { e.hidden = false; e.querySelector('b').textContent = 'NO SUCH PAGE ON FILE.'; const h = document.getElementById('emptyHint'); if (h) h.innerHTML = 'TRY THE <a href="/" style="color:#ffff55">LEDGER</a>.'; const k = document.getElementById('clearBtn'); if (k) { k.innerHTML = '<kbd>F1</kbd> LEDGER'; k.onclick = () => location.assign('/'); } }
+    document.title = 'No such page \u00b7 grime95!';
+  }
+</script></body>
 </html>
