@@ -30,6 +30,7 @@
   let view = 'ledger';    // 'ledger' | 'lineup' | 'record'
   let openId = null;
   let returnFocus = null;
+  let feedNext = false;   // set by in-site opens; direct/deep-link routes render the paper settled
 
   /* ---------- storage ---------- */
   const store = {
@@ -166,6 +167,13 @@
       ['TAGS', row.tags.join(', ').toUpperCase()]
     ];
     return out.map(([k, v]) => `<dt>${k}</dt><dd class="${k === 'PRIORS' && row.priors > 1 ? 'is-alert' : ''}">${k === 'TAGS' && !full ? hl(v, terms) : hl(v, terms)}</dd>`).join('');
+  }
+
+  /* ---------- booking order (publication order) ---------- */
+  const byBooking = () => [...ROWS].sort((a, b) => a.firstBooking.localeCompare(b.firstBooking));
+  function neighbour(id, dir) {
+    const seq = byBooking(); const i = seq.findIndex(r => r.c.id === id);
+    return seq[(i + dir + seq.length) % seq.length];
   }
 
   /* ---------- cadence: one booking a day at noon Eastern ---------- */
@@ -357,7 +365,12 @@ function mugHTML(r, i, readSet) {
         }).join('')}</ul>
       </div>` : '';
 
-    return head + arrests + xref + `<p class="paper__end">End of report</p>`;
+    const seq = byBooking(); const pos = seq.findIndex(r => r.c.id === c.id);
+    const nxt = seq[pos + 1];
+    const tail = nxt
+      ? `<p class="paper__next">Next booking: <a href="#/rec/${encodeURIComponent(nxt.c.arrests[0].booking)}">${esc(nxt.c.arrests[0].booking)} ${esc(nxt.c.name)}</a><br>${esc(nextLine().toLowerCase().replace(/^booking/, 'Booking').replace(/eastern\.$/, 'Eastern.'))}</p>`
+      : `<p class="paper__next">You are caught up. ${esc(nextLine().charAt(0) + nextLine().slice(1).toLowerCase().replace(/eastern\.$/, 'Eastern.'))}<br><a href="#/rec/${encodeURIComponent(seq[0].c.arrests[0].booking)}">Start over at ${esc(seq[0].c.arrests[0].booking)}</a></p>`;
+    return head + arrests + xref + `<p class="paper__end">End of report</p>` + tail;
   }
 
   function resolveId(key) {
@@ -367,6 +380,7 @@ function mugHTML(r, i, readSet) {
   }
 
   function openRecord(key, { push = true } = {}) {
+    if (push) feedNext = true;
     const id = resolveId(key);
     const idx = id ? ROWS.findIndex(r => r.c.id === id) : -1;
     if (idx < 0) return;
@@ -383,10 +397,11 @@ function mugHTML(r, i, readSet) {
     document.title = `${row.c.name} \u00b7 ${row.c.arrests[0].booking} \u00b7 grime95!`;
     els.recFields.innerHTML = fieldsHTML(row, true);
     paint(els.recCanvas, row.c.arrests[0].mugshot, null);
-    els.paper.className = 'paper' + (row.c.arrests.length > 1 ? ' paper--multi' : '');
+    els.paper.className = 'paper' + (row.c.arrests.length > 1 ? ' paper--multi' : '') + (feedNext ? '' : ' no-feed');
     els.paper.innerHTML = paperHTML(row);
     // restart the feed
-    els.paper.style.animation = 'none'; void els.paper.offsetWidth; els.paper.style.animation = '';
+    if (feedNext) { els.paper.style.animation = 'none'; void els.paper.offsetWidth; els.paper.style.animation = ''; }
+    feedNext = false;
 
     showView('record');
     if (push) location.hash = `/rec/${encodeURIComponent(row.c.arrests[0].booking)}`;
@@ -412,10 +427,8 @@ function mugHTML(r, i, readSet) {
   }
 
   function step(dir) {
-    if (!VISIBLE.length) return;
-    const i = VISIBLE.findIndex(r => r.c.id === openId);
-    const n = (i < 0 ? 0 : i + dir + VISIBLE.length) % VISIBLE.length;
-    openRecord(VISIBLE[n].c.id);
+    if (!ROWS.length || !openId) return;
+    openRecord(neighbour(openId, dir).c.id);
   }
 
   /* ---------- views ---------- */
@@ -427,7 +440,7 @@ function mugHTML(r, i, readSet) {
     els.viewList.setAttribute('aria-pressed', String(v === 'ledger'));
     els.viewLineup.setAttribute('aria-pressed', String(v === 'lineup'));
     els.sbarKeys.innerHTML = v === 'record'
-      ? '<kbd>ESC</kbd> LEDGER &nbsp;<kbd>&larr;&rarr;</kbd> PREV/NEXT &nbsp;<kbd>/</kbd> FIND'
+      ? '<kbd>ESC</kbd> LEDGER &nbsp;<kbd>&larr;&rarr;</kbd> PREV/NEXT BOOKING &nbsp;<kbd>/</kbd> FIND'
       : '<kbd>&uarr;&darr;</kbd> MOVE &nbsp;<kbd>ENTER</kbd> OPEN &nbsp;<kbd>/</kbd> FIND &nbsp;<kbd>F1</kbd> LEDGER &nbsp;<kbd>F2</kbd> LINEUP';
     if (v === 'lineup') renderLineup();
     if (v !== 'record') { try { localStorage.setItem('grime95:view', v); } catch { /* noop */ } }
@@ -438,7 +451,7 @@ function mugHTML(r, i, readSet) {
     const m = /^#\/rec\/(.+)$/.exec(location.hash);
     if (m) {
       const key = decodeURIComponent(m[1]);
-      if (resolveId(key)) openRecord(key, { push: false });
+      if (resolveId(key)) { if (!(view === 'record' && openId === resolveId(key))) openRecord(key, { push: false }); }
       else if (ROWS.length) { closeRecord({ push: false }); els.status.innerHTML = `NO RECORD <b>${esc(up(key))}</b> ON FILE`; els.routeStatus.textContent = `No record ${key} on file`; }
     }
     else if (view === 'record') closeRecord({ push: false });
@@ -494,8 +507,8 @@ function mugHTML(r, i, readSet) {
     const cols = view === 'lineup' ? Math.max(1, Math.round(els.lineupGrid.clientWidth / (els.lineupGrid.firstElementChild?.offsetWidth || 1))) : 1;
     if (e.key === 'ArrowDown') { e.preventDefault(); setCursor(cursor + cols); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); setCursor(cursor - cols); }
-    else if (e.key === 'ArrowRight' && view === 'lineup') { e.preventDefault(); setCursor(cursor + 1); }
-    else if (e.key === 'ArrowLeft' && view === 'lineup') { e.preventDefault(); setCursor(cursor - 1); }
+    else if (e.key === 'ArrowRight' && view === 'lineup' && !inField) { e.preventDefault(); setCursor(cursor + 1); }
+    else if (e.key === 'ArrowLeft' && view === 'lineup' && !inField) { e.preventDefault(); setCursor(cursor - 1); }
     else if (e.key === 'PageDown') { e.preventDefault(); setCursor(cursor + 10); }
     else if (e.key === 'PageUp') { e.preventDefault(); setCursor(cursor - 10); }
     else if (e.key === 'Home' && !inField) { e.preventDefault(); setCursor(0); }

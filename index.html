@@ -59,6 +59,12 @@
   <!-- Main screen -->
   <main class="screen" id="screen">
 
+    <div class="ledger__empty" id="empty" hidden>
+      <p><b>NO RECORDS MATCH.</b></p>
+      <p id="emptyHint"></p>
+      <p><button type="button" class="key" id="clearBtn"><kbd>ESC</kbd> CLEAR FIND</button></p>
+    </div>
+
     <!-- LEDGER VIEW -->
     <div class="ledger" id="ledgerView">
       <div class="ledger__box">
@@ -67,11 +73,6 @@
         </div>
         <div class="ledger__rows" id="rows" role="group" aria-label="Booking records"></div>
         <p class="ledger__eof" id="eof" aria-hidden="true"></p>
-        <div class="ledger__empty" id="empty" hidden>
-          <p><b>NO RECORDS MATCH.</b></p>
-          <p id="emptyHint"></p>
-          <p><button type="button" class="key" id="clearBtn"><kbd>ESC</kbd> CLEAR FIND</button></p>
-        </div>
         <p class="ledger__motd" id="motd"></p>
       </div>
 
@@ -98,11 +99,11 @@
         <p class="imaging__hd"><span>IMAGING</span><span id="recBkg"></span></p>
         <div class="imaging__frame"><canvas id="recCanvas" width="334" height="418" aria-hidden="true"></canvas></div>
         <dl class="imaging__fields" id="recFields"></dl>
-        <p class="record__nav"><button type="button" class="key" data-back><kbd>ESC</kbd> LEDGER</button> <button type="button" class="key" data-prev><kbd>&larr;</kbd> PREV</button> <button type="button" class="key" data-next>NEXT <kbd>&rarr;</kbd></button></p>
       </div>
       <div class="printer">
         <div class="paper" id="paper"></div>
       </div>
+      <p class="record__nav"><button type="button" class="key" data-back><kbd>ESC</kbd> LEDGER</button> <button type="button" class="key" data-prev><kbd>&larr;</kbd> PREV BOOKING</button> <button type="button" class="key" data-next>NEXT BOOKING <kbd>&rarr;</kbd></button></p>
     </article>
 
   </main>

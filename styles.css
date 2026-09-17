@@ -220,7 +220,7 @@ body::after {
 .ledger__box { border: 1px solid var(--lgray); min-width: 0; }
 .ledger__hd, .row {
   display: grid;
-  grid-template-columns: calc(var(--ch) * 3) calc(var(--ch) * 11) calc(var(--ch) * 20) calc(var(--ch) * 14) minmax(calc(var(--ch) * 30), 2fr) calc(var(--ch) * 4);
+  grid-template-columns: calc(var(--ch) * 3) calc(var(--ch) * 11) minmax(0, 20fr) minmax(0, 12fr) minmax(0, 30fr) calc(var(--ch) * 4);
   column-gap: var(--ch);
   padding: 0 var(--ch);
   align-items: center;
@@ -266,7 +266,7 @@ body::after {
 .ledger__eof::before { width: calc(var(--ch) * 4); }
 .ledger__eof::after { flex: 1; }
 .ledger__eof:empty { display: none; }
-.ledger__empty { padding: var(--cell) var(--ch); color: var(--white); }
+.ledger__empty { padding: var(--cell) var(--ch); color: var(--white); border: 1px solid var(--lgray); margin-bottom: var(--cell); }
 .ledger__empty p { margin: 0 0 var(--cell); }
 .ledger__empty p:last-child { margin: 0; }
 .ledger__empty #emptyHint:empty { display: none; }
@@ -341,7 +341,7 @@ body::after {
 .record {
   display: grid;
   grid-template-columns: calc(var(--ch) * 44) minmax(0, 1fr);
-  grid-template-areas: "hd hd" "left paper";
+  grid-template-areas: "hd hd" "left paper" "nav nav";
   gap: 0 calc(var(--ch) * 2);
   align-items: start;
 }
@@ -353,7 +353,12 @@ body::after {
 .record__left { grid-area: left; }
 .printer { grid-area: paper; }
 .record__left { border: 1px solid var(--lgray); padding: 0 var(--ch) var(--cell); position: sticky; top: calc(var(--cell) * 2); }
-.record__nav { margin: var(--cell) 0 0; display: flex; gap: var(--ch); flex-wrap: wrap; }
+.record__nav { grid-area: nav; margin: var(--cell) 0 0; align-self: end; display: flex; gap: var(--ch); flex-wrap: wrap; position: sticky; bottom: var(--cell); z-index: 5; background: var(--blue); padding: calc(var(--cell) / 2) 0; }
+.record__nav .key { flex: 1 1 auto; }
+.paper__next { margin: 24px 0 0; padding-top: 24px; border-top: 1px dashed var(--ink-rule); color: var(--ink-soft); }
+.paper__next a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; text-transform: uppercase; display: inline-block; min-height: 44px; line-height: 44px; }
+.paper__next a:hover { color: var(--red); }
+.paper.no-feed { animation: none; }
 
 /* the printer: paper feeds up out of the slot */
 .printer {
@@ -470,9 +475,9 @@ body::after {
   .row { grid-template-rows: auto auto; padding-top: calc(var(--cell) / 2); padding-bottom: calc(var(--cell) / 2); }
   .row .c-chg { grid-column: 3 / span 2; grid-row: 2; white-space: normal; overflow: visible; color: var(--lgray); }
   .row .c-seen, .row .c-bkg, .row .c-name, .row .c-pri { grid-row: 1; }
-  .record { grid-template-columns: minmax(0, 1fr); grid-template-areas: "hd" "paper" "left"; }
+  .record { grid-template-columns: minmax(0, 1fr); grid-template-areas: "hd" "paper" "left" "nav"; }
+  .record__nav { bottom: calc(var(--cell) + 4px); }
   .record__left { position: static; margin-top: var(--cell); }
-  .record__nav { position: sticky; bottom: var(--cell); }
   .printer { padding: var(--cell) 0 0; }
   .paper { padding: 24px 36px 48px; }
   .paper__hd { font-size: 18px; }
