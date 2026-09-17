@@ -209,8 +209,9 @@
       const c = r.c, a = c.arrests[0];
       const read = c.arrests.every(x => readSet.has(x.booking));
       const evidence = terms.length ? hiddenHit(r, terms) : null;
-      return `<button type="button" class="row${i === cursor ? ' is-cursor' : ''}" data-id="${esc(c.id)}" data-i="${i}" data-read="${read ? 1 : 0}" aria-label="Open record ${esc(a.booking)}, ${esc(c.name)}">
-        <span class="c-seen" aria-hidden="true">${read ? '\u2713' : (last === c.id ? '\u25BA' : '')}</span>
+      const isLast = last === c.id;
+      return `<button type="button" class="row${i === cursor ? ' is-cursor' : ''}" data-id="${esc(c.id)}" data-i="${i}" data-read="${read ? 1 : 0}" aria-label="Open record ${esc(a.booking)}, ${esc(c.name)}${isLast ? ', last opened' : read ? ', opened' : ''}">
+        <span class="c-seen" aria-hidden="true">${isLast ? '\u25BA' : read ? '\u2713' : ''}</span>
         <span class="c-bkg">${esc(a.booking)}</span>
         <span class="c-name">${hl(`${c.last}, ${c.first}`, terms)}</span>
         <span class="c-aka">${c.alias ? hl(`"${c.alias}"`, terms) : ''}</span>
@@ -276,9 +277,10 @@
 function mugHTML(r, i, readSet) {
     const c = r.c, a = c.arrests[0];
     const read = c.arrests.every(x => readSet.has(x.booking));
-    return `<button type="button" class="mug${i === cursor ? ' is-cursor' : ''}" data-id="${esc(c.id)}" data-i="${i}" data-read="${read ? 1 : 0}" aria-label="Open record ${esc(a.booking)}, ${esc(c.name)}">
+    const isLast = store.last() === c.id;
+    return `<button type="button" class="mug${i === cursor ? ' is-cursor' : ''}" data-id="${esc(c.id)}" data-i="${i}" data-read="${read ? 1 : 0}" aria-label="Open record ${esc(a.booking)}, ${esc(c.name)}${isLast ? ', last opened' : read ? ', opened' : ''}">
         <span class="mug__frame"><img alt="" data-lazy="${esc(a.mugshot)}" decoding="async" hidden></span>
-        <span class="mug__bkg">${esc(a.booking)}${read ? ' \u2713' : ''}</span>
+        <span class="mug__bkg">${esc(a.booking)}${isLast ? ' \u25BA' : read ? ' \u2713' : ''}</span>
         <span class="mug__name">${esc(up(c.name))}</span>
         <span class="mug__aka">${c.alias ? esc(up(`"${c.alias}"`)) : '\u00a0'}</span>
         ${r.priors > 1 ? `<span class="mug__pri">${r.priors} BOOKINGS</span>` : ''}
