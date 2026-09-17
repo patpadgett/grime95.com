@@ -1,0 +1,21 @@
+/* ---------- print: the report, as a report ---------- */
+@page { margin: 16mm; }
+html, body { background: #fff !important; color: #000; }
+body::after, .tbar, .sbar, .banner, .find, .record__nav, .record__hd, .ledger, .lineup, #empty, .banner__mark, kbd { display: none !important; }
+.record *, .paper * { color: #000 !important; background: none !important; }
+.crt { max-width: none; padding: 0; min-height: 0; }
+.record { display: block; }
+.record__left { border: 0; padding: 0; position: static; margin: 0 0 12mm; }
+.imaging__hd { background: none; color: #000; border-bottom: 1px solid #000; padding: 0 0 2mm; margin: 0 0 4mm; }
+.imaging__frame { width: 60mm; aspect-ratio: 4 / 5; background: none; }
+.imaging__frame canvas { position: static; width: 60mm; height: auto; }
+.imaging__fields dt { color: #000; } .imaging__fields dd { color: #000; }
+.printer { background: none; padding: 0; min-height: 0; overflow: visible; }
+.printer::before { display: none; }
+.paper { background: none; animation: none !important; padding: 0; color: #000; font-size: 11pt; line-height: 1.5; }
+.paper::before, .paper::after { display: none; }
+.paper__hd { color: #000; border-color: #000; }
+.paper__next, .xref { display: none; }
+.narr p { max-width: none; page-break-inside: avoid; }
+a { color: #000; text-decoration: none; }
+
