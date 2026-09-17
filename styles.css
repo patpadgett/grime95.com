@@ -356,8 +356,8 @@ body::after {
   align-items: start;
 }
 .record__hd { grid-area: hd; margin: 0 0 var(--cell); padding: calc(var(--cell) / 2) var(--ch); border: 1px solid var(--lgray); }
-.record__hd h2 { margin: 0 0 calc(var(--cell) / 2); font: inherit; color: var(--white); display: inline-block; padding: 0 var(--ch); margin-left: calc(-1 * var(--ch)); }
-.record__hd h2:focus-visible { outline: 2px solid var(--yellow); outline-offset: 0; }
+.record__hd h1, .record__hd h2 { margin: 0 0 calc(var(--cell) / 2); font: inherit; color: var(--white); display: inline-block; padding: 0 var(--ch); margin-left: calc(-1 * var(--ch)); }
+.record__hd h1:focus-visible, .record__hd h2:focus-visible { outline: 2px solid var(--yellow); outline-offset: 0; }
 .record__sub { margin: 0; display: flex; flex-wrap: wrap; gap: 0 calc(var(--ch) * 3); color: var(--lgray); }
 .record__sub span:first-child { color: var(--lcyan); }
 .record__left { grid-area: left; }
@@ -449,6 +449,21 @@ body::after {
 .paper__end::before, .paper__end::after { content: ' * * * '; }
 .paper--multi .paper__grid { margin-bottom: 0; }
 
+/* ---------- links that used to be buttons (flat pages: every row, mug and key is a real URL) ---------- */
+a.row, a.mug, a.key, .xref a, .sbar a { text-decoration: none; color: inherit; }
+a.key { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--black); }
+a.key:hover, a.key:focus-visible { background: var(--white); color: var(--black); }
+.xref a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; text-transform: uppercase; display: inline-block; min-height: 44px; line-height: 44px; }
+.xref a:hover { color: var(--red); }
+.sbar a { text-decoration: underline; text-underline-offset: 2px; display: inline-block; padding: 0 var(--ch); margin: 0 calc(-1 * var(--ch)); }
+.sbar a:hover { color: var(--blue); }
+.about .printer { grid-area: paper; }
+.about .narr p { max-width: 70ch; }
+.about .narr a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; }
+.about .narr a:hover { color: var(--red); }
+.record.about { grid-template-columns: minmax(0, 1fr); grid-template-areas: "hd" "paper"; }
+.record__sub span:first-child a { color: inherit; }
+
 /* ---------- status bar ---------- */
 .sbar {
   position: sticky; bottom: 0; z-index: 10;
@@ -490,7 +505,7 @@ body::after {
   .row .c-chg { grid-column: 3 / span 2; grid-row: 2; white-space: normal; overflow: visible; color: var(--lgray); }
   .row .c-seen, .row .c-bkg, .row .c-name, .row .c-pri { grid-row: 1; }
   .record { grid-template-columns: minmax(0, 1fr); grid-template-areas: "hd" "paper" "left" "nav"; }
-  .record__nav { bottom: calc(var(--cell) + 4px); }
+  .record__nav { bottom: var(--cell); }
   .record__left { position: static; margin-top: var(--cell); }
   .printer { padding: var(--cell) 0 0; }
   .paper { padding: 24px 36px 48px; }

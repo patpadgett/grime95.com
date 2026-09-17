@@ -1,9 +1,11 @@
 /* ============================================================
    grime95! — Ponder County booking records inquiry terminal
-   Static. No build step. content.json is the only file to edit.
-   Views: LEDGER (list + imaging panel), LINEUP (photo grid),
-   RECORD (imaging + dot-matrix printout). Hash routes every
-   record: #/rec/<id>. Read marks persist per device.
+   Progressive enhancement over the flat pages build_site.py writes:
+   / (ledger, pre-rendered rows) and /rec/<booking>/ (one page per
+   record, story in HTML). The terminal loads ledger.json (every
+   field but the stories) for FIND/SORT/LINEUP, and pulls a story
+   out of its record page on demand. Real URLs, pushState; legacy
+   #/rec/<id> links are rewritten. Read marks persist per device.
    ============================================================ */
 (() => {
   'use strict';
@@ -12,6 +14,8 @@
   const LS_LAST = 'grime95:last';
 
   const $ = (id) => document.getElementById(id);
+  if (!$('rows')) return;                       // static page (about, 404): nothing to drive
+  const recPath = (booking) => `/rec/${encodeURIComponent(booking)}/`;
   const els = {
     q: $('q'), sort: $('sortBy'), dir: $('sortDir'), status: $('resultStatus'), total: $('totalCount'),
     tagline: $('tagline'), motd: $('motd'),
@@ -32,6 +36,34 @@
   let returnFocus = null;
   let feedNext = false;
   let lastOpened = null;   // set by in-site opens; direct/deep-link routes render the paper settled
+
+  /* ---------- stories live in the record pages, not the ledger ---------- */
+  const STORIES = new Map();   // character id -> Promise<void> (arrests[].story filled in)
+  function seedStories() {
+    const el = document.getElementById('record-data');
+    if (!el) return;
+    try {
+      const d = JSON.parse(el.textContent);
+      const row = ROWS.find(r => r.c.id === d.id);
+      if (row) { for (const a of row.c.arrests) { const m = d.arrests.find(x => x.booking === a.booking); if (m) a.story = m.story; } STORIES.set(d.id, Promise.resolve()); }
+    } catch { /* fall back to fetch */ }
+  }
+  function ensureStory(row) {
+    const id = row.c.id;
+    if (row.c.arrests.every(a => Array.isArray(a.story))) return Promise.resolve();
+    if (STORIES.has(id)) return STORIES.get(id);
+    const p = fetch(recPath(row.c.arrests[0].booking), { headers: { Accept: 'text/html' } })
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(html => {
+        const m = /<script type="application\/json" id="record-data">([\s\S]*?)<\/script>/.exec(html);
+        if (!m) throw new Error('no record data');
+        const d = JSON.parse(m[1].replace(/<\\\//g, '</'));
+        for (const a of row.c.arrests) { const x = d.arrests.find(y => y.booking === a.booking); if (x) a.story = x.story; }
+      })
+      .catch((err) => { STORIES.delete(id); throw err; });
+    STORIES.set(id, p);
+    return p;
+  }
 
   /* ---------- storage ---------- */
   const store = {
@@ -186,7 +218,7 @@
   }
 
   /* ---------- cadence: one booking a day at noon Eastern ---------- */
-  const TOTAL = 313;
+  const TOTAL = +document.body.dataset.total || 313;
   const FIRST_DAY = Date.UTC(2026, 8, 15);   // booking 1 was filed 2026-09-15; one per day after, at noon Eastern
   function nextLine() {
     const now = new Date();
@@ -217,14 +249,14 @@
       const read = c.arrests.every(x => readSet.has(x.booking));
       const evidence = terms.length ? hiddenHit(r, terms) : null;
       const isLast = last === c.id;
-      return `<button type="button" class="row${i === cursor ? ' is-cursor' : ''}" data-id="${esc(c.id)}" data-i="${i}" data-read="${read ? 1 : 0}" aria-label="Open record ${esc(a.booking)}, ${esc(c.name)}${isLast ? ', last opened' : read ? ', opened' : ''}">
+      return `<a class="row${i === cursor ? ' is-cursor' : ''}" href="${recPath(a.booking)}" data-id="${esc(c.id)}" data-i="${i}" data-read="${read ? 1 : 0}" aria-label="Open record ${esc(a.booking)}, ${esc(c.name)}${isLast ? ', last opened' : read ? ', opened' : ''}">
         <span class="c-seen" aria-hidden="true">${isLast ? '\u25BA' : read ? '\u2713' : ''}</span>
         <span class="c-bkg">${esc(a.booking)}</span>
         <span class="c-name">${hl(`${c.last}, ${c.first}`, terms)}</span>
         <span class="c-aka">${c.alias ? hl(`"${c.alias}"`, terms) : ''}</span>
         <span class="c-chg">${evidence ? `<span class="c-tag">${esc(evidence.label)}: ${hl(evidence.value, terms)} \u00b7 </span>` : ''}${hl(c.arrests.map(x => x.charge).join(' / '), terms)}</span>
         <span class="c-pri${r.priors > 1 ? ' is-multi' : ''}">${r.priors > 1 ? r.priors : ''}</span>
-      </button>`;
+      </a>`;
     }).join('');
 
     const none = VISIBLE.length === 0;
@@ -285,13 +317,13 @@ function mugHTML(r, i, readSet) {
     const c = r.c, a = c.arrests[0];
     const read = c.arrests.every(x => readSet.has(x.booking));
     const isLast = store.last() === c.id;
-    return `<button type="button" class="mug${i === cursor ? ' is-cursor' : ''}" data-id="${esc(c.id)}" data-i="${i}" data-read="${read ? 1 : 0}" aria-label="Open record ${esc(a.booking)}, ${esc(c.name)}${isLast ? ', last opened' : read ? ', opened' : ''}">
+    return `<a class="mug${i === cursor ? ' is-cursor' : ''}" href="${recPath(a.booking)}" data-id="${esc(c.id)}" data-i="${i}" data-read="${read ? 1 : 0}" aria-label="Open record ${esc(a.booking)}, ${esc(c.name)}${isLast ? ', last opened' : read ? ', opened' : ''}">
         <span class="mug__frame"><img alt="" data-lazy="${esc(a.mugshot)}" decoding="async" hidden></span>
         <span class="mug__bkg">${esc(a.booking)}${isLast ? ' \u25BA' : read ? ' \u2713' : ''}</span>
         <span class="mug__name">${esc(up(c.name))}</span>
         <span class="mug__aka">${c.alias ? esc(up(`"${c.alias}"`)) : '\u00a0'}</span>
         ${r.priors > 1 ? `<span class="mug__pri">${r.priors} BOOKINGS</span>` : ''}
-      </button>`;
+      </a>`;
   }
 
   // The lineup is windowed: only rows near the viewport are in the DOM, the rest is spacer.
@@ -379,15 +411,15 @@ function mugHTML(r, i, readSet) {
         <h3>See also</h3>
         <ul>${related.map(r => {
           const shared = r.tags.filter(t => row.tags.includes(t));
-          return `<li><button type="button" data-goto="${esc(r.c.id)}">${esc(r.c.arrests[0].booking)} ${esc(r.c.name)}</button> <span>&mdash; ${esc(shared.join(', '))}</span></li>`;
+          return `<li><a href="${recPath(r.c.arrests[0].booking)}" data-goto="${esc(r.c.id)}">${esc(r.c.arrests[0].booking)} ${esc(r.c.name)}</a> <span>&mdash; ${esc(shared.join(', '))}</span></li>`;
         }).join('')}</ul>
       </div>` : '';
 
     const seq = byBooking(); const pos = seq.findIndex(r => r.c.id === c.id);
     const nxt = seq[pos + 1];
     const tail = nxt
-      ? `<p class="paper__next">Next booking: <a href="#/rec/${encodeURIComponent(nxt.c.arrests[0].booking)}">${esc(nxt.c.arrests[0].booking)} ${esc(nxt.c.name)}</a><br>${esc(nextLine().toLowerCase().replace(/^booking/, 'Booking').replace(/eastern\.$/, 'Eastern.'))}</p>`
-      : `<p class="paper__next">You are caught up. ${esc(nextLine().charAt(0) + nextLine().slice(1).toLowerCase().replace(/eastern\.$/, 'Eastern.'))}<br><a href="#/rec/${encodeURIComponent(seq[0].c.arrests[0].booking)}">Start over at ${esc(seq[0].c.arrests[0].booking)}</a></p>`;
+      ? `<p class="paper__next">Next booking: <a href="${recPath(nxt.c.arrests[0].booking)}">${esc(nxt.c.arrests[0].booking)} ${esc(nxt.c.name)}</a><br>${esc(nextLine().toLowerCase().replace(/^booking/, 'Booking').replace(/eastern\.$/, 'Eastern.'))}</p>`
+      : `<p class="paper__next">You are caught up. ${esc(nextLine().charAt(0) + nextLine().slice(1).toLowerCase().replace(/eastern\.$/, 'Eastern.'))}<br><a href="${recPath(seq[0].c.arrests[0].booking)}">Start over at ${esc(seq[0].c.arrests[0].booking)}</a></p>`;
     return head + arrests + xref + `<p class="paper__end">End of report</p>` + tail;
   }
 
@@ -397,12 +429,20 @@ function mugHTML(r, i, readSet) {
     return byBooking ? byBooking.c.id : null;
   }
 
-  function openRecord(key, { push = true } = {}) {
-    if (push) feedNext = true;
+  function openRecord(key, opts = {}) {
     const id = resolveId(key);
     const idx = id ? ROWS.findIndex(r => r.c.id === id) : -1;
     if (idx < 0) return;
     const row = ROWS[idx];
+    if (row.c.arrests.every(a => Array.isArray(a.story))) { renderRecord(row, opts); return; }
+    els.status.textContent = `RETRIEVING ${row.c.arrests[0].booking} FROM ARCHIVE\u2026`;
+    ensureStory(row).then(() => renderRecord(row, opts)).catch(() => {
+      els.status.innerHTML = `RECORD <b>${esc(row.c.arrests[0].booking)}</b> COULD NOT BE RETRIEVED. <a href="${recPath(row.c.arrests[0].booking)}">OPEN IT DIRECTLY.</a>`;
+    });
+  }
+  function renderRecord(row, { push = true } = {}) {
+    if (push) feedNext = true;
+    const id = row.c.id;
     if (view !== 'record') returnFocus = document.activeElement;
     openId = id; lastOpened = id;
     // cursor follows the opened record when it's visible
@@ -422,7 +462,7 @@ function mugHTML(r, i, readSet) {
     feedNext = false;
 
     showView('record');
-    if (push) location.hash = `/rec/${encodeURIComponent(row.c.arrests[0].booking)}`;
+    if (push && location.pathname !== recPath(row.c.arrests[0].booking)) history.pushState(null, '', recPath(row.c.arrests[0].booking));
     row.c.arrests.forEach(a => store.markRead(a.booking));
     store.setLast(id);
     els.routeStatus.textContent = `Record ${row.c.arrests[0].booking} opened: ${row.c.name}`;
@@ -435,13 +475,13 @@ function mugHTML(r, i, readSet) {
     els.recName.focus({ preventScroll: true });
   }
 
-  const BASE_TITLE = document.title;
+  const BASE_TITLE = document.body.dataset.siteTitle || document.title;
   function closeRecord({ push = true } = {}) {
     openId = null;
     document.title = BASE_TITLE;
     els.routeStatus.textContent = returnView() === 'lineup' ? 'Back to the lineup' : 'Back to the ledger';
     showView(returnView());
-    if (push && location.hash) history.pushState(null, '', location.pathname + location.search);
+    if (push && (location.pathname !== '/' || location.hash)) history.pushState(null, '', '/');
     renderLedger();
     const wanted = lastOpened && (view === 'lineup' ? els.lineupGrid : els.rows).querySelector(`[data-id="${CSS.escape(lastOpened)}"]`);
     const target = wanted || (view === 'lineup' ? els.lineupGrid.querySelector('.mug') : els.rows.children[cursor]) || els.q;
@@ -480,7 +520,9 @@ function mugHTML(r, i, readSet) {
 
   /* ---------- routing ---------- */
   function route() {
-    const m = /^#\/rec\/(.+)$/.exec(location.hash);
+    const legacy = /^#\/rec\/(.+)$/.exec(location.hash);
+    if (legacy) { history.replaceState(null, '', recPath(decodeURIComponent(legacy[1]))); }
+    const m = /^\/rec\/([^/]+)\/?$/.exec(location.pathname);
     if (m) {
       const key = decodeURIComponent(m[1]);
       if (resolveId(key)) { if (!(view === 'record' && openId === resolveId(key))) openRecord(key, { push: false }); }
@@ -500,7 +542,8 @@ function mugHTML(r, i, readSet) {
 
   const onPick = (e) => {
     const b = e.target.closest('[data-id]');
-    if (b) openRecord(b.dataset.id);
+    if (!b || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;   // modified clicks keep native link behaviour
+    e.preventDefault(); openRecord(b.dataset.id);
   };
   els.rows.addEventListener('click', onPick);
   els.lineupGrid.addEventListener('click', onPick);
@@ -513,13 +556,14 @@ function mugHTML(r, i, readSet) {
   els.lineupGrid.addEventListener('focusin', onHover);
 
   els.recordView.addEventListener('click', (e) => {
-    if (e.target.closest('[data-back]')) { closeRecord(); return; }
-    if (e.target.closest('[data-prev]')) { step(-1); return; }
-    if (e.target.closest('[data-next]')) { step(1); return; }
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+    if (e.target.closest('[data-back]')) { e.preventDefault(); closeRecord(); return; }
+    if (e.target.closest('[data-prev]')) { e.preventDefault(); step(-1); return; }
+    if (e.target.closest('[data-next]')) { e.preventDefault(); step(1); return; }
     const go = e.target.closest('[data-goto]');
-    if (go) openRecord(go.dataset.goto);
-    const tail = e.target.closest('.paper__next a[href^="#/rec/"]');
-    if (tail) { e.preventDefault(); openRecord(decodeURIComponent(tail.getAttribute('href').slice(6))); }
+    if (go) { e.preventDefault(); openRecord(go.dataset.goto); return; }
+    const tail = e.target.closest('.paper__next a[href^="/rec/"]');
+    if (tail) { e.preventDefault(); openRecord(decodeURIComponent(/^\/rec\/([^/]+)/.exec(tail.getAttribute('href'))[1])); }
   });
 
   document.addEventListener('keydown', (e) => {
@@ -551,18 +595,22 @@ function mugHTML(r, i, readSet) {
     else if (e.key === 'Enter' && (inField || e.target.tagName !== 'BUTTON')) { e.preventDefault(); if (VISIBLE[cursor]) openRecord(VISIBLE[cursor].c.id); }
   });
 
-  els.latest.addEventListener('click', (e) => { const k = els.latest.getAttribute('href'); if (k && k.startsWith('#/rec/')) { e.preventDefault(); openRecord(decodeURIComponent(k.slice(6))); } });
+  els.latest.addEventListener('click', (e) => { const k = els.latest.getAttribute('href'); if (k && k.startsWith('/rec/') && !(e.metaKey || e.ctrlKey || e.shiftKey)) { e.preventDefault(); openRecord(decodeURIComponent(/^\/rec\/([^/]+)/.exec(k)[1])); } });
   window.addEventListener('hashchange', route);
+  window.addEventListener('popstate', route);
 
   /* ---------- boot ---------- */
-  fetch('content.json')
+  fetch('/ledger.json')
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(data => {
       DATA = data;
       ROWS = buildRows(data);
+      seedStories();
+      const q0 = new URLSearchParams(location.search).get('q');
+      if (q0) els.q.value = q0;
       els.total.textContent = ROWS.length;
       const latest = ROWS.reduce((m, r) => { const b = r.c.arrests[r.c.arrests.length - 1].booking; return !m || b > m.b ? { b, r } : m; }, null);
-      if (latest) { els.latest.textContent = `${latest.b} ${up(latest.r.c.last)}`; els.latest.href = `#/rec/${encodeURIComponent(latest.b)}`; els.latest.setAttribute('aria-label', `Open latest record ${latest.b}, ${latest.r.c.name}`); }
+      if (latest) { els.latest.textContent = `${latest.b} ${up(latest.r.c.last)}`; els.latest.href = recPath(latest.b); els.latest.setAttribute('aria-label', `Open latest record ${latest.b}, ${latest.r.c.name}`); }
       els.count.textContent = `BOOKING ${ROWS.length} OF ${TOTAL}`;
       els.next.textContent = nextLine();
       if (data.tagline) els.tagline.textContent = up(data.tagline);
@@ -571,13 +619,13 @@ function mugHTML(r, i, readSet) {
       try { v = localStorage.getItem('grime95:view') === 'lineup' ? 'lineup' : 'ledger'; } catch { /* noop */ }
       paintDir();
       renderLedger();
-      showView(v);
+      if (!/^\/rec\//.test(location.pathname)) showView(v);
       route();
     })
     .catch(() => {
       els.empty.hidden = false;
       els.empty.querySelector('b').textContent = 'RECORDS DATABASE OFFLINE.';
-      els.hint.textContent = 'CONTENT.JSON COULD NOT BE READ. SERVE THIS FOLDER OVER HTTP.';
+      els.hint.textContent = 'LEDGER.JSON COULD NOT BE READ. THE PRE-RENDERED LEDGER ABOVE STILL WORKS AS PLAIN LINKS.';
       els.status.textContent = 'ERROR';
     });
 })();
