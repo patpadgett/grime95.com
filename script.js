@@ -242,7 +242,7 @@
     nx.hidden = !nx.textContent;
     els.status.innerHTML = terms.length
       ? `<b>${VISIBLE.length}</b> OF ${ROWS.length} RECORDS MATCH "${esc(up(els.q.value.trim()))}"`
-      : `<b>${ROWS.length}</b> RECORDS ON FILE &nbsp;&middot;&nbsp; SORTED BY ${esc(els.sort.selectedOptions[0].textContent)} ${desc ? '\u2193' : '\u2191'}`;
+      : `<b>${ROWS.length}</b> RECORDS ON FILE &nbsp;&middot;&nbsp; SORTED BY ${esc(els.sort.selectedOptions[0].textContent)}&nbsp;${desc ? '\u2193' : '\u2191'}`;
 
     paintImaging();
     if (view === 'lineup') renderLineup(readSet);

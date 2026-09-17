@@ -473,7 +473,8 @@ body::after {
   .c-aka { display: none; }
 }
 @media (max-width: 900px) {
-  .banner { grid-template-columns: minmax(0, 1fr); grid-template-areas: "mark" "line" "meta" "help"; row-gap: var(--cell); }
+  .banner { grid-template-columns: minmax(0, 1fr); grid-template-areas: "mark" "line" "meta" "help"; row-gap: calc(var(--cell) / 2); padding-top: calc(var(--cell) / 2); padding-bottom: calc(var(--cell) / 2); }
+  .banner__meta, .banner__help { margin-top: calc(var(--cell) / 2); }
   .banner__line, .banner__meta, .banner__help { min-width: 0; }
   .banner__mark { transform: scale(.75); transform-origin: 0 0; height: calc(var(--cell) * 5 * .75); width: calc(var(--ch) * 58 * .75); overflow: visible; }
   .find { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "q q" "sort view" "status status"; row-gap: var(--cell); }
