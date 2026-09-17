@@ -13,7 +13,7 @@
 
   const $ = (id) => document.getElementById(id);
   const els = {
-    q: $('q'), sort: $('sortBy'), status: $('resultStatus'), total: $('totalCount'),
+    q: $('q'), sort: $('sortBy'), dir: $('sortDir'), status: $('resultStatus'), total: $('totalCount'),
     tagline: $('tagline'), motd: $('motd'),
     viewList: $('viewList'), viewLineup: $('viewLineup'),
     ledgerView: $('ledgerView'), rows: $('rows'), empty: $('empty'), hint: $('emptyHint'), clear: $('clearBtn'),
@@ -93,14 +93,22 @@
     return true;
   }
 
+  let desc = true;   // default: newest booking first
   function sorted(rows) {
     const by = els.sort.value;
-    return [...rows].sort((a, b) => {
+    const out = [...rows].sort((a, b) => {
       if (by === 'first') return a.c.first.localeCompare(b.c.first) || a.c.last.localeCompare(b.c.last);
       if (by === 'booking') return a.firstBooking.localeCompare(b.firstBooking);
-      if (by === 'priors') return b.priors - a.priors || a.c.last.localeCompare(b.c.last);
+      if (by === 'priors') return a.priors - b.priors || a.c.last.localeCompare(b.c.last);
       return a.c.last.localeCompare(b.c.last) || a.c.first.localeCompare(b.c.first);
     });
+    return desc ? out.reverse() : out;
+  }
+  function paintDir() {
+    els.dir.setAttribute('aria-pressed', String(desc));
+    els.dir.innerHTML = desc ? '<kbd>\u2193</kbd> DESC' : '<kbd>\u2191</kbd> ASC';
+    const what = els.sort.selectedOptions[0].textContent;
+    els.dir.setAttribute('aria-label', desc ? `Sort descending by ${what}; switch to ascending` : `Sort ascending by ${what}; switch to descending`);
   }
 
   /* highlight the matched term inside a field, uppercase */
@@ -225,7 +233,7 @@
     nx.hidden = !nx.textContent;
     els.status.innerHTML = terms.length
       ? `<b>${VISIBLE.length}</b> OF ${ROWS.length} RECORDS MATCH "${esc(up(els.q.value.trim()))}"`
-      : `<b>${ROWS.length}</b> RECORDS ON FILE &nbsp;&middot;&nbsp; SORTED BY ${esc(els.sort.selectedOptions[0].textContent)}`;
+      : `<b>${ROWS.length}</b> RECORDS ON FILE &nbsp;&middot;&nbsp; SORTED BY ${esc(els.sort.selectedOptions[0].textContent)} ${desc ? '\u2193' : '\u2191'}`;
 
     paintImaging();
     if (view === 'lineup') renderLineup(readSet);
@@ -460,7 +468,8 @@ function mugHTML(r, i, readSet) {
   /* ---------- events ---------- */
   let tid = null;
   els.q.addEventListener('input', () => { clearTimeout(tid); tid = setTimeout(() => { cursor = 0; renderLedger(); }, 80); });
-  els.sort.addEventListener('change', () => { cursor = 0; renderLedger(); });
+  els.sort.addEventListener('change', () => { cursor = 0; paintDir(); renderLedger(); });
+  els.dir.addEventListener('click', () => { desc = !desc; cursor = 0; paintDir(); renderLedger(); });
   els.clear.addEventListener('click', () => { els.q.value = ''; cursor = 0; renderLedger(); els.q.focus(); });
   els.viewList.addEventListener('click', () => { if (view === 'record') closeRecord(); showView('ledger'); });
   els.viewLineup.addEventListener('click', () => { if (view === 'record') closeRecord(); showView('lineup'); });
@@ -533,6 +542,7 @@ function mugHTML(r, i, readSet) {
       els.motd.textContent = data.closing || '';
       let v = 'ledger';
       try { v = localStorage.getItem('grime95:view') === 'lineup' ? 'lineup' : 'ledger'; } catch { /* noop */ }
+      paintDir();
       renderLedger();
       showView(v);
       route();

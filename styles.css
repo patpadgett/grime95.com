@@ -177,6 +177,9 @@ body::after {
 }
 .caret { display: none; }
 .find__sort { grid-area: sort; display: flex; align-items: center; gap: var(--ch); }
+.key--dir { min-width: calc(var(--ch) * 8); }
+.key--dir[aria-pressed="true"] { background: var(--lgray); color: var(--black); }
+.key--dir[aria-pressed="true"] kbd { color: var(--blue); }
 .find__sort select {
   appearance: none; -webkit-appearance: none;
   background: var(--black); color: var(--white);
@@ -495,6 +498,7 @@ body::after {
   .find__view { justify-content: stretch; }
   .find__view .key { flex: 1; }
   .find__sort .selwrap, .find__sort select { flex: 1; width: 100%; }
+  .find__sort .key--dir { flex: 0 0 auto; }
   .banner__mark { transform: scale(.5); height: calc(var(--cell) * 5 * .5); width: calc(var(--ch) * 58 * .5); }
   .banner__meta { flex-direction: column; }
   .tbar__l { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
