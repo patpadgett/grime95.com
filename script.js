@@ -187,14 +187,21 @@
 
   /* ---------- cadence: one booking a day at noon Eastern ---------- */
   const TOTAL = 313;
+  const FIRST_DAY = Date.UTC(2026, 8, 15);   // booking 1 was filed 2026-09-15; one per day after, at noon Eastern
   function nextLine() {
     const now = new Date();
     const et = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
     const beforeNoon = et.getHours() < 12;
     const n = ROWS.length;
     if (n >= TOTAL) return 'ROLL 95-12 COMPLETE \u00b7 ' + TOTAL + ' BOOKINGS ON FILE';
+    // how many bookings SHOULD be on file by now (day index since the first, +1 if past noon today)
+    const dayIdx = Math.floor((Date.UTC(et.getFullYear(), et.getMonth(), et.getDate()) - FIRST_DAY) / 86400000);
+    const due = Math.min(TOTAL, dayIdx + (beforeNoon ? 0 : 1));
+    if (n < due) return `BOOKING ${n + 1} OF ${TOTAL} IS RUNNING LATE. THE JAILER IS LOOKING FOR THE POLAROID.`;
     return `BOOKING ${n + 1} OF ${TOTAL} IS FILED ${beforeNoon ? 'TODAY' : 'TOMORROW'} AT 12:00 NOON EASTERN.`;
   }
+  // refresh the promise when noon passes in an open tab
+  setInterval(() => { if (!ROWS.length) return; const t = nextLine(); if (els.next.textContent !== t) { els.next.textContent = t; const nx = document.getElementById('nextLine'); if (nx && !nx.hidden) nx.textContent = t; } }, 60000);
 
   /* ---------- LEDGER ---------- */
   function renderLedger() {

@@ -271,6 +271,12 @@ body::after {
 .ledger__eof::after { flex: 1; }
 .ledger__eof:empty { display: none; }
 .ledger__empty { padding: var(--cell) var(--ch); color: var(--white); border: 1px solid var(--lgray); margin-bottom: var(--cell); }
+.err { margin-top: var(--cell); max-width: 62ch; }
+.err h1 { margin: 0 0 var(--cell); font: inherit; }
+.err h1 b { font-weight: 400; color: var(--yellow); }
+.err p { color: var(--lgray); }
+.err .key { display: inline-flex; align-items: center; text-decoration: none; }
+.err__path { color: var(--white); font-weight: 400; overflow-wrap: anywhere; }
 .ledger__empty p { margin: 0 0 var(--cell); }
 .ledger__empty p:last-child { margin: 0; }
 .ledger__empty #emptyHint:empty { display: none; }
@@ -467,7 +473,8 @@ body::after {
   .c-aka { display: none; }
 }
 @media (max-width: 900px) {
-  .banner { grid-template-columns: 1fr; grid-template-areas: "mark" "line" "meta" "help"; row-gap: var(--cell); }
+  .banner { grid-template-columns: minmax(0, 1fr); grid-template-areas: "mark" "line" "meta" "help"; row-gap: var(--cell); }
+  .banner__line, .banner__meta, .banner__help { min-width: 0; }
   .banner__mark { transform: scale(.75); transform-origin: 0 0; height: calc(var(--cell) * 5 * .75); width: calc(var(--ch) * 58 * .75); overflow: visible; }
   .find { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "q q" "sort view" "status status"; row-gap: var(--cell); }
   .find__sort { min-width: 0; }
@@ -508,7 +515,9 @@ body::after {
   .tbar__l { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
   .find__view .key kbd { display: none; }
   .tbar__term { display: none; }
-  .banner__meta span, .banner__meta b { white-space: nowrap; }
+  .banner__meta span { white-space: normal; }
+  .banner__meta a { white-space: normal; line-height: var(--cell); min-height: var(--tap); display: inline-flex; align-items: center; margin: 0; }
+  .banner { padding-left: var(--ch); padding-right: var(--ch); }
   .lineup__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mug { min-width: 0; }
 }
