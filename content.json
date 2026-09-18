@@ -91,6 +91,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "earl-griggs",
+      "first": "Earl",
+      "last": "Griggs",
+      "name": "Earl Griggs",
+      "alias": "Smokey",
+      "arrests": [
+        {
+          "booking": "95-12-0004",
+          "date": "1995-12-02",
+          "charge": "Public intoxication; indecent exposure; destruction of property",
+          "location": "The Rusty Nail",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/image01.jpg",
+          "tags": [
+            "public intoxication",
+            "the rusty nail",
+            "livestock-adjacent"
+          ],
+          "story": [
+            "Earl \"Smokey\" Griggs stumbled out of the county jail, his breath reeking of stale beer and bad decisions. Darla Mae, his long-suffering sister, leaned against her Buick, arms crossed.",
+            "“What now, Earl?” she snapped as he climbed in.",
+            "He burped and slurred, “Ain’t my fault this time, Darla. The jukebox at The Rusty Nail was playin’ my song, and I just… got inspired.”",
+            "Darla glared. “Inspired to ride the mechanical bull naked?”",
+            "Earl grinned. “I thought it’d be funny!”",
+            "“It wasn’t funny when you knocked over three tables and scared the Johnsons’ Pomeranian into the dartboard!”",
+            "Earl shrugged. “Sheriff Ponder overreacted. A man’s got a right to have fun.”",
+            "“You puked in her hat, Earl.”",
+            "He squinted. “That’s what that was?”",
+            "As Darla drove home, Earl passed out mid-mutter, while she muttered prayers that he’d someday sober up—or at least run out of bars to get banned from."
+          ]
+        }
+      ]
     }
   ]
 }
