@@ -462,7 +462,7 @@ function mugHTML(r, i, readSet) {
     feedNext = false;
 
     showView('record');
-    if (push && location.pathname !== recPath(row.c.arrests[0].booking)) history.pushState(null, '', recPath(row.c.arrests[0].booking));
+    if (push && location.pathname !== recPath(row.c.arrests[0].booking)) history.pushState(null, '', recPath(row.c.arrests[0].booking)); trackView();
     row.c.arrests.forEach(a => store.markRead(a.booking));
     store.setLast(id);
     els.routeStatus.textContent = `Record ${row.c.arrests[0].booking} opened: ${row.c.name}`;
@@ -481,7 +481,7 @@ function mugHTML(r, i, readSet) {
     document.title = BASE_TITLE;
     els.routeStatus.textContent = returnView() === 'lineup' ? 'Back to the lineup' : 'Back to the ledger';
     showView(returnView());
-    if (push && (location.pathname !== '/' || location.hash)) history.pushState(null, '', '/');
+    if (push && (location.pathname !== '/' || location.hash)) history.pushState(null, '', '/'); trackView();
     renderLedger();
     const wanted = lastOpened && (view === 'lineup' ? els.lineupGrid : els.rows).querySelector(`[data-id="${CSS.escape(lastOpened)}"]`);
     const target = wanted || (view === 'lineup' ? els.lineupGrid.querySelector('.mug') : els.rows.children[cursor]) || els.q;
@@ -516,6 +516,12 @@ function mugHTML(r, i, readSet) {
       : '<kbd>&uarr;&darr;</kbd> MOVE &nbsp;<kbd>ENTER</kbd> OPEN &nbsp;<kbd>/</kbd> FIND &nbsp;<kbd>F1</kbd> LEDGER &nbsp;<kbd>F2</kbd> LINEUP';
     if (v === 'lineup') renderLineup();
     if (v !== 'record') { try { localStorage.setItem('grime95:view', v); } catch { /* noop */ } }
+  }
+
+  /* ---------- analytics: one page_view per in-app navigation (GA4 tag loaded in <head>) ---------- */
+  function trackView() {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'page_view', { page_location: location.href, page_path: location.pathname, page_title: document.title });
   }
 
   /* ---------- routing ---------- */
