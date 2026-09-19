@@ -125,6 +125,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "billy-ray-thornton",
+      "first": "Billy Ray",
+      "last": "Thornton",
+      "name": "Billy Ray Thornton",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0005",
+          "date": "1995-12-02",
+          "charge": "Disorderly conduct; assault with currency",
+          "location": "Sunset Lanes",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/image03.jpg",
+          "tags": [
+            "disorderly conduct",
+            "bowling alley",
+            "nacho cart"
+          ],
+          "story": [
+            "Billy Ray Thornton (no relation) adjusted his crooked yellow aviators and sighed as the bondsman snapped his photo.",
+            "“So, Billy Ray,” the bondsman smirked, “what’d you do this time?”",
+            "Billy Ray scratched his beard, the faint smell of chili still clinging to him. “Well, it all started when Earl Griggs bet me I couldn’t eat six chili cheese dogs and bowl a perfect game.”",
+            "The bondsman raised an eyebrow. “And?”",
+            "“I got to four dogs before I blacked out. Woke up at the bowling alley snack bar with a corndog in one hand and a pile of nickels in the other.”",
+            "Sheriff Ponder’s voice barked from across the room. “Tell him the rest, Billy Ray.”",
+            "He winced. “Apparently, I decided to start payin’ for nachos by chuckin’ nickels at the shoe rental guy. He wasn’t impressed.”",
+            "The bondsman laughed. “And Earl?”",
+            "Billy Ray shook his head. “He’s back in lockup for some kinda vending machine rescue mission.”",
+            "Sheriff Ponder groaned, grabbing more paperwork. “This whole town’s lost its mind tonight.”",
+            "Billy Ray grinned. “Nah, Sheriff. We’re just warmin’ up.”"
+          ]
+        }
+      ]
     }
   ]
 }
