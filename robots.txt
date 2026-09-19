@@ -3,3 +3,4 @@ Allow: /
 Disallow: /content.json
 
 Sitemap: https://grime95.com/sitemap.xml
+Disallow: /assets/ig/
