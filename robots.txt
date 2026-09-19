@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /content.json
+Disallow: /assets/ig/
 
 Sitemap: https://grime95.com/sitemap.xml
-Disallow: /assets/ig/
