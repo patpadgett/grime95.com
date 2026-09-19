@@ -518,10 +518,10 @@ function mugHTML(r, i, readSet) {
     if (v !== 'record') { try { localStorage.setItem('grime95:view', v); } catch { /* noop */ } }
   }
 
-  /* ---------- analytics: one page_view per in-app navigation (GA4 tag loaded in <head>) ---------- */
+  /* ---------- analytics: one state change per in-app navigation (Hotjar tag, when loaded in <head>) ---------- */
   function trackView() {
-    if (typeof window.gtag !== 'function') return;
-    window.gtag('event', 'page_view', { page_location: location.href, page_path: location.pathname, page_title: document.title });
+    if (typeof window.hj !== 'function') return;
+    window.hj('stateChange', location.pathname + location.search + location.hash);
   }
 
   /* ---------- routing ---------- */
