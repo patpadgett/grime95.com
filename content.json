@@ -160,6 +160,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "adam-mccoy",
+      "first": "Adam",
+      "last": "McCoy",
+      "name": "Adam McCoy",
+      "alias": "Double Adam",
+      "arrests": [
+        {
+          "booking": "95-12-0006",
+          "date": "1995-12-02",
+          "charge": "Grand theft ornament; arson; unauthorized use of a vehicle",
+          "location": "Municipal Water Tower",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/image05.jpg",
+          "tags": [
+            "arson",
+            "water tower",
+            "nacho cart"
+          ],
+          "story": [
+            "“Double Adam” McCoy tilted his head at the camera, his two Adam’s apples twitching as he swallowed. His aviators hid bloodshot eyes, and his plaid shirt was shredded like it had been through a combine.",
+            "“Double Adam,” Sheriff Ponder sighed. “What in God’s name possessed you to lasso the town’s Christmas angel off the water tower?”",
+            "Adam smirked. “Needed a mascot for the demolition derby.”",
+            "“The derby that wasn’t even scheduled?”",
+            "“Sometimes life don’t wait for paperwork, Sheriff.”",
+            "Ponder gestured to his burnt boots. “And the fireworks?”",
+            "“Spirited things up. Until the angel caught fire.”",
+            "“And the truck you flipped into the creek?”",
+            "“Borrowed it. Temporarily. Technically, I was done with it by then.”",
+            "Ponder glared. “You know Billy Ray’s nacho cart floated downriver, right?”",
+            "Adam shrugged. “He should thank me. Free advertising.”",
+            "As Ponder cuffed him, Adam grinned. “Ain’t this town fun on Friday nights?”"
+          ]
+        }
+      ]
     }
   ]
 }
