@@ -196,6 +196,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tammy-jo-carter",
+      "first": "Tammy Jo",
+      "last": "Carter",
+      "name": "Tammy Jo Carter",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0007",
+          "date": "1995-12-02",
+          "charge": "Grand theft cart; vandalism; release of livestock",
+          "location": "Town Gazebo",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/image04.jpg",
+          "tags": [
+            "vandalism",
+            "bingo hall",
+            "nacho cart",
+            "livestock-adjacent"
+          ],
+          "story": [
+            "Tammy Jo Carter sat in the holding room, her sweater pristine despite the chaos she’d caused.",
+            "“So,” began Deputy Hargrove, holding back a grin. “You stole Billy Ray’s nacho cart and drove it into the gazebo?”",
+            "Tammy Jo nodded, unbothered. “It was blocking the bingo hall. The ladies were restless.”",
+            "“And the spray paint?”",
+            "“‘No nachos on bingo night’ felt appropriate.”",
+            "“And why’d you release Earl’s pet pig into the bakery?”",
+            "Tammy Jo shrugged. “Earl bet me twenty bucks I wouldn’t.”",
+            "Sheriff Ponder pinched his nose. “Tammy Jo, do you have any idea how much damage you’ve done tonight?”",
+            "“Not as much as Double Adam or Earl,” she said sweetly.",
+            "Ponder sighed. “You bonded out yet?”",
+            "“Already done,” she replied, smug. “Same as every Friday.”",
+            "Tammy Jo was a local legend—her crimes were always petty, but her timing impeccable."
+          ]
+        }
+      ]
     }
   ]
 }
