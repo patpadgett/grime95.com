@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://grime95.com/</loc><lastmod>2026-09-21</lastmod><priority>1.0</priority></url>
+  <url><loc>https://grime95.com/</loc><lastmod>2026-09-22</lastmod><priority>1.0</priority></url>
   <url><loc>https://grime95.com/about/</loc><lastmod>2026-09-15</lastmod><priority>0.5</priority></url>
   <url><loc>https://grime95.com/rec/95-12-0001/</loc><lastmod>2026-09-15</lastmod><priority>0.8</priority></url>
   <url><loc>https://grime95.com/rec/95-12-0002/</loc><lastmod>2026-09-16</lastmod><priority>0.8</priority></url>
@@ -9,4 +9,5 @@
   <url><loc>https://grime95.com/rec/95-12-0005/</loc><lastmod>2026-09-19</lastmod><priority>0.8</priority></url>
   <url><loc>https://grime95.com/rec/95-12-0006/</loc><lastmod>2026-09-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://grime95.com/rec/95-12-0007/</loc><lastmod>2026-09-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://grime95.com/rec/95-12-0008/</loc><lastmod>2026-09-22</lastmod><priority>0.8</priority></url>
 </urlset>

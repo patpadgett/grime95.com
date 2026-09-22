@@ -233,6 +233,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "gary-wayne-mullins",
+      "first": "Gary Wayne",
+      "last": "Mullins",
+      "name": "Gary Wayne Mullins",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0008",
+          "date": "1995-12-02",
+          "charge": "Negligent operation of a motor vehicle",
+          "location": "Gas-N-Go",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/image06.jpg",
+          "tags": [
+            "traffic",
+            "gas station",
+            "donuts"
+          ],
+          "story": [
+            "Gary Wayne Mullins had one talent: falling asleep in the worst possible moments.",
+            "“Gary, wake up!” Sheriff Ponder banged the table. “You’re in jail, for Pete’s sake!”",
+            "Gary’s head jerked up. “Huh? Where am I?”",
+            "Deputy Hargrove shook his head. “You fell asleep at the gas station… again. Truck running, gear in neutral. Rolled straight into the donut rack.”",
+            "Gary winced. “Was anyone hurt?”",
+            "“Only the powdered donuts. Whole shelf toppled. Brenda Sue’s still sweeping up sugar.”",
+            "Gary nodded solemnly. “Reckon I should apologize.”",
+            "“Reckon you should stop napping in public places,” Ponder snapped. “Last week, it was the hardware store. Before that, the post office. I’m out of patience.”",
+            "Gary yawned. “Well, jail’s quiet. Can I catch a nap now?”",
+            "“You’re bonded out already,” Hargrove said. “Tammy Jo paid it.”",
+            "Gary scratched his head. “Tammy Jo? Why?”",
+            "“Don’t ask us,” Hargrove muttered. “She just said you’re ‘good for a laugh.’”"
+          ]
+        }
+      ]
     }
   ]
 }
