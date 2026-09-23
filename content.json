@@ -269,6 +269,34 @@
           ]
         }
       ]
+    },
+    {
+      "id": "buck-mcgraw",
+      "first": "Buck",
+      "last": "McGraw",
+      "name": "Buck McGraw",
+      "alias": "Honest Buck",
+      "arrests": [
+        {
+          "booking": "95-12-0009",
+          "date": "1995-12-02",
+          "charge": "Theft of fuel from a county vehicle",
+          "location": "The Rusty Spur",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/image07.jpg",
+          "tags": [
+            "theft",
+            "the rusty spur",
+            "poetry"
+          ],
+          "story": [
+            "The thing about “Honest Buck” McGraw is that nobody believes he’s honest, least of all himself. By the time he rolled into the station tonight smelling like diesel fuel, he was already two steps into trouble.",
+            "Buck had been drinking in a booth at the Rusty Spur, scribbling poetry about \"the beauty of oil stains on asphalt.\" By his third bourbon, the poem had somehow turned into a plan. Ten minutes later, he was sprawled under the sheriff’s cruiser in the parking lot, mouth-siphoning gasoline with the kind of passion usually reserved for true love or last rites.",
+            "When they dragged him in, still coughing up fumes, Buck just grinned through bloodied teeth. “A man’s gotta keep the engine running,” he slurred.",
+            "The mugshot shows him defiant, shirt stained with whiskey and grease, eyes daring the camera to blink first. Somewhere in the background, you can almost hear him mutter: “They’re gonna call this art one day.”"
+          ]
+        }
+      ]
     }
   ]
 }
