@@ -297,6 +297,36 @@
           ]
         }
       ]
+    },
+    {
+      "id": "rusty-jane-walker",
+      "first": "Rusty Jane",
+      "last": "Walker",
+      "name": "Rusty Jane Walker",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0010",
+          "date": "1995-12-02",
+          "charge": "Booked by wager; no charges filed",
+          "location": "County Fairgrounds",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/image02.jpg",
+          "tags": [
+            "county fair",
+            "chili cook-off",
+            "no charges"
+          ],
+          "story": [
+            "When Rusty Jane Walker walked into the county fair's chili cook-off, there was no mistaking her presence. With her hair permed into a mullet sharp enough to cut steel and a pair of denim overalls that looked like they’d been through more wars than peace treaties, she became an instant conversation starter—and ender. The overalls weren’t just her statement piece; they were her armor.",
+            "Rusty Jane had a knack for two things: out-eating anyone dumb enough to challenge her, and scaring off barflies with her thousand-yard stare. It was said she once stared down a runaway bull, and the bull apologized. But tonight wasn’t about livestock or looks—it was about chili, and Rusty Jane's concoction, “Fire in the Hole,” had earned her three consecutive first-place ribbons.",
+            "Except this year, Old Man Tugger decided to wager big against her. Tugger, with his \"secret family recipe\" (rumored to include wild mushrooms and a splash of moonshine), had upped the stakes: the loser had to pose for a mugshot in front of the fair’s fake county jail—an embarrassing rite of passage.",
+            "Rusty Jane didn't bat an eyelash. “Tugger,” she drawled, her voice lower than most men’s, “if I lose, I’ll even let you slap my mugshot on the billboard down Route 12.”",
+            "The contest was tight. Tugger’s chili made a judge cry actual tears, but Rusty Jane’s lit a fire in their souls. The deciding factor? A random carnie running through the fairgrounds screaming, \"Tugger used canned beans!\" Rusty Jane leaned back in her chair and roared with laughter as Tugger was dragged, fuming, to the photo booth.",
+            "Rusty Jane, ever the crowd-pleaser, stepped into the booth too. \"Take one for the fans,\" she told the photographer, deadpan. And thus, the legend of Rusty Jane’s mugshot was born."
+          ]
+        }
+      ]
     }
   ]
 }
