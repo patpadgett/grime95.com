@@ -327,6 +327,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "toby-rasmussen",
+      "first": "Toby",
+      "last": "Rasmussen",
+      "name": "Toby Rasmussen",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0011",
+          "date": "1995-12-02",
+          "time": "12:30 AM",
+          "charge": "Disturbing the peace (church bell, second ringing)",
+          "location": "First Methodist",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250613_130955659.jpg",
+          "tags": [
+            "church",
+            "noise",
+            "louella"
+          ],
+          "story": [
+            "The Methodists changed the bell-tower lock at noon after Louella Fenwick rang it fifty times at two in the morning for Verle. Left the key on a nail by the door. Well, hell. You can buy hardware; you can't buy suspicion.",
+            "By half past midnight Toby Rasmussen was up there. Twenty-four, dirty-blond, sale-barn hand. He'd spent the day chasing the cow, same as Jason Kimbrough, with the same damn results everybody got. Came to the Nail at ten and heard about Louella.",
+            "He rang eleven times.",
+            "\"Eleven?\" Deputy Stotts stood at the top of the stairs, out of breath again. Those steps hadn't got any shorter since her last trip.",
+            "\"I've had eleven beers.\"",
+            "\"That's not what she was doing, Toby.\"",
+            "\"I know what she was doing.\" He rang again. Twelve. \"That's for Verle. The other eleven were for me.\"",
+            "Stotts sat on the step, the second deputy today to park there. Reckon she could spare him a little time. She let him get to fifteen.",
+            "\"That's plenty, hon.\"",
+            "He agreed. Coming down, he asked whether Louella was still in. Yes. Could he be put in with her?",
+            "\"It's one cell, Toby. Everybody's in with her. Ain't a goddamn hotel.\"",
+            "He's startled in the Polaroid, lips parted, cream tee, looking like nobody mentioned the flash. Louella patted the bench. He sat. Neither said a word. The bell's got a new lock. Key's on the nail."
+          ]
+        }
+      ]
     }
   ]
 }
