@@ -364,6 +364,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "marcus-tillery",
+      "first": "Marcus",
+      "last": "Tillery",
+      "name": "Marcus Tillery",
+      "alias": "Monday Night",
+      "arrests": [
+        {
+          "booking": "95-12-0012",
+          "date": "1995-12-02",
+          "time": "12:40 AM",
+          "charge": "Assault with a fowl; disturbing the peace",
+          "location": "The Rusty Nail",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250105_014420605.jpg",
+          "tags": [
+            "rusty nail",
+            "football",
+            "poultry",
+            "livestock-adjacent"
+          ],
+          "story": [
+            "Marcus Tillery has worn the same Monday Night Football polo to the Rusty Nail every Saturday since 1989, on the theory that it confuses God. It has not confused God. It has confused a good many bartenders.",
+            "At 12:20 a.m. some jackass from Camdenton announced Nebraska would beat Florida by forty. Marcus had no dog in that fight and had never been within four hundred miles of Nebraska, but he'd won a frozen Butterball at the Legion turkey shoot and had been toting it around like a football for six hours, waiting on a reason.",
+            "\"It was a hand-off,\" he told Deputy Stotts. \"He just didn't have his goddamn hands ready.\"",
+            "The Camdenton fella lost a tooth. The turkey lost nothing. It is still froze solid. It is in evidence, in the break-room fridge, next to Hargrove's yogurt.",
+            "Dwight shot the Polaroid by the Coke machine because the real booking camera's been dead since Thanksgiving. Marcus stood there calm as a deacon at a funeral he didn't much care about and asked, polite as you please, if he might could get the turkey back by Christmas.",
+            "Dwight said that depended on the turkey.",
+            "Marcus said, \"Well, hell, it ain't going anywhere.\" God love him, he's right. It's still in there."
+          ]
+        }
+      ]
     }
   ]
 }
