@@ -397,6 +397,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "mason-ealy",
+      "first": "Mason",
+      "last": "Ealy",
+      "name": "Mason Ealy",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0013",
+          "date": "1995-12-02",
+          "time": "12:45 AM",
+          "charge": "Vandalism (courthouse star, attempted improvement, with a ladder)",
+          "location": "Courthouse square",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250613_131000582.jpg",
+          "tags": [
+            "courthouse",
+            "christmas lights",
+            "juvenile"
+          ],
+          "story": [
+            "Mason Ealy went after the courthouse flicker with a screwdriver and no particular way of reaching it. Fifteen years old. Bless his heart, at that age a ladder feels like most of a plan.",
+            "Chuck Ledbetter lit the courthouse star at 10:25 using a bucket truck he wasn't supposed to have. Grounded wrong, Manny Ortega said from the cell. At 12:40 a.m. Mason figured he might could fix it.",
+            "Fetched a ladder from the Rexall's alley. Got about a third of the way up the courthouse. What was he aiming to do at the top? Hadn't worked that part out. He admitted to \"a screwdriver and a feeling.\"",
+            "Gus Halloran, still on the steps under the star in his orange, watched him climb.",
+            "\"Son, you ain't gonna reach it.\"",
+            "\"I know.\"",
+            "\"Then what are you doing?\"",
+            "\"Trying.\"",
+            "Gus said okay and watched. Can't hardly fault the trying, though somebody ought to check the ladder.",
+            "Deputy Stotts came back from the bell tower with Toby Rasmussen and found a fifteen-year-old up against the courthouse and an escaped prisoner spotting him. She stopped. Stood there a spell. Then walked over and held the ladder herself while Mason came down. No sense scaring the boy into falling.",
+            "He's leaning right in the Polaroid, mouth open a little in a smile, blue tee with cursive on it. Curfew. Gus went back in with him. The star still flickers. It's kind of nice. Nobody says so."
+          ]
+        }
+      ]
     }
   ]
 }
