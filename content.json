@@ -433,6 +433,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "carla-beeson",
+      "first": "Carla",
+      "last": "Beeson",
+      "name": "Carla Beeson",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0014",
+          "date": "1995-12-02",
+          "time": "1:05 AM",
+          "charge": "Unlawful entry; impersonating a health inspector",
+          "location": "Hardee's",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250105_014436271.jpg",
+          "tags": [
+            "hardee's",
+            "impersonation",
+            "late night"
+          ],
+          "story": [
+            "Carla Beeson went through the Hardee's drive-thru at 12:50 a.m., ordered a Frisco burger, and got told the grill was down. Most folks would've gone home hungry. Carla said, \"Then I'll need to see the grill.\" Like the damn thing was on her insurance.",
+            "She parked, went through the employee door, and started opening reach-in coolers in oversized tinted glasses and her mother's plaid blouse. Wrote on a napkin. Said \"mm-hm\" with enough disappointment to make two employees start cleaning. Hell, that blouse alone could've made a boy wipe a counter.",
+            "The night manager, nineteen-year-old Colton, asked for credentials. Carla showed him a Blockbuster card. Bless her heart, she had identification. It just identified somebody who could rent a movie.",
+            "\"That's when I called,\" Colton told Deputy Stotts. \"It was more the confidence than the card.\"",
+            "\"You did fine, hon. Hard to argue with a woman already writing your shit down.\"",
+            "In the Polaroid Carla's hunched, lips parted, fixin' to declare the fryer oil a violation. It was. Nobody wrote it down. She'd come for supper and nearly improved the place.",
+            "The grill's still down."
+          ]
+        }
+      ]
     }
   ]
 }
