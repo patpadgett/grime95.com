@@ -465,6 +465,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "sal-bianchi",
+      "first": "Sal",
+      "last": "Bianchi",
+      "name": "Sal Bianchi",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0015",
+          "date": "1995-12-02",
+          "time": "1:15 AM",
+          "charge": "Running a book (on the cow)",
+          "location": "The Rusty Spur",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250613_131012765.jpg",
+          "tags": [
+            "rusty spur",
+            "gambling",
+            "the cow"
+          ],
+          "story": [
+            "Sal Bianchi gave a cow forty-to-one odds on going home, and now he owed a woman in jail two hundred dollars. That's a hell of a way to learn livestock.",
+            "He'd been taking bets since ten that morning. Where it'd be at noon. Whether it'd make the Nativity. Whether Duane Fenster would hit it, long odds, correctly. Caught by dark? By nine? By midnight? He offered forty to one on it walking into the sale barn on its own, for a joke.",
+            "Louella Fenwick put five dollars on that, from the cell, by phone, through Lyle Tackett's taxi. Damn cow walked into the sale barn on its own at ten.",
+            "At 1 a.m. Sal was at the Spur, book open on the bar, trying to figure out paying a woman in jail. Black-and-burgundy shirt, mustache, head tilted. You could about hear the arithmetic hurting.",
+            "\"Sal, that's a book.\"",
+            "\"It's a notebook.\"",
+            "\"It says 'COW' on the cover and it's got odds in it.\"",
+            "\"Everybody had a piece of that cow, Lula Mae.\"",
+            "Everybody did. She booked him. He asked for the cell so he could pay Louella in person. No bullshit about waiting till payday, either. God love Sal, he might price a cow wrong, but he paid cash.",
+            "Louella gave him twenty back. \"For the trouble.\" The whole cell watched like it was a wedding. Subdued in the Polaroid. Broke. Honest about it. The cow never knew."
+          ]
+        }
+      ]
     }
   ]
 }
