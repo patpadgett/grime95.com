@@ -533,6 +533,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "jordan-pettis",
+      "first": "Jordan",
+      "last": "Pettis",
+      "name": "Jordan Pettis",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0017",
+          "date": "1995-12-02",
+          "time": "1:45 AM",
+          "charge": "Interfering with a jailer (haircut, unsolicited, on Dwight)",
+          "location": "Sheriff's Office",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250613_131026896.jpg",
+          "tags": [
+            "in-house",
+            "hair",
+            "dwight"
+          ],
+          "story": [
+            "Misty Rawlins did forty heads of hair through the cell bars with an Avon comb between 6:45 and 9, and got out at ten, and left the comb, and at 1:30 a.m. Jordan Pettis -- twenty-six, mint-green tank top in December, not a hairdresser but has \"watched\" -- picked it up.",
+            "He didn't go for the cell, the sneaky son of a bitch. The cell was done. He went for Dwight.",
+            "Dwight was asleep. Sitting up at the counter, head down, the stolen Spectra in front of him, out cold for the first time since Friday. And Jordan stood behind him with that comb and looked at Dwight's hair, which lives under a ZEBCO cap at all times and had not been seen by living eyes in years, and lifted the cap.",
+            "He got about four minutes in before the Sheriff came out of his office and stopped dead.",
+            "\"Jordan.\"",
+            "\"Shh.\"",
+            "\"What in the goddamn --\"",
+            "\"He's had a DAY, Marvin. Look at him. Man's been rode hard and put up wet since Friday. Let me do this one thing.\"",
+            "The Sheriff looked. Dwight, asleep, his hair -- Lord, there's more of it than anybody thought -- being combed real gentle by a man in a tank top at two in the morning, and the Sheriff, who is not a soft man but has his moments, said, quiet, \"Finish, then,\" and Jordan did.",
+            "He's got his arms behind his back in the Polaroid, serious, like a man who's done something he can't undo and wouldn't if he could. Dwight woke up at three with a part. He kept it. Nobody's said a damn word. Everybody's noticed. Hailey says he looks like a weatherman."
+          ]
+        }
+      ]
     }
   ]
 }
