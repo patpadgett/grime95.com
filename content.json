@@ -568,6 +568,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "deborah-kincaid",
+      "first": "Deborah",
+      "last": "Kincaid",
+      "name": "Deborah Kincaid",
+      "alias": "The Realtor",
+      "arrests": [
+        {
+          "booking": "95-12-0018",
+          "date": "1995-12-02",
+          "time": "1:50 AM",
+          "charge": "Trespass; attempted showing of an occupied residence",
+          "location": "412 Poplar St.",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250105_014640226.jpg",
+          "tags": [
+            "trespass",
+            "real estate",
+            "poplar street"
+          ],
+          "story": [
+            "Deborah Kincaid sold four houses in 1995 and has never once slept through the night. Some folks count sheep. Deborah probably wonders what the damn pasture would appraise for.",
+            "At 1:40 a.m. she let herself into 412 Poplar with a lockbox key, herringbone coat over a red top, and commenced selling the crown molding to a couple she'd collected in the Rusty Nail parking lot. They weren't buyers. They were drunk. The house wasn't for sale, and the Hendersons were asleep upstairs, enjoying what they thought was ownership.",
+            "“Original hardwoods,” Deborah said when Mr. Henderson came down with a bat.",
+            "She handed him a card. God love her, a man could come downstairs carrying hell on a stick and she'd see a referral.",
+            "Deputy Stotts found the couple in the kitchen eating the Hendersons' pie and Deborah measuring the master closet.",
+            "“Deborah, these people live here.”",
+            "“Well, sure. Shows the place works.”",
+            "She went quietly. Ain't a mean bone in her; just no off switch anybody's located. Her eyes are nearly closed in the Polaroid. Not shame. She hasn't slept since the Tuesday after Labor Day, and shit, that'd make anybody confuse a felony with an open house.",
+            "The Hendersons have listed the house. With her."
+          ]
+        }
+      ]
     }
   ]
 }
