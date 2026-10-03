@@ -602,6 +602,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "louella-fenwick",
+      "first": "Louella",
+      "last": "Fenwick",
+      "name": "Louella Fenwick",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0019",
+          "date": "1995-12-02",
+          "time": "2:15 AM",
+          "charge": "Public intoxication; unlawful use of a church bell",
+          "location": "First Methodist",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_014647744.jpg",
+          "tags": [
+            "church",
+            "public intoxication",
+            "noise"
+          ],
+          "story": [
+            "First Methodist rang forty-one times at two in the morning. Sheriff Ponder counted every damn one before he got dressed. You give a church bell that much rope, you generally ain't announcing a bake sale.",
+            "Louella Fenwick was up in the tower wearing her cream blouse and one shoe, with most of a bottle of Boone's Farm. She held the rope like she was waiting on a bus that ought to know better by now.",
+            "“How many is that?”",
+            "“Forty-one.”",
+            "“I was married forty-one years, Marvin.” She pulled again. “Forty-two.”",
+            "Well, hell. The Sheriff sat on the tower steps. He'd known Louella since fourth grade and her husband Verle since third. Verle was buried the Tuesday before Thanksgiving. You can look through that whole statute book and not find what to do with a woman who's still got years to count and nobody to count them with.",
+            "He let her get to fifty. Didn't hurry her a bit. Then he drove her in, and Dwight took the Polaroid: chin down, one hand curled at her chest, holding nothing.",
+            "Nobody filed the damn paperwork. The Methodists changed the lock."
+          ]
+        }
+      ]
     }
   ]
 }
