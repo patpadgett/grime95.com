@@ -635,6 +635,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "jo-bob-sackett",
+      "first": "Jo",
+      "last": "Bob Sackett",
+      "name": "Jo Bob Sackett",
+      "alias": "Santa",
+      "arrests": [
+        {
+          "booking": "95-12-0020",
+          "date": "1995-12-02",
+          "time": "2:15 AM",
+          "charge": "Photographed with the wrong slate; identity disputed",
+          "location": "Sheriff's Office",
+          "officer": "Dwight Pruitt (jailer)",
+          "mugshot": "assets/mugshots/IMG_20250613_131055487.jpg",
+          "tags": [
+            "in-house",
+            "santa",
+            "slate",
+            "identity"
+          ],
+          "story": [
+            "Jo Bob Sackett is the only man in the whole Polaroid run holding a booking slate. Brought his own. County service had got so poor even Santa was supplying materials.",
+            "The real Santa. Parade Santa. Went into the Legion for one beer at 9:20 that morning and came out to Nathan Coble driving his float to the Pentecostals in his suit. Jo Bob spent the day hunting suit, float, tractor, and eventually Larry Boggs, who'd driven the whole mess to his mother's. By 2 a.m. he'd found none of it. Came to jail to report himself.",
+            "\"As what?\" Dwight asked.",
+            "\"Missing.\"",
+            "\"You're right damn here.\"",
+            "\"That's what missing people always say.\"",
+            "Hell, try arguing with that after the day Dwight had. Jo Bob's slate was a shoebox lid: JO BOB in Sharpie, SANTA underneath, then ASK, smaller. Black shirt, white beard, wristwatch. Not smiling. Most convincing Santa in the county, and somebody else had his pants.",
+            "\"You can't file yourself missing, Jo Bob.\"",
+            "\"Lacey Harmon did.\"",
+            "Another point. Everybody had a point today and nobody had a goddamn solution. Dwight shot him holding the slate.",
+            "He's in the cell. The suit's in evidence with the mayonnaise. Nathan Coble apologized. Jo Bob said the kid did fine. That's our Santa: day ruined, still making sure the boy knows he ain't."
+          ]
+        }
+      ]
     }
   ]
 }
