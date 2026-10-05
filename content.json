@@ -672,6 +672,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ned-arbogast",
+      "first": "Ned",
+      "last": "Arbogast",
+      "name": "Ned Arbogast",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0021",
+          "date": "1995-12-02",
+          "time": "2:30 AM",
+          "charge": "Filed under the wrong county (Henry); wrong year; charge unknown",
+          "location": "Sheriff's Office",
+          "officer": "Dwight Pruitt (jailer)",
+          "mugshot": "assets/mugshots/IMG_20250613_131102964.jpg",
+          "tags": [
+            "henry county",
+            "misfiled",
+            "state camera"
+          ],
+          "story": [
+            "At 2:30 a.m., forty-eight Polaroids into the Rexall Spectra, Dwight found a manila envelope under the booking desk: HENRY COUNTY -- RETURN. Four proper booking photos inside, front and profile, black slate, state camera. County south of here. Dates scattered through 1996, which hadn't happened yet.",
+            "He put them in the stack. Hell, why let the calendar get bossy now?",
+            "Says it was an accident. Says he was tired. Says a picture's a picture. Here comes Ned Arbogast, plaid over teal, hair retreating hard, holding HENRY COUNTY SHERIFF DEPT 03 30 96 like somebody asked him to and he'd rather not prolong the discussion.",
+            "Nobody in Ponder County knows Ned Arbogast. Nobody here's been to Henry County on purpose. Monday the Sheriff called. They'd never heard of Ned either, hadn't sent an envelope, and wanted to know what year it was. Damn good question. Wrong office to ask.",
+            "Ned ain't in the cell. Never was. He's between Jo Bob Sackett and a woman with a cup in the stack, serious, sideways and then forward, from a March that hasn't come, in a county denying custody of his very existence. He'll be there forever. That's some durable clerical bullshit.",
+            "Dwight says he looks “like he belongs.”",
+            "He does. Everybody does by now. Don't know the fellow, but there's room for his picture."
+          ]
+        }
+      ]
     }
   ]
 }
