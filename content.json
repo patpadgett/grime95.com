@@ -704,6 +704,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "lamar-quisenberry",
+      "first": "Lamar",
+      "last": "Quisenberry",
+      "name": "Lamar Quisenberry",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0022",
+          "date": "1995-12-02",
+          "time": "2:35 AM",
+          "charge": "Misfiled (Henry County); monochrome; possibly not a person",
+          "location": "Sheriff's Office",
+          "officer": "Dwight Pruitt (jailer)",
+          "mugshot": "assets/mugshots/IMG_20250613_131110521.jpg",
+          "tags": [
+            "henry county",
+            "misfiled",
+            "state camera"
+          ],
+          "story": [
+            "The second Henry County photo is blue all over. Front and profile, mullet, raglan shirt, slate. Whatever camera took it made the whole works underwater green-blue. Poor fella looks like somebody already remembers him wrong.",
+            "The slate says Lamar Quisenberry. Or Dwight read Lamar Quisenberry at 2:35 in the morning and wrote it down. At that hour your name's whatever the awake man can spell. Be grateful it ain't “goddamn blur.”",
+            "Nobody's claimed him. Henry County says no. Ponder County says no. Lamar, wherever and whenever he is, hasn't weighed in. Reckon he might like a vote.",
+            "Louella Fenwick studied the photo through the bars.",
+            "“Oh, that's Verle's cousin's boy.”",
+            "Looked again. “No it isn't.”",
+            "Third look. “Well, it might be.”",
+            "That's the closest we got. Three identifications, all from one woman, and none worth a shit in court.",
+            "He's unsmiling both ways, holding the slate like he's held one before. There's a longer story somewhere, some year, some county with a working camera. Ain't a bit of it here.",
+            "Dwight put him between a Santa and a Chiefs fan anyway. Decent enough company for a man nobody can place. By 2:35 a.m. the record had quit being about who did what. Hell, we were past that.",
+            "It's about who was in the pile. Lamar's in the pile."
+          ]
+        }
+      ]
     }
   ]
 }
