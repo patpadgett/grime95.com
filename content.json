@@ -740,6 +740,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tony-vasquez",
+      "first": "Tony",
+      "last": "Vasquez",
+      "name": "Tony Vasquez",
+      "alias": "Elkins-Swyers",
+      "arrests": [
+        {
+          "booking": "95-12-0023",
+          "date": "1995-12-02",
+          "time": "2:40 AM",
+          "charge": "Theft of promotional calendars (34 count)",
+          "location": "Elkins-Swyers Co. Inc.",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_014657821.jpg",
+          "tags": [
+            "theft",
+            "calendars",
+            "office supply"
+          ],
+          "story": [
+            "Every calendar on every wall of the Ponder County jail says Elkins-Swyers Co. Inc., 1-800-741-0908. Not a damn one says December. Tony Vasquez has supplied the county with all the January it can stand.",
+            "Tony drives for Elkins-Swyers. Back in January somebody told him to get the calendars out, and he took that to heart. Bars, church basements, sheriff's offices. God love him, the man distributed time like folks were fixin' to run short.",
+            "Come December he still had thirty-four in the truck. Thirty-four was enough to get asked about. Tony wasn't scared of work; he was scared of standing by a desk while somebody counted shit.",
+            "At 2:30 a.m. Deputy Hargrove found him behind the Elkins-Swyers warehouse, feeding the leftovers back through a window. Salmon-striped shirt over a teal tee. Dressed for a vacation, working a reverse burglary.",
+            "\"Tony, what the hell are you doing?\"",
+            "\"They're not stolen, they're unreturned.\"",
+            "\"You're putting them in.\"",
+            "\"Well, I ain't gonna fix it taking more out.\"",
+            "Hard to fault that part. The rest was bullshit, but that part stood up real good.",
+            "Dwight shot the Polaroid in front of one of the calendars. January 1995. Tony did not look at it. He'd already had that month up to here."
+          ]
+        }
+      ]
     }
   ]
 }
