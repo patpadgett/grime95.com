@@ -775,6 +775,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "homer-stroud",
+      "first": "Homer",
+      "last": "Stroud",
+      "name": "Homer Stroud",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0024",
+          "date": "1995-12-02",
+          "time": "2:40 AM",
+          "charge": "Misfiled (Henry County, 09 28 96); a future Homer",
+          "location": "Sheriff's Office",
+          "officer": "Dwight Pruitt (jailer)",
+          "mugshot": "assets/mugshots/IMG_20250613_131117617.jpg",
+          "tags": [
+            "henry county",
+            "misfiled",
+            "state camera"
+          ],
+          "story": [
+            "The third Henry County photo is dated September 28, 1996. Ten months from now. Well, shit. Most counties can't file yesterday right; this one's already disappointed in next September.",
+            "Homer Stroud. Fifty-some, cap and plaid shirt, two unsmiling views, holding a slate for something he ain't done yet.",
+            "Dwight held it up to the cell at 2:40 a.m. \"Anybody know a Homer?\" Everybody did. Everybody knows a Homer. This particular Homer was the difficulty.",
+            "Norman Petrie, Legion adjutant, eating his own raffled ham through the bars, said, \"That's Homer Stroud. From Clinton. He does gutters.\"",
+            "\"Has he been arrested?\"",
+            "\"Not yet.\"",
+            "\"It says September.\"",
+            "Norman studied it. \"Well, hell. He's gonna be.\" Then back to his ham. A man can only worry about so much on an empty fork.",
+            "So Homer Stroud does gutters in Clinton, hasn't done whatever he's fixin' to do, and his picture sits in the Ponder County December 2 stack anyhow. God love him, he's getting a head start on a bad day.",
+            "The Sheriff called Clinton on Monday, got Homer himself, asked was everything all right. Homer said yes, why. The Sheriff said no reason, hung up, and sat there. What the damn hell do you warn a man against? September?",
+            "Dwight says it's the only Polaroid in the stack that's \"still developing.\""
+          ]
+        }
+      ]
     }
   ]
 }
