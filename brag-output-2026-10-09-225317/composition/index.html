@@ -1,0 +1,386 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face {
+    font-family: 'IBMVGA8x16';
+    src: url('assets/fonts/IBMVGA8x16.woff2') format('woff2');
+    font-display: block;
+  }
+  @font-face {
+    font-family: 'CourierPrime';
+    src: url('assets/fonts/CourierPrime-400.woff2') format('woff2');
+    font-weight: 400;
+    font-display: block;
+  }
+  @font-face {
+    font-family: 'CourierPrime';
+    src: url('assets/fonts/CourierPrime-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: block;
+  }
+
+  :root {
+    --blue:  #0000aa;
+    --black: #000000;
+    --dgray: #555555;
+    --lgray: #aaaaaa;
+    --white: #ffffff;
+    --yellow:#ffff55;
+    --cyan:  #00aaaa;
+    --lgreen:#55ff55;
+    --paper: #f3f0e6;
+    --bar:   #d5e6d3;
+    --ink:   #1c1a17;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { width: 100%; height: 100%; background: #000; overflow: hidden; }
+
+  #stage {
+    position: absolute; inset: 0;
+    width: 1920px; height: 1080px;
+    background: var(--blue);
+    font-family: 'IBMVGA8x16', 'Courier New', monospace;
+    color: var(--white);
+    overflow: hidden;
+    /* CRT scanlines */
+  }
+  #stage::after {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none; z-index: 90;
+    background: repeating-linear-gradient(to bottom, transparent 0 3px, rgba(0,0,0,0.10) 3px 4px);
+  }
+  #stage::before {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none; z-index: 91;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.35) 100%);
+  }
+
+  .scene { position: absolute; inset: 0; }
+
+  /* ---------- top status bar ---------- */
+  .tbar {
+    position: absolute; top: 0; left: 0; right: 0; height: 46px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--lgray); color: var(--black);
+    padding: 0 22px; font-size: 26px; letter-spacing: 1px;
+  }
+
+  /* ---------- boot ---------- */
+  #scene-boot { background: var(--black); z-index: 40; display: flex; flex-direction: column; justify-content: center; padding: 0 120px; }
+  #boot-line {
+    color: var(--lgreen); font-size: 30px; white-space: pre; line-height: 1.4;
+    text-shadow: 0 0 6px rgba(85,255,85,0.4);
+  }
+  #boot-caret { display: inline-block; width: 18px; height: 34px; background: var(--lgreen); vertical-align: text-bottom; }
+
+  /* ---------- ledger / terminal ---------- */
+  .term { position: absolute; inset: 0; padding: 62px 60px 40px; display: flex; flex-direction: column; gap: 10px; }
+
+  .ascii {
+    color: var(--white); font-size: 30px; line-height: 1.05; white-space: pre; letter-spacing: 0;
+    text-shadow: 0 0 8px rgba(255,255,255,0.15);
+  }
+  .ascii b { color: var(--white); font-weight: normal; }
+  .ascii i { color: var(--lgreen); font-style: normal; }
+
+  .tagline { color: var(--lgray); font-size: 24px; letter-spacing: 2px; }
+
+  /* ledger table */
+  .ledger { border: 2px solid var(--lgray); background: var(--black); }
+  .ledger__hd, .row {
+    display: grid;
+    grid-template-columns: 150px 320px 180px 1fr 70px;
+    align-items: center; gap: 12px;
+    padding: 9px 14px; font-size: 23px; line-height: 1.15;
+  }
+  .ledger__hd { background: var(--lgray); color: var(--black); font-weight: normal; letter-spacing: 1px; }
+  .row { color: var(--lgray); border-top: 1px solid #222; }
+  .row .c-bkg { color: var(--cyan); }
+  .row .c-name { color: var(--white); }
+  .row .c-chg { color: var(--lgray); }
+  .row mark { background: var(--yellow); color: var(--black); padding: 0 2px; }
+  .row.is-cursor { background: var(--lgray); }
+  .row.is-cursor .c-bkg, .row.is-cursor .c-name, .row.is-cursor .c-chg { color: var(--black); }
+  .row.is-cursor .c-bkg { color: #0033aa; }
+  .row.is-cursor mark { background: var(--black); color: var(--yellow); }
+  .row.is-killer .c-chg { color: var(--white); }
+
+  /* find bar */
+  .find { display: flex; align-items: center; gap: 26px; color: var(--white); font-size: 25px; }
+  .find .lab { color: var(--lgray); letter-spacing: 1px; }
+  .find__field {
+    background: var(--black); border: 2px solid var(--lgray); padding: 8px 14px; min-width: 420px;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  #find-text { color: var(--white); letter-spacing: 2px; }
+  .find__caret { display: inline-block; width: 14px; height: 28px; background: var(--white); }
+  .find .status { color: var(--lgreen); }
+
+  /* ---------- printout ---------- */
+  #scene-record { background: var(--blue); z-index: 30; }
+  .record-wrap {
+    position: absolute; inset: 0; padding: 70px 60px 40px;
+    display: grid; grid-template-columns: 420px 1fr; gap: 40px; align-items: start;
+  }
+  .mug { border: 4px solid var(--lgray); background: var(--black); padding: 8px; }
+  .mug img { display: block; width: 100%; height: auto; filter: grayscale(0.2) contrast(1.05); }
+  .mug__cap { color: var(--lgray); font-size: 20px; margin-top: 10px; letter-spacing: 1px; text-align: center; }
+
+  .printer { position: relative; height: 620px; overflow: hidden; }
+  .paper {
+    position: absolute; left: 0; top: 0; width: 100%;
+    background:
+      repeating-linear-gradient(to bottom, var(--bar) 0 26px, var(--paper) 26px 48px);
+    border-top: 6px solid var(--bar);
+    padding: 26px 40px 40px; color: var(--ink);
+    font-family: 'CourierPrime', 'Courier New', monospace; font-size: 26px; line-height: 1.5;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  .paper h3 { font-family: 'IBMVGA8x16','Courier New',monospace; font-size: 26px; color: var(--ink); letter-spacing: 1px; margin-bottom: 6px; }
+  .paper .charge { font-family: 'IBMVGA8x16','Courier New',monospace; font-size: 20px; color: #55504a; letter-spacing: 1px; margin-bottom: 16px; }
+  .paper p { margin-bottom: 12px; }
+  .paper .sig { font-style: italic; color: #55504a; font-size: 22px; margin-top: 8px; }
+
+  /* ---------- outro ---------- */
+  #scene-outro { background: var(--blue); z-index: 35; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; }
+  #outro-disc { color: var(--yellow); font-size: 40px; letter-spacing: 3px; }
+  #outro-logo { color: var(--white); font-size: 46px; letter-spacing: 4px; text-shadow: 0 0 12px rgba(255,255,255,0.2); }
+  #outro-cta { color: var(--lgray); font-size: 24px; letter-spacing: 2px; }
+
+  .hidden { visibility: hidden; }
+</style>
+</head>
+<body>
+<div id="stage"
+     data-composition-id="root"
+     data-start="0"
+     data-duration="20"
+     data-width="1920"
+     data-height="1080">
+
+  <audio id="music" data-start="0" data-duration="20" data-track-index="2" data-volume="0.28" src="assets/music/happy-beats-business-moves-vol-9-by-ende-dot-app.mp3"></audio>
+
+  <!-- ============ SCENE 1: BOOT (0.0 - 2.0) ============ -->
+  <div class="scene" id="scene-boot">
+    <div id="boot-line">PONDER CO. SHERIFF'S DEPT.<span id="boot-caret"></span></div>
+  </div>
+
+  <!-- ============ SCENE 2: LEDGER (2.0 - 8.0) ============ -->
+  <div class="scene term" id="scene-ledger">
+    <div class="tbar">
+      <span>PONDER CO. SHERIFF'S DEPT.</span>
+      <span>BOOKING RECORDS INQUIRY</span>
+      <span>TERM 03 &nbsp; SAT 12-02-1995</span>
+    </div>
+
+    <pre class="ascii" id="ascii"><b> ██████  ██████  ██ ███    ███ ███████ </b><i> █████  ███████ ██ </i>
+<b>██       ██   ██ ██ ████  ████ ██      </b><i>██   ██ ██      ██ </i>
+<b>██   ███ ██████  ██ ██ ████ ██ █████   </b><i> ██████ ███████ ██ </i>
+<b>██    ██ ██   ██ ██ ██  ██  ██ ██      </b><i>     ██      ██    </i>
+<b> ██████  ██   ██ ██ ██      ██ ███████ </b><i> █████  ███████ ██ </i></pre>
+    <div class="tagline">SMALL-TOWN STORIES FROM SATURDAY, DECEMBER 2, 1995</div>
+
+    <div class="ledger" id="ledger">
+      <div class="ledger__hd">
+        <span>BKG NO</span><span>NAME</span><span>AKA</span><span>CHARGE</span><span>PRI</span>
+      </div>
+      <div class="row" data-row="1"><span class="c-bkg">95-12-0021</span><span class="c-name">ARBOGAST, NED</span><span class="c-aka"></span><span class="c-chg">FILED UNDER THE WRONG COUNTY (HENRY); WRONG YEAR; CHARGE UNKNOWN</span><span class="c-pri"></span></div>
+      <div class="row" data-row="2"><span class="c-bkg">95-12-0007</span><span class="c-name">CARTER, TAMMY JO</span><span class="c-aka"></span><span class="c-chg">GRAND THEFT CART; VANDALISM; RELEASE OF LIVESTOCK</span><span class="c-pri"></span></div>
+      <div class="row" data-row="3"><span class="c-bkg">95-12-0016</span><span class="c-name">PEAVEY, HARLAN</span><span class="c-aka"></span><span class="c-chg">RECEIVING STOLEN PROPERTY (ONE PROSTHETIC LEG)</span><span class="c-pri"></span></div>
+      <div class="row" data-row="4"><span class="c-bkg">95-12-0012</span><span class="c-name">TILLERY, MARCUS</span><span class="c-aka">"MONDAY NIGHT"</span><span class="c-chg">ASSAULT WITH A FOWL; DISTURBING THE PEACE</span><span class="c-pri"></span></div>
+      <div class="row" data-row="5"><span class="c-bkg">95-12-0015</span><span class="c-name">BIANCHI, SAL</span><span class="c-aka"></span><span class="c-chg">RUNNING A BOOK (ON THE COW)</span><span class="c-pri"></span></div>
+    </div>
+
+    <div class="find">
+      <span class="lab">FIND:</span>
+      <span class="find__field"><span id="find-text"></span><span class="find__caret"></span></span>
+      <span class="status" id="find-status"></span>
+    </div>
+  </div>
+
+  <!-- ============ SCENE 3: FIND (8.0 - 11.5) shares the ledger ============ -->
+
+  <!-- ============ SCENE 4: RECORD / PRINTOUT (11.5 - 17.0) ============ -->
+  <div class="scene hidden" id="scene-record">
+    <div class="record-wrap">
+      <div>
+        <div class="mug"><img src="assets/mugshot.jpg" alt="Tammy Jo Carter mugshot"></div>
+        <div class="mug__cap">IMAGING · 95-12-0007</div>
+      </div>
+      <div class="printer">
+        <div class="paper" id="paper" data-layout-allow-overflow>
+          <h3>TAMMY JO CARTER</h3>
+          <div class="charge">95-12-0007 · GRAND THEFT CART; VANDALISM; RELEASE OF LIVESTOCK</div>
+          <p>Tammy Jo Carter sat in the holding room, her sweater pristine despite the chaos she&rsquo;d caused.</p>
+          <p>&ldquo;So,&rdquo; began Deputy Hargrove, holding back a grin. &ldquo;You stole Billy Ray&rsquo;s nacho cart and drove it into the gazebo?&rdquo;</p>
+          <p>Tammy Jo nodded, unbothered. &ldquo;It was blocking the bingo hall. The ladies were restless.&rdquo;</p>
+          <p class="sig">&mdash; Ponder Co. Sheriff&rsquo;s Dept. &middot; filed by Deputy Hargrove</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SCENE 5: OUTRO (17.0 - 20.0) ============ -->
+  <div class="scene hidden" id="scene-outro">
+    <div id="outro-disc">ALL PERSONS AND EVENTS ARE FICTION.</div>
+    <div id="outro-logo">GRIME95!</div>
+    <div id="outro-cta">ONE NEW BOOKING FILED EVERY DAY AT 12:00 NOON EASTERN.</div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+window.__timelines = window.__timelines || {};
+
+const $  = (s) => document.querySelector(s);
+const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+const tl = gsap.timeline({ paused: true });
+
+/* ---------- initial states ---------- */
+gsap.set("#scene-boot", { autoAlpha: 1 });
+gsap.set("#scene-ledger", { autoAlpha: 0 });
+gsap.set("#scene-record", { autoAlpha: 0 });
+gsap.set("#scene-outro", { autoAlpha: 0 });
+gsap.set(".ascii, .tagline", { opacity: 0 });
+gsap.set(".row", { opacity: 0, y: 12 });
+gsap.set("#find-text", { width: 0 });
+gsap.set("#paper", { y: -560 });
+
+/* =========================================================
+   SCENE 1 — BOOT (0.0 - 2.0)
+   ========================================================= */
+// caret blink (finite repeat)
+tl.to("#boot-caret", { opacity: 0, duration: 0.18, repeat: 10, yoyo: true, ease: "none" }, 0.2);
+
+// power-on: blue field floods, boot line exits up
+tl.to("#scene-boot", { autoAlpha: 0, duration: 0.25, ease: "power2.in" }, 1.75);
+tl.set("#scene-boot", { visibility: "hidden" }, 2.0);
+tl.set("#scene-ledger", { visibility: "visible" }, 2.0);
+tl.fromTo("#scene-ledger", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, ease: "power2.out" }, 2.0);
+
+/* =========================================================
+   SCENE 2 — LEDGER (2.0 - 8.0)
+   ========================================================= */
+// ASCII banner assembles line by line  (~2.3 - 3.2)
+tl.to(".ascii", { opacity: 1, duration: 0.15 }, 2.25);
+$$(".ascii").forEach((el) => {
+  tl.fromTo(el, { opacity: 0, y: -6 }, { opacity: 1, y: 0, duration: 0.2, ease: "steps(2)" }, 2.3);
+});
+// tagline (settled ~0.8s)  beat-grid: ~3.18
+tl.fromTo(".tagline", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power1.out" }, 3.18);
+
+// ledger header
+tl.fromTo(".ledger__hd", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "none" }, 4.23); // beat-locked: strong cue 4.23
+
+// rows fill top to bottom on the beat grid  (4.75, 5.28, 5.80, 6.34, 6.86)
+const rowTimes = [4.75, 5.28, 5.80, 6.34, 6.86]; // beat-grid: consecutive beats
+$$(".row").forEach((row, i) => {
+  const t = rowTimes[i] || 6.86;
+  tl.fromTo(row, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.22, ease: "steps(3)" }, t);
+});
+
+// cursor settles on Tammy Jo Carter (row 2)  beat-locked: strong cue 7.40
+tl.add(() => {
+  $$(".row").forEach((r) => r.classList.remove("is-cursor"));
+  const r2 = document.querySelector('.row[data-row="2"]');
+  if (r2) r2.classList.add("is-cursor");
+}, null, 7.40);
+// highlight killer charge rows (white charge text) after they land
+tl.to('.row[data-row="2"] .c-chg, .row[data-row="3"] .c-chg, .row[data-row="4"] .c-chg',
+      { color: "#ffffff", duration: 0.2, ease: "none" }, 6.9);
+
+// clear the cursor highlight before the FIND filter dims rows (keeps contrast legible)
+tl.add(() => {
+  $$(".row").forEach((r) => r.classList.remove("is-cursor"));
+}, null, 8.30);
+
+/* =========================================================
+   SCENE 3 — FIND (8.0 - 11.5)
+   ========================================================= */
+// find field visible from start of ledger scene; type "COW" char by char on beats
+const cowChars = ["C", "O", "W"];
+const cowTimes = [8.44, 8.96, 9.50]; // beat-grid: consecutive beats
+cowChars.forEach((ch, i) => {
+  tl.add(() => {
+    const el = $("#find-text");
+    el.textContent = cowChars.slice(0, i + 1).join("");
+  }, null, cowTimes[i]);
+});
+
+// at 10.54 (strong cue) filter: keep the two COW rows (Sal Bianchi + any), highlight mark
+tl.add(() => {
+  // highlight COW matches
+  $$(".row").forEach((row) => {
+    const chg = row.querySelector(".c-chg");
+    if (chg && chg.textContent.includes("COW")) {
+      chg.innerHTML = chg.textContent.replace("COW", "<mark>COW</mark>");
+    }
+  });
+  // dim non-matching rows (keep a legible floor so contrast holds)
+  $$(".row").forEach((row) => {
+    const chg = row.querySelector(".c-chg");
+    const isMatch = chg && chg.textContent.includes("COW");
+    gsap.to(row, { opacity: isMatch ? 1 : 0.5, duration: 0.2, ease: "none" });
+  });
+  $("#find-status").textContent = "1 RECORD MATCHES";
+}, null, 10.54);
+
+// status counts up, then clear the find as we open the record
+tl.fromTo("#find-status", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 10.54);
+
+/* =========================================================
+   SCENE 4 — RECORD / PRINTOUT (11.5 - 17.0)
+   ========================================================= */
+// ledger exits, record scene enters (the transition IS the exit — hard cut on strong cue 11.60)
+tl.set("#scene-ledger", { visibility: "hidden" }, 11.60);
+tl.set("#scene-record", { visibility: "visible" }, 11.60);
+tl.fromTo("#scene-record", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, ease: "power2.out" }, 11.60);
+
+// mugshot snaps in
+tl.fromTo(".mug", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.25, ease: "steps(3)" }, 12.12); // beat 12.12
+tl.fromTo(".mug__cap", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 12.65); // beat 12.65
+
+// paper feeds out from the printer — beat-locked: strong cue 12.65 (the payoff)
+tl.to("#paper", { y: 0, duration: 1.6, ease: "none" }, 12.65);
+// paper continues to settle / hold
+// (the paper div is taller than the viewport window; sliding y:0 reveals the top; text prints top-down)
+
+// reveal the story lines progressively as the paper feeds (every-other-beat to stay readable)
+const lineTimes = [13.18, 13.70, 14.22]; // beat-grid: consecutive beats for the 3 prose lines
+$$("#paper p").forEach((p, i) => {
+  if (i < 3) {
+    tl.fromTo(p, { opacity: 0 }, { opacity: 1, duration: 0.18, ease: "none" }, lineTimes[i]);
+  }
+});
+// signature line last
+tl.fromTo("#paper .sig", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.out" }, 15.28); // beat 15.28
+
+/* =========================================================
+   SCENE 5 — OUTRO (17.0 - 20.0)
+   ========================================================= */
+tl.set("#scene-record", { visibility: "hidden" }, 17.0);
+tl.set("#scene-outro", { visibility: "visible" }, 17.0);
+tl.fromTo("#scene-outro", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, ease: "power2.out" }, 17.0);
+
+// disclaimer lands — beat-locked: strong cue 17.38
+tl.fromTo("#outro-disc", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power1.out" }, 17.38);
+// logo lockup
+tl.fromTo("#outro-logo", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.4)" }, 17.91);
+// CTA
+tl.fromTo("#outro-cta", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 18.44);
+
+// final scene may fade the music out (duck) — handled via audio track; fade outro text slightly at very end
+tl.to("#outro-cta", { opacity: 0.55, duration: 0.6, ease: "power1.in" }, 19.3);
+
+/* register */
+window.__timelines["root"] = tl;
+</script>
+</body>
+</html>
