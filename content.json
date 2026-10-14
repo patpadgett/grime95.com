@@ -981,6 +981,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "bonnie-threlkeld",
+      "first": "Bonnie",
+      "last": "Threlkeld",
+      "name": "Bonnie Threlkeld",
+      "alias": "Bingo Bonnie",
+      "arrests": [
+        {
+          "booking": "95-12-0030",
+          "date": "1995-12-02",
+          "time": "4:45 AM",
+          "charge": "Filing a false report; theft by deception (bingo prizes)",
+          "location": "Bingo Hall",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015714379.jpg",
+          "tags": [
+            "bingo hall",
+            "fraud",
+            "nacho cart"
+          ],
+          "story": [
+            "Bonnie Threlkeld called in the nacho cart theft at 4:20 a.m. and gave particulars fit for a deposition. Tammy Jo Carter had wheeled it out the side door of the bingo hall. True as could be. Bonnie just left out who'd unlocked the door, turned off the alarm, and filled the cart.",
+            "Bonnie had. Woman had done every damn thing but get there first.",
+            "She runs Saturday bingo the way Vegas runs Vegas. Six of the last eight blackout jackpots went to her sister, her other sister, and \"R. Threlkeld,\" a man who does not exist. Family resemblance must be hell to establish on that last one.",
+            "Deputy Hargrove might've spent all morning sorting it out, except Bonnie, in her floral blouse and big rounded glasses, explaining the theft, said, \"before I could get it out myself.\"",
+            "There's your loose board. Stepped right through it.",
+            "\"Before you could what, Bonnie?\"",
+            "\"Well, shit.\"",
+            "I reckon we've all wished we could reach across a desk and put a sentence back in our mouth. Hers just came with a nacho cart attached.",
+            "In the Polaroid her head's tilted. Still figuring whether she actually said that, or whether Hargrove might could have heard some entirely different bullshit.",
+            "She said it. When they finally caught Tammy Jo, she called Bonnie \"a real one.\""
+          ]
+        }
+      ]
     }
   ]
 }
