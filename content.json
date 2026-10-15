@@ -1016,6 +1016,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "roy-stubblefield",
+      "first": "Roy",
+      "last": "Stubblefield",
+      "name": "Roy Stubblefield",
+      "alias": "Chief",
+      "arrests": [
+        {
+          "booking": "95-12-0031",
+          "date": "1995-12-02",
+          "time": "5:10 AM",
+          "charge": "Operating a tree lot without a permit; assault with a Scotch pine",
+          "location": "Old Sinclair station",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015721155.jpg",
+          "tags": [
+            "christmas tree lot",
+            "assault",
+            "permit"
+          ],
+          "story": [
+            "Roy Stubblefield opened his Christmas tree lot at the old Sinclair station at 5 a.m. He believes people buying trees at 5 a.m. don't haggle. He's right. Anybody shopping for a pine in the dark has other shit going on.",
+            "Roy had no permit. He had a Chiefs cap, a horseshoe mustache, and a policy. Around here that's most of a business plan.",
+            "Deputy Hargrove stopped for a tree. Asked friendly enough to see the permit. Roy asked, considerably less friendly, whether he wanted a tree or a conversation.",
+            "\"Both.\"",
+            "Roy handed him a seven-foot Scotch pine at a speed the Deputy's report described as \"thrown.\" Hargrove had come intending to spend money with Roy, too. Two fellas trying to have Christmas, and now one had the damn thing coming at his head.",
+            "\"It's a Christmas tree,\" Roy said from the back of the cruiser. \"You can't assault a man with Christmas.\"",
+            "You sure as hell can. It's needles. The holiday don't round them off.",
+            "Dwight shot him under the NO SMOKING sign, serious as a hymn. God love Roy, he looked ready to argue the case clear up to whoever was in charge of pine trees.",
+            "His nephew ran the lot the rest of the day and sold out by three. He haggled. Roy's policy wasn't worth a damn without Roy there to throw it."
+          ]
+        }
+      ]
     }
   ]
 }
