@@ -1050,6 +1050,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "lonnie-baskett",
+      "first": "Lonnie",
+      "last": "Baskett",
+      "name": "Lonnie Baskett",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0032",
+          "date": "1995-12-02",
+          "time": "5:30 AM",
+          "charge": "Sleeping in a public place (Lions Club pancake breakfast, pre-opening)",
+          "location": "Fire Station No. 1",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_015729901.jpg",
+          "tags": [
+            "fire station",
+            "pancakes",
+            "sleeping"
+          ],
+          "story": [
+            "The Lions Club found Lonnie Baskett asleep under the griddle at 5:20 a.m. inside the fire station. Padded jacket over a Flintstones T-shirt. Bottle of syrup already open. That boy wasn't leaving a damn thing to chance except waking up.",
+            "He hadn't broken in. He'd attended the Friday-night fish fry, eaten, and stayed put. The firemen figured he was a Lion. The Lions figured he was a fireman. Everybody turned out the lights. Hell, between two civic organizations you'd think somebody could identify a man full of fish.",
+            "\"I was first in line,\" Lonnie told Sheriff Ponder, eyes still shut.",
+            "\"Lonnie, the line starts outside.\"",
+            "\"That's a policy, not a law.\"",
+            "Had him there. Sheriff came for pancakes himself, not a constitutional argument from underneath the cooking equipment.",
+            "The Lions were carrying on, so he wrote Lonnie up mostly to hush them, then let him eat first. Decent man. No sense making somebody's breakfast cold just because his ass got there too early.",
+            "Lonnie ate eleven. In the Polaroid, taken before a handwritten calendar in the fire chief's office, he's still asleep. Dwight says it's the best one he took all day. Getting a good picture of Lonnie usually involves asking him to quit talking; this was a hell of a shortcut.",
+            "Roy Stubblefield's red cap is in the left edge. He was next."
+          ]
+        }
+      ]
     }
   ]
 }
