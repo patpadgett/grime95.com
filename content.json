@@ -1084,6 +1084,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "kayla-sprouse",
+      "first": "Kayla",
+      "last": "Sprouse",
+      "name": "Kayla Sprouse",
+      "alias": "Miss Ponder County 1995",
+      "arrests": [
+        {
+          "booking": "95-12-0033",
+          "date": "1995-12-02",
+          "time": "6:00 AM",
+          "charge": "Theft (one parade float, partial)",
+          "location": "Fairgrounds equipment barn",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015736817.jpg",
+          "tags": [
+            "parade",
+            "pageant",
+            "theft"
+          ],
+          "story": [
+            "Kayla Sprouse, Miss Ponder County 1995, learned Friday she'd be sharing this year's parade float with Miss Ponder County 1994. That'd be her cousin Brandi. They hadn't spoken since the Fourth of July over a jet ski, and apparently a whole damn float wasn't enough room to continue not speaking.",
+            "At 5:45 a.m. Deputy Hargrove found Kayla in the fairgrounds equipment barn, taking a Sawzall to the float. She'd done the math. Her half had the throne. Brandi's half had opportunities.",
+            "Floral blouse, bow off her sash, calm as you please. Most folks look caught when a deputy walks in. Kayla looked like he'd come to help load.",
+            "\"It's technically my float. The Jaycees gave it to me. I'm giving Brandi some of it.\"",
+            "\"You're giving her the trailer hitch, Kayla.\"",
+            "\"She can pull.\"",
+            "\"How the hell am I supposed to write this up?\"",
+            "\"Put down sharing.\"",
+            "You had to love her nerve. We'd crowned her for poise, and by God, she was keeping her ass poised through a theft investigation.",
+            "In the Polaroid she's leaning back, half-lidded, hands folded in her lap, waiting on judges she reckons she can win over. Made bail by 8:30 and rode at nine. Sure as shit, Brandi walked behind carrying the hitch."
+          ]
+        }
+      ]
     }
   ]
 }
