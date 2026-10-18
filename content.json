@@ -1119,6 +1119,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "randy-culpepper",
+      "first": "Randy",
+      "last": "Culpepper",
+      "name": "Randy Culpepper",
+      "alias": "Sunshine",
+      "arrests": [
+        {
+          "booking": "95-12-0034",
+          "date": "1995-12-02",
+          "time": "6:20 AM",
+          "charge": "Public indecency (tanning); operating a tanning bed without a license",
+          "location": "Behind Sunset Lanes",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250105_015747418.jpg",
+          "tags": [
+            "bowling alley",
+            "tanning",
+            "indecency"
+          ],
+          "story": [
+            "Randy Culpepper bought a tanning bed off a salon in Osage Beach that went under. No salon of his own, no room big enough at the house, so he set it in a horse trailer behind Sunset Lanes and ran an extension cord into the bowling alley's wall. Well, hell. Electricity don't care whether you've got a reception desk.",
+            "He's his own best customer. Look at those shoulders. That ain't a tan you get piddlin' around with yard work.",
+            "At 6:10 a.m. Deputy Stotts answered a call about \"a blue light and a man's voice going 'ohhh' behind the lanes.\" She opened the trailer. Randy wore a tank top, a cap, a gold chain, and nothing you'd call pants. Eyes shut. Smiling like the light bill was somebody else's.",
+            "\"It's for the dance tonight. You can't show up to the VFW pale.\"",
+            "\"Randy, it's a horse trailer.\"",
+            "\"Horses don't need it. They're outside.\"",
+            "\"Your ass is inside, and I can see it from outside.\"",
+            "He didn't let that spoil a damn thing. God love him, all he wanted was to look nice at the dance. Some men buy a shirt; Randy cooks the parts that stick out.",
+            "He rode in without opening his eyes. In the Polaroid he still hasn't. Happiest man in the building, no bullshit about it. And he's orange."
+          ]
+        }
+      ]
     }
   ]
 }
