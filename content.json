@@ -1153,6 +1153,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "kyle-mattingly",
+      "first": "Kyle",
+      "last": "Mattingly",
+      "name": "Kyle Mattingly",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0035",
+          "date": "1995-12-02",
+          "time": "6:45 AM",
+          "charge": "Careless driving; failure to secure a load (one Nativity donkey)",
+          "location": "Highway 5 at the sale barn",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015757475.jpg",
+          "tags": [
+            "nativity",
+            "livestock-adjacent",
+            "highway 5",
+            "traffic"
+          ],
+          "story": [
+            "First Baptist rented a donkey for the live Nativity off a man in Lebanon, and Kyle Mattingly got sent to fetch it in his Ranger at 5 a.m., because Kyle is the youth pastor's brother-in-law and that, friends, is how church works.",
+            "Kyle did not bring a trailer. Kyle put a donkey in the bed of a Ford Ranger with a tarp over it and one bungee cord across, and that donkey rode standing up at fifty-five down Highway 5 with its head over the cab like a hood ornament straight out of hell.",
+            "The donkey was fine. The donkey, by every account, was having the time of its damn life.",
+            "Deputy Hargrove pulled him over at the sale barn, where the loose cow was standing square in the road like it owned the county, and the donkey and the cow looked at each other a good long while, the way two old boys do at a funeral when they ain't sure if they're kin.",
+            "\"Jesus Christ, Kyle.\"",
+            "\"He wanted to see out.\"",
+            "\"He's a DONKEY.\"",
+            "\"Well, he sure as shit didn't want to see IN.\"",
+            "Kyle's squinting in the Polaroid, blue tee and cap, like a man trying to work out what the charge for a donkey even is. Failure to secure a load. The donkey made the Nativity. Nobody asked how it got there. The cow watched Kyle go, and Hargrove swears it shook its head."
+          ]
+        }
+      ]
     }
   ]
 }
