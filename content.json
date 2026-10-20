@@ -1188,6 +1188,37 @@
           ]
         }
       ]
+    },
+    {
+      "id": "brent-hollis",
+      "first": "Brent",
+      "last": "Hollis",
+      "name": "Brent Hollis",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0036",
+          "date": "1995-12-02",
+          "time": "7:00 AM",
+          "charge": "Theft of services (Walmart layaway line)",
+          "location": "Walmart",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250105_015804014.jpg",
+          "tags": [
+            "walmart",
+            "christmas",
+            "line-cutting"
+          ],
+          "story": [
+            "Brent Hollis was seventy-first in the Walmart layaway line at 6:15 a.m. and first at 6:50. Nobody could say exactly how. You'd have thought a man wearing a blue plaid shirt over two other shirts would've been easier to track.",
+            "He inched along saying, \"'scuse me, my wife's up here,\" seventy times. Slow. Apologetic. Polite as a church usher moving you away from the good fan.",
+            "Brent ain't got a wife. He's got a Super Nintendo on layaway and a nephew he's already told. That's a hell of a promise to make a little boy, and God love him, he meant to keep it. His methods were shit.",
+            "The line caught on at the counter. A Missouri line in December has cold feet and a damn good memory. Peg hit him with her purse. A man held his collar till Deputy Stotts arrived, Brent still saying \"'scuse me,\" apparently hoping manners might could reverse a felony.",
+            "In the Polaroid he's leaning back, looking serious off to the left, like that whole line's still behind him.",
+            "It is. Peg posted his bail so she could stand in front of him again Monday. Woman wasn't finished waiting."
+          ]
+        }
+      ]
     }
   ]
 }
