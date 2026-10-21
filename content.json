@@ -1219,6 +1219,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "gene-autry-pike",
+      "first": "Gene",
+      "last": "Autry Pike",
+      "name": "Gene Autry Pike",
+      "alias": "Gene Autry",
+      "arrests": [
+        {
+          "booking": "95-12-0037",
+          "date": "1995-12-02",
+          "time": "7:20 AM",
+          "charge": "Animal at large; failure to control livestock (the cow)",
+          "location": "Highway 5, everywhere",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_015814142.jpg",
+          "tags": [
+            "livestock-adjacent",
+            "the cow",
+            "highway 5"
+          ],
+          "story": [
+            "That cow loose on Highway 5 all of December 2, 1995 belonged, on paper, to Gene Autry Pike. Same cow that stopped the donkey, ate the Nativity hay, and walked into the sale barn at midnight like it had called ahead. Busy damn cow.",
+            "Gene Autry said he didn't have one.",
+            "Black jacket with racing stripes, cap, head down, half a smile. You know that smile. That's a man whose wife already heard this bullshit and didn't buy any.",
+            "\"Then whose brand is on it, Gene?\"",
+            "\"Mine. But I sold that cow.\"",
+            "\"To who?\"",
+            "\"Myself. Different year.\"",
+            "Now, I like Gene. Most everybody does. But he'd argue with a fencepost and then send the fencepost a bill for standing there.",
+            "Sheriff Ponder booked him at seven. Wasn't gonna help a lick, but four calls had come in and the Sheriff needed a name to put on the cow. The cow wasn't offering one. Hell, the cow had places to be.",
+            "In the Polaroid there's a fellow asleep at a table behind him. That's Lonnie. He's still there. Between Lonnie and Gene, you had two men available and neither taking responsibility for a hoof.",
+            "The cow was never booked. The cow had a better day than anybody."
+          ]
+        }
+      ]
     }
   ]
 }
