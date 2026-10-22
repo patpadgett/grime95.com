@@ -1255,6 +1255,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tyler-nance",
+      "first": "Tyler",
+      "last": "Nance",
+      "name": "Tyler Nance",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0038",
+          "date": "1995-12-02",
+          "time": "7:45 AM",
+          "charge": "Stealing under $150 (one tuba)",
+          "location": "High School band room",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015831568.jpg",
+          "tags": [
+            "high school",
+            "parade",
+            "band"
+          ],
+          "story": [
+            "Tyler Nance, fifteen, plays trombone in the Ponder County High School Marching Wildcats. He's wanted the tuba since he was nine, when somebody told him his arms were too short. His arms caught up. The tuba chair didn't. Six years is a hell of a wait for permission to go oom-pah.",
+            "At 7:30 a.m., ninety minutes before the Christmas parade, Tyler took the tuba.",
+            "Didn't hide it. Walked down Main Street carrying the damn thing, which is about as sneaky as stealing a grain bin. He meant to march. That was the whole plan, clear to the fence line.",
+            "Deputy Hargrove called it “the most honest thing I saw all day.” Hard to dispute a boy advertising his theft in brass.",
+            "In the Polaroid Tyler's grinning, striped button-up on, like he'd ordered this exact Saturday. Behind him is a MIKE KEITH INSURANCE calendar saying November 1994. Nobody in that building flips shit except occasionally their lid.",
+            "The band director declined to press charges. Also declined to let him march. Fair enough, but you hate to see a dream get parked indoors.",
+            "Tyler played the tuba in the holding cell for an hour. Every note was wrong. Dwight says it was beautiful, and I reckon a man that tired knows joy when it rattles the plumbing."
+          ]
+        }
+      ]
     }
   ]
 }
