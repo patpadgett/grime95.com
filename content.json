@@ -1287,6 +1287,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "wesley-grimm",
+      "first": "Wesley",
+      "last": "Grimm",
+      "name": "Wesley Grimm",
+      "alias": "Nature Boy",
+      "arrests": [
+        {
+          "booking": "95-12-0039",
+          "date": "1995-12-02",
+          "time": "8:00 AM",
+          "charge": "Unlawful release of wildlife (parade); possession of eleven raccoons",
+          "location": "Main Street staging area",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015838396.jpg",
+          "tags": [
+            "parade",
+            "wildlife",
+            "raccoons",
+            "livestock-adjacent"
+          ],
+          "story": [
+            "Wesley Grimm called his float “Missouri's Bounty.” Flatbed, hay bales, eleven raccoons in a wire pen. He'd been live-trapping since Halloween. Most folks would've stopped at one raccoon and asked what the hell they were doing.",
+            "The Jaycees told him no Thursday. Wesley showed up anyway in a T-shirt with eagles and a canyon, smiling that little smile of a man who figures permission is mostly for indoor things. God love him, he'd brought the whole damn outdoors.",
+            "At 7:55 the Shriners' go-karts fired up behind him in the staging lot. Raccoons don't care for go-karts. Turns out they didn't care for his pen, either.",
+            "By the time Deputy Hargrove got the cuffs on, there were raccoons in the Baptist float's manger, in the Sonic Drive-In float's fake tater tots, and on the Jaycees' truck roof. One was inside the tuba Tyler Nance had just been arrested for. That son of a bitch had found the only parade seat with a bell on it.",
+            "“They're bounty,” Wesley said. “They'll come back.”",
+            "Nine did. Pretty fair return on a wildlife investment, considering the shit he'd put them through.",
+            "The calendar behind him in the Polaroid says September 1994. Nothing in this building is current."
+          ]
+        }
+      ]
     }
   ]
 }
