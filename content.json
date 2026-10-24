@@ -1320,6 +1320,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dallas-yancey",
+      "first": "Dallas",
+      "last": "Yancey",
+      "name": "Dallas Yancey",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0040",
+          "date": "1995-12-02",
+          "time": "8:15 AM",
+          "charge": "Disorderly conduct; unauthorized Shriner",
+          "location": "Parade staging lot",
+          "officer": "Reserve Deputy Toad",
+          "mugshot": "assets/mugshots/IMG_20250105_015845494.jpg",
+          "tags": [
+            "parade",
+            "shriners",
+            "go-karts"
+          ],
+          "story": [
+            "Dallas Yancey is twenty, ain't a Shriner, and does not own a fez. He does own a go-kart. At 8 a.m. on parade day he lined up with the Shriners' go-karts in a red puffy coat and purple shirt, figuring the rest might sort itself out.",
+            "That's a hell of a lot to ask of a puffy coat.",
+            "The Shriners looked closely. When the Grand Potentate asked to see his fez, Dallas said it was \"in the shop.\" Asked which shop, he did a lap. Then several more. Boy was trying to outrun a follow-up question at lawnmower speed.",
+            "Reserve Deputy Toad stepped in front of the kart with his hand up. Toad directs parade traffic once a year and got deputized by accident in 1988. He trusted that hand more than was sensible.",
+            "\"Whoa, damn it!\"",
+            "Toad's fine. He's just slow now. Dallas hadn't meant to hurt a soul; he wanted in the parade so bad he'd forgotten somebody might be standing in it.",
+            "In the Polaroid he's hunched and serious under the NO SMOKING sign, the only one all day who looked like he felt bad. He did. Felt like shit, poor kid. Wrote Toad a letter, too. Toad framed it. It's in the hallway."
+          ]
+        }
+      ]
     }
   ]
 }
