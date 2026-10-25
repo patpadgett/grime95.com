@@ -1352,6 +1352,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "curtis-blevins",
+      "first": "Curtis",
+      "last": "Blevins",
+      "name": "Curtis Blevins",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0041",
+          "date": "1995-12-02",
+          "time": "8:30 AM",
+          "charge": "Property damage (paint); vandalism of a municipal water tower, attempted",
+          "location": "Municipal Water Tower",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015854488.jpg",
+          "tags": [
+            "water tower",
+            "vandalism",
+            "paint"
+          ],
+          "story": [
+            "Before Adam \"Double Adam\" McCoy set the water tower on fire that night, Curtis Blevins tried to paint it. Adam's got his own entry. One municipal improvement at a time, for hell's sake.",
+            "Curtis climbed up at dawn with two gallons of white and a roller on a broom handle. He meant to cover PONDER COUNTY and write “something true.” Hadn't settled on what. He was gonna “let the tower tell him.”",
+            "Bless his heart, most of us can't get an answer out of the county at ground level.",
+            "The tower didn't say shit. The wind, however, had considerable input.",
+            "At 8:20 a.m. Deputy Hargrove found Curtis back on the ground, roller in hand, covered head to foot in his own paint. His pink T-shirt had been red an hour earlier. The tower was untouched except for one word he'd managed before the wind turned, eight feet tall: THE.",
+            "“THE what, Curtis?”",
+            "“I was getting to it.”",
+            "“Whole damn town's on the edge of its seat.”",
+            "Curtis's eyes are nearly closed in the Polaroid, speckled like a bird's egg. You want to laugh, but the man did climb a water tower for the truth. We mostly just holler for it from a stool.",
+            "The THE was still there when the fire started."
+          ]
+        }
+      ]
     }
   ]
 }
