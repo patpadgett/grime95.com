@@ -1387,6 +1387,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "josh-wexler",
+      "first": "Josh",
+      "last": "Wexler",
+      "name": "Josh Wexler",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0042",
+          "date": "1995-12-02",
+          "time": "8:45 AM",
+          "charge": "Truancy (Saturday); trespass on school property",
+          "location": "High School",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_015907430.jpg",
+          "tags": [
+            "high school",
+            "truancy",
+            "band"
+          ],
+          "story": [
+            "Josh Wexler got picked up for truancy on a Saturday. The Sheriff admitted that was \"not a thing,\" but wrote it down because Josh asked him to. Around here we might could arrest you for something that ain't possible, if you ask decent.",
+            "Josh is sixteen, Nike shirt, cap with the green underside showing, face still waiting to see how things turn out. At 8:30 a.m. he was in the high school band room, sitting in the tuba chair and playing nothing. Tyler Nance had the tuba. Tyler was in jail. Whole damn instrument section gone before breakfast.",
+            "\"I just wanted to see what it felt like,\" Josh said.",
+            "\"The chair?\"",
+            "\"Yeah.\"",
+            "Sheriff Ponder had come about the raccoons. He sat in the trombone chair, and neither said anything awhile. Good man. He could spare a kid some quiet; the raccoons could keep tearing up whatever the hell they were tearing up.",
+            "Then he said, \"Well, you're trespassing.\"",
+            "\"Can I be truant instead? It sounds better.\"",
+            "The Sheriff said sure. Trespassing sounds like you're up to some shit. Truant at least suggests somebody expected you.",
+            "In the Polaroid Josh has one arm across the frame and his mouth a little open, like he's still in that chair. His mom bailed him out at 9:10, in time to watch the parade go by without a tuba in it."
+          ]
+        }
+      ]
     }
   ]
 }
