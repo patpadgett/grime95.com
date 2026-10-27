@@ -1422,6 +1422,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "wade-pettibone",
+      "first": "Wade",
+      "last": "Pettibone",
+      "name": "Wade Pettibone",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0043",
+          "date": "1995-12-02",
+          "time": "9:00 AM",
+          "charge": "Contributing to the delinquency of a minor; parade interference (father)",
+          "location": "Main Street parade route",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015916305.jpg",
+          "tags": [
+            "parade",
+            "family",
+            "booster club"
+          ],
+          "story": [
+            "Wade Pettibone and his boy Junior got booked together at 9 a.m. and photographed together because Dwight was out of wall. Not film. Wall. That's the kind of Saturday we were having.",
+            "Wade is Booster Club clear to the bone. His shirt says CLUB beneath a wildcat that looks like it lost an argument with a grain truck. Arms folded, he told Deputy Hargrove the Christmas parade ought not pass the Pentecostal church because “they don't clap.”",
+            "“Band works hard. Least folks could move their damn hands.”",
+            "So at 8:50, when the band turned onto Church Street, Wade and Junior blocked the intersection with Wade's Silverado and stood in the bed holding THIS WAY, pointed toward the Legion.",
+            "The band followed. They're fifteen-year-olds; give them a sign and they'll follow it plumb into next week. The Shriners followed the band. Santa's tractor followed the Shriners. Whole parade fetched up at the Legion Hall and stopped, because the Legion has a bar. Hell of a navigation aid, a bar.",
+            "“Best turnout we ever had,” Wade said.",
+            "Can't fault the man's affection for a school band. His judgment's another sack of shit entirely.",
+            "Junior smiled for the Polaroid. Wade didn't. Wade knows the routine. Junior's learning it, and apparently driver education comes with matching shirts."
+          ]
+        }
+      ]
     }
   ]
 }
