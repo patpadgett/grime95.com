@@ -1455,6 +1455,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "patsy-delacroix",
+      "first": "Patsy",
+      "last": "Delacroix",
+      "name": "Patsy Delacroix",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0044",
+          "date": "1995-12-02",
+          "time": "9:15 AM",
+          "charge": "Disturbing a lawful assembly; assault on a game show host (effigy)",
+          "location": "Legion Hall craft fair",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_015922079.jpg",
+          "tags": [
+            "american legion",
+            "craft fair",
+            "bob barker"
+          ],
+          "story": [
+            "Patsy Delacroix has watched The Price Is Right every weekday since 1974 and has never been wrong about a showcase. Argue if you want. I'd sooner kick a wasp nest in my church shoes.",
+            "The Legion craft fair opened at nine, in the same hall where the parade had just crashed to a halt. The Methodist men's group had made a life-size plywood Bob Barker for a photo booth. Fifty cents a picture. Patsy paid. Looked at him a good long while.",
+            "Wrong hair color. Wrong microphone shape. She told the men they ought to be ashamed of that damn thing, and they laughed. Well, shit. You don't laugh during an inspection.",
+            "She knocked his head off with her pocketbook.",
+            "“That is not Bob,” she told the Sheriff from a folding chair, red-striped blouse and pink bow, dressed nice for a day nobody had managed to deserve. “You don't get to make a Bob. Especially not that sorry-ass Bob.”",
+            "Bless her heart, she'd paid for a picture with somebody she'd eaten lunch with for twenty-one years. They'd handed her lumber with a haircut.",
+            "Dwight shot her right there under the BOB BARKER sign, head hanging, jaw set. Come on down. Mind the head."
+          ]
+        }
+      ]
     }
   ]
 }
