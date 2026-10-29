@@ -1487,6 +1487,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nathan-coble",
+      "first": "Nathan",
+      "last": "Coble",
+      "name": "Nathan Coble",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0045",
+          "date": "1995-12-02",
+          "time": "9:30 AM",
+          "charge": "Impersonating Santa Claus (understudy); tractor theft",
+          "location": "American Legion Hall parking lot",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_015928401.jpg",
+          "tags": [
+            "parade",
+            "santa",
+            "tractor",
+            "american legion"
+          ],
+          "story": [
+            "Nathan Coble saw a running tractor and a Santa float without a Santa, and figured somebody ought to do something. Nathan is twenty-two, striped shirt, face like a Sunday. Give that boy half a chance to help and he'll help your ass clean into a charge.",
+            "The parade had stalled at the Legion. Santa went inside for \"one beer,\" leaving the tractor running and his suit on the seat because the Legion runs hot. Kids waited on the sidewalk. Nathan didn't see a theft. He saw folks fixing to be disappointed.",
+            "He put on the suit and drove four blocks down Main to the Pentecostal church, the one Wade Pettibone had rerouted the whole parade around. Idled there twenty minutes, waving and ho ho ho-ing in a voice he later admitted \"was mostly Cody Whitlow's dad.\"",
+            "The Pentecostals clapped. Wade was wrong as hell about that.",
+            "Real Santa reported the tractor stolen at 9:25. Deputy Hargrove found Nathan passing out candy canes he'd discovered in the float's glove box.",
+            "\"Step down, Nathan.\"",
+            "\"One more block?\"",
+            "Hargrove gave him one. Damn decent of him, considering he'd have to explain why a stolen tractor got an extension.",
+            "In the Polaroid Nathan's still got that little smile. Ain't a lick of bullshit in it. He knows what he did."
+          ]
+        }
+      ]
     }
   ]
 }
