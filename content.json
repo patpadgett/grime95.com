@@ -1522,6 +1522,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nate-corrigan",
+      "first": "Nate",
+      "last": "Corrigan",
+      "name": "Nate Corrigan",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0046",
+          "date": "1995-12-02",
+          "time": "9:35 AM",
+          "charge": "Careless driving (Shriner go-kart, borrowed); parade interference",
+          "location": "Main Street",
+          "officer": "Reserve Deputy Toad",
+          "mugshot": "assets/mugshots/IMG_20250613_132119347.jpg",
+          "tags": [
+            "parade",
+            "shriners",
+            "go-karts"
+          ],
+          "story": [
+            "Dallas Yancey lined his own go-kart up with the Shriners at 8:15, got run out, and ran over Toad. Phil the dentist clipped a stroller and got pulled out by the fez. At 9:30, with the Shriners regrouping behind the Rexall, Phil's commotion drew one Shriner away from a running kart.",
+            "Nate Corrigan got in. Thirty-one, not a Shriner, sunglasses hanging from his shirt's V. Serious face. Nate generally doesn't do things. By God, he was fixin' to do one.",
+            "He drove one block in the parade behind the band. Shriner speed: eight miles an hour. Looks like nothing from the curb; down there by the pavement, I reckon it felt like hauling ass. No waving, no figure-eights. Straight behind the tubas, hands at ten and two, sunglasses swinging. Most responsible damn theft of a ride you've ever seen.",
+            "At Church Street he pulled over, climbed out, and stood beside it. Toad, still shaky, looked him over.",
+            "“You're not a Shriner.”",
+            "“No.”",
+            "“Then why—”",
+            "“I've always wanted to.”",
+            "Well, hell. Toad understood. Everybody does. A little kart, a block of music, a thing you finally got to do. He booked Nate anyway.",
+            "Nate's serious in the Polaroid, sunglasses still there. He'll never do anything like that again and doesn't need to. The Shriner got his kart back. Said it was “warm.”"
+          ]
+        }
+      ]
     }
   ]
 }
