@@ -1557,6 +1557,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "sherry-lindquist",
+      "first": "Sherry",
+      "last": "Lindquist",
+      "name": "Sherry Lindquist",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0047",
+          "date": "1995-12-02",
+          "time": "9:45 AM",
+          "charge": "Practicing law without a license (bond hearing, unofficial)",
+          "location": "Sheriff's Office lobby",
+          "officer": "Dwight Pruitt (jailer)",
+          "mugshot": "assets/mugshots/IMG_20250105_015934249.jpg",
+          "tags": [
+            "in-house",
+            "bail",
+            "legal"
+          ],
+          "story": [
+            "By 9:30 a.m. the Ponder County jail had twenty-eight people in fourteen beds, and Judge Renfro was somewhere up a tree with his radio off. Deer stand. Important distinction if you're the judge; didn't mean shit to anybody needing bail.",
+            "In walked Sherry Lindquist, who does taxes. She sat at the fingerprint shelf beside Dale \"Bail\" Bailey, opened a legal pad, and started holding bond hearings. No fuss. Woman saw paperwork needing done.",
+            "She called names. Folks stood. What'd you do, and were you sorry? Fifty dollars for sorry, a hundred for not, twenty-five for Louella Fenwick because \"honey, no.\" Hell, at least you could understand the rates.",
+            "She'd heard nine and Dale had collected on six before Dwight asked who she was.",
+            "\"I'm the judge.\"",
+            "\"You do my taxes, Sherry.\"",
+            "\"Then you know I'm thorough.\"",
+            "That was a damn awkward credential to argue with. Dwight trusted her with deductions he couldn't pronounce. God love her, she'd come to a room full of trouble and found something useful to do with a pen.",
+            "In the Polaroid she's beaming in her striped blouse, standing by the office door like she owns the place. For forty minutes she did. Nobody she released came back. The real judge got in Monday and honored all nine."
+          ]
+        }
+      ]
     }
   ]
 }
