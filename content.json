@@ -1591,6 +1591,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "lindsay-fowler",
+      "first": "Lindsay",
+      "last": "Fowler",
+      "name": "Lindsay Fowler",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0048",
+          "date": "1995-12-02",
+          "time": "9:50 AM",
+          "charge": "Interference with a parade (band); took a flute",
+          "location": "Main Street",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250613_132124988.jpg",
+          "tags": [
+            "parade",
+            "band",
+            "flute",
+            "high school"
+          ],
+          "story": [
+            "Everybody blamed Norma June Wiley for the flute. Miss Twirl 1973, her own entry, 0003, was passed out in the high school trophy case Saturday morning holding a baton. Seemed a fair place to start, but hell, a woman can't steal everything.",
+            "It was Lindsay Fowler. Twenty-six, Marching Wildcats flute section from '84 to '87, second chair behind Kimberly, who lives in Tulsa now and doesn't even play. That last part still chaps Lindsay's ass.",
+            "Friday night, while Norma June was carrying on, Lindsay took a school flute from the band room. They'd sold her old one. Saturday at 9:45 she stepped into the Main Street parade beside the flute section, cream T-shirt, blue scrunchie, and went right to playing.",
+            "\"Joy to the World.\" She knew every damn note. Fifteen-year-olds on either side kept looking over like the school had started holding folks back eight years.",
+            "The band director admitted she was \"first chair, honestly.\" God love her, she'd finally moved up by aging out.",
+            "Hargrove pulled her out at Oak Street.",
+            "\"Lindsay, you're not in the band.\"",
+            "\"I was.\"",
+            "\"Eight years ago.\"",
+            "\"Well, shit, I still know it.\"",
+            "She's subdued in the Polaroid, shoulders rounded in a dark corner, red sign behind her. The flute's in evidence beside the tuba Tyler Nance took. The band director says she can sit in at the spring concert. Lindsay said she'd think about it. She's thinking about it."
+          ]
+        }
+      ]
     }
   ]
 }
