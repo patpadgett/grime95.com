@@ -1628,6 +1628,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "chad-ferrell",
+      "first": "Chad",
+      "last": "Ferrell",
+      "name": "Chad Ferrell",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0049",
+          "date": "1995-12-02",
+          "time": "10:00 AM",
+          "charge": "Assault (snowball, packed); disturbing the peace",
+          "location": "Main Street",
+          "officer": "Reserve Deputy Toad",
+          "mugshot": "assets/mugshots/IMG_20250105_015940618.jpg",
+          "tags": [
+            "parade",
+            "assault",
+            "weather"
+          ],
+          "story": [
+            "It has not snowed in Ponder County. Get that straight before Chad Ferrell starts explaining. At 9:50 a.m. he threw a snowball off the Rexall roof at the Grand Marshal's Cadillac and broke the windshield. Clear weather. Frozen damn precipitation coming down from the drugstore.",
+            "Chad, wearing a black shirt with a baseball on it, wanted credit for planning ahead. He'd made the snowball Wednesday during the flurries and kept it in his mom's deep freeze \"for the parade.\" Three days. Rock in the middle \"for structure.\"",
+            "Around here we generally call that a rock, but bless his heart, Chad had put work into the outside.",
+            "\"It was a plan,\" he said.",
+            "Sure as shit was. That's the troubling part. An accident you might could talk a boy out of repeating.",
+            "The Grand Marshal was Mike Keith, of Mike Keith Insurance. His calendars hang on every wall in the jail. Turns out the man is real well insured, which is a hell of a thing to have demonstrated during your parade.",
+            "Reserve Deputy Toad, still shaky from the go-kart, stood under the ladder. \"I can wait.\" No climbing after him. Toad had already had enough transportation bullshit.",
+            "Chad looks serious against the height chart in the Polaroid. Five-ten. The snowball was recovered. It's in the evidence freezer with the turkey. Reckon they can discuss structure."
+          ]
+        }
+      ]
     }
   ]
 }
