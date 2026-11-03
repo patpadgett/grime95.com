@@ -1661,6 +1661,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "vicki-sandoval",
+      "first": "Vicki",
+      "last": "Sandoval",
+      "name": "Vicki Sandoval",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0050",
+          "date": "1995-12-02",
+          "time": "10:10 AM",
+          "charge": "Assault (on a Shriner); interference with a parade",
+          "location": "Main Street",
+          "officer": "Reserve Deputy Toad",
+          "mugshot": "assets/mugshots/IMG_20250613_125748388.jpg",
+          "tags": [
+            "parade",
+            "shriners",
+            "assault"
+          ],
+          "story": [
+            "At 9:40 a.m., Vicki Sandoval stood outside the Rexall with her two kids when a Shriner go-kart clipped her stroller. Not Dallas Yancey this time. An actual Shriner, a dentist named Phil.",
+            "The stroller was empty. Phil considered that the key fact. Vicki figured Phil was fixin' to learn something.",
+            "She chased him a block and a half in a black T-shirt with the sleeves cut off and caught him. Parade go-karts do eight miles an hour. Vicki, forty-six and madder than a wet hen, does whatever the hell is required. She pulled him out by the fez.",
+            "\"It was EMPTY!\" Phil said.",
+            "\"It's the PRINCIPLE, you tasseled son of a bitch.\"",
+            "Hard to present a second argument while a woman has hold of your parade hat. Poor Phil. A man can know every tooth in your head and still misjudge your mother.",
+            "Reserve Deputy Toad had already been hit by a go-kart that morning. He took his sweet time arriving. Said it was his leg. Sure, honey. That leg had opinions.",
+            "Vicki's dead serious in the Polaroid, taken at the Legion Annex against a March 1995 calendar. Closest to right anybody got all damn day. Can't fault a mama for wanting wheels kept off her babies' things.",
+            "Phil's fine. His fez isn't. The kids thought it was the best parade ever."
+          ]
+        }
+      ]
     }
   ]
 }
