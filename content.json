@@ -1695,6 +1695,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "eli-hostetler",
+      "first": "Eli",
+      "last": "Hostetler",
+      "name": "Eli Hostetler",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0051",
+          "date": "1995-12-02",
+          "time": "10:15 AM",
+          "charge": "Selling without a permit; misrepresentation of a baked good",
+          "location": "Legion Hall craft fair",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_015946560.jpg",
+          "tags": [
+            "craft fair",
+            "american legion",
+            "fraud",
+            "food service"
+          ],
+          "story": [
+            "Eli Hostetler was nineteen and selling friendship by the loaf at the Legion craft fair. His sign said \"Amish Friendship Bread, $4.\" Eli ain't Amish. The goods weren't bread. Sara Lee pound cake, box thrown away, dishtowel pulled over the evidence. Four dollars for cake and a little bullshit.",
+            "By ten he'd sold thirty-one loaves. The Amish ladies next door, selling actual bread they had actually made, had sold four. Well, hell. You can see where that'd take some of the pleasure out of kneading.",
+            "They didn't complain. Those ladies don't. They looked at Eli till he felt it, then looked at the Sheriff till he felt responsible for it. No raised voices. Just passed the trouble down the table like a bowl of beans.",
+            "\"It's got friendship in it,\" Eli said. \"I was friendly.\"",
+            "\"Son, it's got a UPC on the bottom.\"",
+            "\"Didn't charge extra for that.\"",
+            "God love the boy. Cornered, and still trying to give somebody a bargain. The Sheriff had to admire the nerve, even if the damn dishtowel wasn't much of a business license.",
+            "In the Polaroid Eli stands straight in his pink-striped shirt. That's the face of a boy figuring his mother will hear about this shit before he gets home. She did. She was two tables down, selling wreaths."
+          ]
+        }
+      ]
     }
   ]
 }
