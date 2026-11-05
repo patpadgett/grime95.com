@@ -1729,6 +1729,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "hailey-pruitt",
+      "first": "Hailey",
+      "last": "Pruitt",
+      "name": "Hailey Pruitt",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0052",
+          "date": "1995-12-02",
+          "time": "10:15 AM",
+          "charge": "None (minor); photographed at her own request; kept the time",
+          "location": "Sheriff's Office",
+          "officer": "Dwight Pruitt (jailer)",
+          "mugshot": "assets/mugshots/IMG_20250613_132132798.jpg",
+          "tags": [
+            "in-house",
+            "family",
+            "no charges",
+            "clock"
+          ],
+          "story": [
+            "Hailey Pruitt came in at ten Saturday morning with Owen and the sandwich, and before long she'd found what was wrong with the whole operation. She's twelve. Dwight's daughter, Owen's sister. While Owen gave the jail art direction, she stood under the clock.",
+            "It says BULOVA and CLINTON, MO. Been wrong since the power quit in August. One calendar said October 1994, the other January 1995. Hailey, black shirt with a red thing on it, looked around at all this assistance.",
+            "\"Dad, nothing in here knows what time it is.\"",
+            "\"I know it.\"",
+            "\"Then how do you write down when people came in?\"",
+            "Off his watch, naturally. Watch was slow. Dwight didn't know yet. Hailey did; she'd checked against the Rexall's. You can raise a child yourself and still get caught unprepared when she turns out competent.",
+            "So she kept time all day. Stool under the wrong clock, notebook ready. Every time Dwight shot somebody, she called the real time and he wrote it down. Didn't argue with her, either. Man knew good help when it stood under his clock in a black shirt.",
+            "Every time on every Polaroid from 10:15 a.m. on is Hailey's. Everything before is wrong by eleven minutes. Ain't anybody fixed those.",
+            "He shot her at 10:15 because she asked. No charge. Pursed lips, level look, under the clock. She wrote her own time on it. Only one in the pile she's sure of. She checked."
+          ]
+        }
+      ]
     }
   ]
 }
