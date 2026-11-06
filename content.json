@@ -1764,6 +1764,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "casey-lindgren",
+      "first": "Casey",
+      "last": "Lindgren",
+      "name": "Casey Lindgren",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0053",
+          "date": "1995-12-02",
+          "time": "10:25 AM",
+          "charge": "Unlawful sale of raffle tickets (for a raffle that does not exist)",
+          "location": "Legion Hall craft fair",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250613_125759066.jpg",
+          "tags": [
+            "craft fair",
+            "american legion",
+            "raffle",
+            "fraud"
+          ],
+          "story": [
+            "Casey Lindgren sold two hundred and six raffle tickets at the Legion craft fair between nine and ten-fifteen. Dollar apiece for a chance at “the quilt.” Fine offer. Small hitch: there wasn't a damn quilt.",
+            "There was the Baptist ladies' quilt table. Casey stood close enough, cream top and big honest smile, that people assumed. Casey assumed right along with them. Most businesses would charge extra for that kind of confidence.",
+            "Deputy Hargrove asked which quilt.",
+            "“One of those. I hadn't picked.”",
+            "“You were gonna buy a quilt with the raffle money and raffle it.”",
+            "“Yes.”",
+            "“Casey, that's just selling a quilt for two hundred dollars.”",
+            "“With SUSPENSE.”",
+            "Hell, put it that way and the whole craft fair sounds underambitious. The Baptist ladies hadn't known they were the prize. Once told, they weren't entirely against it. They'd been trying to move that log-cabin pattern since Easter; by now they'd have considered shooting it out of a cannon.",
+            "God love Casey, that smile could get a mule interested in financing. It's in the Polaroid, leaning in, eyes a little left toward somebody who might yet buy a ticket. Arrest ain't closed the booth.",
+            "For all the bullshit required to get there, the drawing was held at four. Louella Fenwick won. She's using it in the cell."
+          ]
+        }
+      ]
     }
   ]
 }
