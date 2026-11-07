@@ -1801,6 +1801,46 @@
           ]
         }
       ]
+    },
+    {
+      "id": "bernard-kaplan",
+      "first": "Bernard",
+      "last": "Kaplan",
+      "name": "Bernard Kaplan",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0054",
+          "date": "1995-12-02",
+          "time": "10:30 AM",
+          "charge": "Practicing law without a license (actual lawyer, wrong state)",
+          "location": "Sheriff's Office lobby",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250613_132137120.jpg",
+          "tags": [
+            "in-house",
+            "legal",
+            "out of town"
+          ],
+          "story": [
+            "Sherry Lindquist started bond hearings at the fingerprint shelf at 9:45. She does taxes. Somebody had to. At 10:25 Bernard Kaplan walked into the lobby in a charcoal blazer, big glasses and a beard, and watched five minutes of shit he hadn't covered in law school.",
+            "\"I'm sorry, is this a court?\"",
+            "Actual attorney. Champaign, Illinois. Driving to Branson with his wife for a show. They'd stopped for gas, she'd gone to the Rexall, and he'd wandered across the square because he likes courthouses. Bless him, some men look at bass boats. Bernard found a tax preparer releasing prisoners.",
+            "\"Ma'am, you can't set bail.\"",
+            "\"Who are you?\"",
+            "\"I'm a lawyer.\"",
+            "\"Where?\"",
+            "\"Illinois.\"",
+            "\"Then you can't either, honey.\"",
+            "Bernard explained principle. Sherry explained how many people were still back yonder. Dale Bailey collected on two more while they argued. The Sheriff came out at 10:30 on a Saturday to find out what the hell needed this much explaining.",
+            "\"Sir, are you licensed in Missouri?\"",
+            "\"No, but—\"",
+            "\"Then you're doing what she's doing.\"",
+            "Well, damn. Hard to rescue the law when the law's fixin' to put you beside it.",
+            "They booked him. In the Polaroid his mouth's a little open; he's still got some sentence left. His wife came back with Tums and found him in a cell with Louella. They made the show, barely. Bernard says he'll never look at a courthouse again. He will."
+          ]
+        }
+      ]
     }
   ]
 }
