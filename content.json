@@ -1841,6 +1841,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "crystal-vanderpool",
+      "first": "Crystal",
+      "last": "Vanderpool",
+      "name": "Crystal Vanderpool",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0055",
+          "date": "1995-12-02",
+          "time": "10:30 AM",
+          "charge": "Solicitation of a peace officer (romantic); interference",
+          "location": "Sheriff's Office",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_015951853.jpg",
+          "tags": [
+            "in-house",
+            "romance",
+            "sheriff"
+          ],
+          "story": [
+            "Crystal Vanderpool came to the Sheriff's Office at 10:20 a.m. to bail out her brother Dallas, the fake Shriner. Didn't commit a crime. Still left a booking Polaroid behind. Woman knew what she wanted and wasn't about to let the absence of wrongdoing gum it up.",
+            "\"Marvin,\" she told Sheriff Ponder, \"you've been a widower six years. I've been divorced two. It's December. Take a picture of me for your desk.\"",
+            "Marvin said that wasn't what the camera was for.",
+            "\"Then arrest me, damn it.\"",
+            "\"For what?\"",
+            "She considered that in her burgundy paisley top, all that hair waiting on an answer. \"Loitering with intent.\"",
+            "He wrote it down. Crossed it out. Poor dear man could handle a jail full of drunks, but a woman volunteering to like him had his pen plumb confused.",
+            "Dwight knew when to quit watching a decent man wrestle his own ass. He took the picture anyway, out in the hall in front of the door marked SHERIFF. Crystal tilted her head like she'd had this planned since Thanksgiving. She had. Dallas getting arrested was about the only part she hadn't needed to arrange.",
+            "There's no charge on file. The Polaroid's on Marvin's desk. He'll tell you it's evidence, and we let him. Hell, it's evidence somebody's sweet on him. Ain't nobody disputing that."
+          ]
+        }
+      ]
     }
   ]
 }
