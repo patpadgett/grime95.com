@@ -1906,6 +1906,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "annette-purcell",
+      "first": "Annette",
+      "last": "Purcell",
+      "name": "Annette Purcell",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0056",
+          "date": "1995-12-02",
+          "time": "10:40 AM",
+          "charge": "Shoplifting (one Polaroid camera, Rexall); returned, used",
+          "location": "Rexall Drug",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250613_125804999.jpg",
+          "tags": [
+            "rexall",
+            "polaroid",
+            "theft"
+          ],
+          "story": [
+            "The booking camera died Thanksgiving night. Dwight used his own Polaroid till ten Saturday morning, when the film ran out. Annette Purcell heard through her sister Wanda, the Avon lady, over breakfast. Around here news gets delivered with the biscuits whether you ordered any or not.",
+            "Annette went to the Rexall. Didn't buy film. Took a whole Spectra off the shelf, the good camera, plus four packs, and walked out in her burgundy coat with the yellow lining.",
+            "Drove straight to jail and handed it to Dwight. “Here.”",
+            "“Annette, did you pay for this?”",
+            "“It's for the county.”",
+            "“The county's got to pay for it, then.”",
+            "“Well, the county can arrest my ass and use the camera to do it.”",
+            "Which it did. That's public service with the paperwork attached.",
+            "This is the first Polaroid off the stolen Spectra. She's smiling, head tilted, hunched and pleased as punch. Damn right. A hundred more people were coming, and Annette was the only reason any of them got a picture. Woman saw a need and filled it. Skipped a register, but filled it.",
+            "The Rexall sent a bill. The Sheriff paid out of the coffee fund. Hell, it was fine. Nobody drinks that coffee. You could warsh a tractor part in it and make the part worse."
+          ]
+        }
+      ]
     }
   ]
 }
