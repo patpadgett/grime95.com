@@ -1941,6 +1941,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "derek-ashby",
+      "first": "Derek",
+      "last": "Ashby",
+      "name": "Derek Ashby",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0057",
+          "date": "1995-12-02",
+          "time": "10:45 AM",
+          "charge": "Stealing (one camel blanket); cruelty to animals, dismissed",
+          "location": "First Baptist parking lot",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_020008243.jpg",
+          "tags": [
+            "nativity",
+            "camel",
+            "theft",
+            "livestock-adjacent"
+          ],
+          "story": [
+            "At 10:30 a camel arrived at First Baptist in a trailer from Lebanon, Missouri. Faroukh, the man who brought her, doesn't do Nativities. He does \"appearances.\" Reckon that distinction matters come tax time. The camel was Cheryl. She came with a blanket.",
+            "Derek Ashby was twenty-six, black shirt, cardigan, teeth like a game show, standing in the parking lot for reasons he couldn't later supply. He saw the blanket. Nice blanket. Took it right off Cheryl, in front of Cheryl, which left precious little room for bullshit about who'd done it.",
+            "Cheryl bit him.",
+            "Deputy Hargrove came to sort out the donkey situation and found Derek on the ground under a camel, laughing too hard to get up. Still had the blanket in his fist. Boy'd surrendered most everything but his grip.",
+            "\"Why the hell'd you take it?\"",
+            "\"It was on a camel!\"",
+            "That was the whole defense. Same damn fact the prosecution was fixin' to use, only happier.",
+            "God love him, Derek knew a story worth telling when it had hold of him. Smiled all through booking. He's smiling in the Polaroid like a man who got bit by a camel in Missouri and appreciates the gift. You can't order that shit out of a catalog.",
+            "The cruelty charge was dropped. Cheryl was fine. She got her blanket back and kept the piece of Derek."
+          ]
+        }
+      ]
     }
   ]
 }
