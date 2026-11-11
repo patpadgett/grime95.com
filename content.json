@@ -1976,6 +1976,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ross-tidwell",
+      "first": "Ross",
+      "last": "Tidwell",
+      "name": "Ross Tidwell",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0058",
+          "date": "1995-12-02",
+          "time": "10:45 AM",
+          "charge": "Interference with an animal (cow); attempted milking",
+          "location": "Highway 5",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250613_132142848.jpg",
+          "tags": [
+            "livestock-adjacent",
+            "the cow",
+            "highway 5"
+          ],
+          "story": [
+            "By 10:30 Saturday morning that cow had spent six hours loose on Highway 5. Two sale-barn men had chased it, it had stopped a donkey, and Gene Autry Pike, its officially identified owner, said he'd sold it to himself. Along came Ross Tidwell, thinking somebody ought to milk the poor damn thing.",
+            "It's a steer. Hold that thought.",
+            "Ross is thirty-eight, town-raised, red henley, hands behind his back like he's studying something valuable. Knows cattle about like most of us know airplanes: can point one out real good. He pulled over, got out with a Big Gulp cup, walked up and crouched.",
+            "God love him, he meant to help. Brought his own container and everything.",
+            "The cow watched. Been watching this county carry on all day. The Sheriff said it \"had a look on it.\" Ross looked underneath a considerable while, then stood up.",
+            "\"Marvin, I think this cow's broke.\"",
+            "\"It's a steer, Ross.\"",
+            "\"It's a what?\"",
+            "\"It's a boy.\"",
+            "Well, shit. Ross looked at the cow. Cow looked at Ross. Whatever passed between them wouldn't fill that cup.",
+            "Booked for interference, mostly because the Sheriff had to say something. Ross is serious in the Polaroid, head tilted, hands back, still trying to get the livestock straight in his head. Everybody's called it the cow all day. Everybody's gonna keep calling it the cow. Ross would like it noted that he was the only one who checked what the hell was under it."
+          ]
+        }
+      ]
     }
   ]
 }
