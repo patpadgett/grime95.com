@@ -2012,6 +2012,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "rusty-spurlock",
+      "first": "Rusty",
+      "last": "Spurlock",
+      "name": "Rusty Spurlock",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0059",
+          "date": "1995-12-02",
+          "time": "11:00 AM",
+          "charge": "Passing a bad check (to the Rusty Spur, from the Rusty Nail)",
+          "location": "The Rusty Spur",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250105_020013978.jpg",
+          "tags": [
+            "rusty spur",
+            "rusty nail",
+            "bad check"
+          ],
+          "story": [
+            "Ponder County has two bars called Rusty. The Rusty Nail's on the square and the Rusty Spur's out on the highway, and they hate each other the way two Baptist churches on the same block hate each other: quiet, polite, and till Jesus comes back.",
+            "Rusty Spurlock is named Rusty. He drinks at both, God love him, because a man's got to have a backup. At 10:50 Saturday morning he wrote a check at the Spur for two Bloody Marys and a pack of Winstons, and when the bartender looked at it, it was a Rusty Nail bar tab from the night before with \"pay to the order of the Spur\" wrote across the top and signed.",
+            "\"Rusty, that ain't a goddamn check.\"",
+            "\"It's a check the Nail owes me. I'm passin' it on.\"",
+            "\"That is not how checks work, you jackass --\"",
+            "\"That's EXACTLY how checks. Money's money. Ask Preston at the bank.\"",
+            "Preston at the bank was in the drunk tank in a bathrobe, but Rusty didn't know that yet.",
+            "In the Polaroid he's in a navy jacket with the lining hanging out, mullet slick as owl shit, half a grin on him like a man who still believes it'll clear. Both bars have banned him, which took a summit. He drinks at the Legion now. The Legion, bless it, has a bar and no standards."
+          ]
+        }
+      ]
     }
   ]
 }
