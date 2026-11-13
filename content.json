@@ -2045,6 +2045,44 @@
           ]
         }
       ]
+    },
+    {
+      "id": "nicole-tremaine",
+      "first": "Nicole",
+      "last": "Tremaine",
+      "name": "Nicole Tremaine",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0060",
+          "date": "1995-12-02",
+          "time": "11:00 AM",
+          "charge": "Theft (one live Nativity sheep, briefly)",
+          "location": "First Baptist parking lot",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250613_125815571.jpg",
+          "tags": [
+            "nativity",
+            "livestock-adjacent",
+            "theft"
+          ],
+          "story": [
+            "Nicole Tremaine, twenty-three, took a sheep. Couldn't tell you why. Asked several ways, she remained pretty firm on not knowing a damn thing about her own plan.",
+            "Glen Whitaker's four sheep had just been unloaded at First Baptist for the Nativity. Nicole was crossing the parking lot to the craft fair in a dark hoodie. One sheep looked at her. She looked back. She opened her Escort's rear door and it climbed in.",
+            "\"On its own,\" she said. \"I ain't out here loading sheep.\"",
+            "No, hon. Just providing transportation.",
+            "She drove around the square twice. Said the sheep liked the radio. I believe her. Nicole wanted company, the sheep wanted a ride, and neither one had the sense to ask Glen.",
+            "Deputy Hargrove stopped her in front of the Rexall because a sheep was looking out the Escort's back window.",
+            "\"Ma'am, is that a sheep?\"",
+            "\"It's Glen's.\"",
+            "\"Does Glen know?\"",
+            "\"Glen's got three more.\"",
+            "\"Well, hell, that's inventory. I asked about permission.\"",
+            "She's wide-eyed in the Polaroid, faint smile, hoodie, just discovering how little encouragement it takes to get her ass in trouble.",
+            "The sheep went back fine. Glen called it \"the dumb one.\" Same sheep got on the highway later. Nicole says that's not her fault. It isn't. It is. You show a sheep the world, don't act surprised when the little shit wants another look."
+          ]
+        }
+      ]
     }
   ]
 }
