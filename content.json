@@ -2083,6 +2083,46 @@
           ]
         }
       ]
+    },
+    {
+      "id": "kimberly-nash",
+      "first": "Kimberly",
+      "last": "Nash",
+      "name": "Kimberly Nash",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0061",
+          "date": "1995-12-02",
+          "time": "11:05 AM",
+          "charge": "Careless driving (parade route, wrong way); attempted return to Tulsa",
+          "location": "Main Street",
+          "officer": "Reserve Deputy Toad",
+          "mugshot": "assets/mugshots/IMG_20250613_132150039.jpg",
+          "tags": [
+            "parade",
+            "traffic",
+            "tulsa"
+          ],
+          "story": [
+            "Kimberly Nash wouldn't get out of her Cutlass. That's why this is the only Polaroid taken inside a car. Dwight couldn't fetch her a portable damn wall.",
+            "She's the Kimberly. Lindsay Fowler's Kimberly. First chair flute, Marching Wildcats, '84 to '87. Moved to Tulsa, doesn't play. Home for Thanksgiving at her mother's, meant to leave Friday, then Saturday at eight. At 11 a.m. she was still here, plaid shirt over a red tee, hair every which way, driving wrong-way down Main Street against a parade that had already ended.",
+            "Didn't know about the parade. Doesn't read the Ledger. Lives in Tulsa. Fair enough; we don't keep up with their shit either.",
+            "Reserve Deputy Toad stood in front with his hand up. She stopped. Stayed put.",
+            "\"Ma'am.\"",
+            "\"I'm just trying to get to 5.\"",
+            "\"You're on Main.\"",
+            "\"I KNOW I'm on Main. Where the hell else would I be stuck?\"",
+            "\"There was a parade.\"",
+            "\"I don't LIVE here.\"",
+            "She said that four times. Toad wrote it down four times. Dear man wasn't gonna lose her side of the argument through careless paperwork.",
+            "Dwight happened to be at the Rexall buying film. Shot her through the driver's window because she wouldn't come to a wall and no wall would come to her. She's sideways in it, unsmiling.",
+            "Somebody told her later a girl named Lindsay played her old flute in the parade she'd missed.",
+            "\"Lindsay Fowler? She was second chair.\"",
+            "She was. She's first now. Kimberly's in Tulsa."
+          ]
+        }
+      ]
     }
   ]
 }
