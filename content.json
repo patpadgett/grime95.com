@@ -2123,6 +2123,46 @@
           ]
         }
       ]
+    },
+    {
+      "id": "peggy-rountree",
+      "first": "Peggy",
+      "last": "Rountree",
+      "name": "Peggy Rountree",
+      "alias": "Peg",
+      "arrests": [
+        {
+          "booking": "95-12-0062",
+          "date": "1995-12-02",
+          "time": "11:15 AM",
+          "charge": "Assault (purse, Walmart layaway); smoking in a county building",
+          "location": "Walmart / Sheriff's Office",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250613_125821634.jpg",
+          "tags": [
+            "walmart",
+            "layaway",
+            "assault",
+            "smoking"
+          ],
+          "story": [
+            "Peg Rountree hit Brent Hollis with her purse in the Walmart layaway line at 6:50 a.m., posted his bail at 8:00 so he'd be out of the line, and came in at 11 to make sure he stayed out. That's follow-through. Most of us can't finish a grocery list.",
+            "Deputy Stotts asked about the purse.",
+            "“Self-defense.”",
+            "“He said 'scuse me, Peg.”",
+            "“Seventy times. Hell, I excused him the first sixty-nine.”",
+            "While explaining, Peg lit a cigarette under the lobby's NO SMOKING sign. Dwight told her to put it out.",
+            "“In a minute.”",
+            "He took the Polaroid with it still burning. Dwight knows when to pick a fight, and a woman who has already financed the release of her own victim ain't running low on determination.",
+            "She's grinning in a big flower-basket sweatshirt, ring on her hand, smoke drifting off the top of the frame. Got to love Peg. Even getting booked, she looks pleased to see everybody.",
+            "“Is that going in the paper?”",
+            "“There's no paper, Peg. It's a Polaroid.”",
+            "“Well, shit. Take another one, then. I wasn't ready.”",
+            "He didn't. This is the one. Damn fine likeness, too.",
+            "She got a Nintendo on layaway Monday. Brent was behind her. He didn't say a word."
+          ]
+        }
+      ]
     }
   ]
 }
