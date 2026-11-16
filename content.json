@@ -2163,6 +2163,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "trina-voss",
+      "first": "Trina",
+      "last": "Voss",
+      "name": "Trina Voss",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0063",
+          "date": "1995-12-02",
+          "time": "11:20 AM",
+          "charge": "Assault (chili); disturbing a sanctioned competition",
+          "location": "Fairgrounds, chili cook-off",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_020021840.jpg",
+          "tags": [
+            "county fair",
+            "chili cook-off",
+            "assault"
+          ],
+          "story": [
+            "They judged the Ponder County Christmas Carnival chili cook-off at eleven, and Trina Voss didn't win. Nine years running. By now that woman could've measured disappointment with the same cup she used for beans.",
+            "Rusty Jane Walker won this year. Her own entry, 0010; look it up. Trina had come in a sleeveless top in thirty-four degrees because \"you sweat over a pot.\" She walked her Crock-Pot to the judges' table and poured it over the head judge.",
+            "Well, shit. There went the serving suggestion.",
+            "It was good chili. Everybody said so afterward, and meant it. Wasn't first, but it didn't deserve to spend its afternoon in a man's eyebrows either.",
+            "\"It's hot,\" the judge said, meaning temperature. Then he tasted some off his chin. \"It's good.\"",
+            "\"THEN WHY THE HELL DIDN'T IT WIN?\"",
+            "Poor man had a face full of supper and no safe answer.",
+            "Sheriff Ponder walked her to the car. She went quiet. God love her, nine years is a long time to bring your best pot and carry home the same damn answer.",
+            "She's leaning forward in the Polaroid, unsmiling, red from the pot and the cold and all nine years. The judge sent a card: \"Second place, if it helps.\"",
+            "It did not help."
+          ]
+        }
+      ]
     }
   ]
 }
