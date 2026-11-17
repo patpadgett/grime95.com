@@ -2198,6 +2198,44 @@
           ]
         }
       ]
+    },
+    {
+      "id": "leonard-ashby",
+      "first": "Leonard",
+      "last": "Ashby",
+      "name": "Leonard Ashby",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0064",
+          "date": "1995-12-02",
+          "time": "11:20 AM",
+          "charge": "Retrieving a son from a camel; interfering with an animal (Cheryl)",
+          "location": "First Baptist parking lot",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250613_132157042.jpg",
+          "tags": [
+            "nativity",
+            "camel",
+            "family",
+            "livestock-adjacent"
+          ],
+          "story": [
+            "Derek Ashby took a camel's blanket at 10:45, got bit, laughed on the ground and got booked. That's Derek's story. His daddy's takes longer, on account of having to explain Derek.",
+            "Leonard Ashby came to the First Baptist lot at 11:15. Fifty-four, balding, mustache gray at the ends, burgundy-and-blue overshirt. Somebody'd called saying, \"Derek's under a camel.\" By then Derek was in a cruiser. The camel had her blanket back. Leonard walked up.",
+            "\"You bit my boy.\"",
+            "Cheryl looked at him.",
+            "\"He had it coming. Hell, I'm not saying he didn't. But you bit him.\"",
+            "Faroukh, her owner, said, \"Sir, please step back from the camel.\"",
+            "\"I'm talking to her.\"",
+            "\"She does not talk.\"",
+            "\"She bit my son, she can damn well listen.\"",
+            "For six minutes he talked quietly to Cheryl about Derek, about Derek's mother, about how Derek was \"like this at four.\" Cheryl didn't move. Reckon Leonard needed to tell somebody who wasn't fixin' to interrupt and say boys will be boys. Man already knew that. Had fifty-four years on him and still couldn't get ahead of this shit.",
+            "Faroukh, who's heard plenty addressed to his camel, called it \"the most reasonable anyone was to her all day.\"",
+            "Hargrove booked Leonard for interference because Faroukh had asked twice. He's slumped and neutral in the Polaroid, unsmiling, done saying his piece. Cheryl didn't bite him. Faroukh says she wanted to. Says she chose not to. That's something."
+          ]
+        }
+      ]
     }
   ]
 }
