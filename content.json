@@ -2236,6 +2236,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ramon-villarreal",
+      "first": "Ramon",
+      "last": "Villarreal",
+      "name": "Ramon Villarreal",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0065",
+          "date": "1995-12-02",
+          "time": "11:30 AM",
+          "charge": "Disorderly conduct (football, Chicago-related)",
+          "location": "American Legion Hall bar",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250613_125827189.jpg",
+          "tags": [
+            "american legion",
+            "football",
+            "white sox"
+          ],
+          "story": [
+            "Ramon Villarreal came from Chicago to Ponder County for a job and a girl. Then he had no job, no girl, and a lease. We kept him. At eleven he was in the Legion bar wearing a White Sox shirt among Cardinals fans, so he hadn't quit believing things could work out.",
+            "The argument was football. It's December. Wade Pettibone, booked at nine for hijacking the parade, was out by ten-thirty and back at the bar he'd hijacked it to. Wade said Chicago \"hadn't done shit since Ditka.\"",
+            "Ramon agreed.",
+            "That was where it all went to hell. He agreed loud, at length, with the grief of a man who'd saved every receipt. Started listing seasons. Wade had come fishing for a fight and caught a whole damn funeral.",
+            "By the time Hargrove got there, half the bar was consoling Ramon. They'd have done it for any of us. Even in that shirt.",
+            "\"I'm not arresting a man for being sad about the Bears.\"",
+            "\"He's been sad for forty minutes, Deputy.\"",
+            "\"Well, what am I supposed to put down?\"",
+            "\"Put down the Bears. Might help the poor son of a bitch.\"",
+            "Ramon's chin-up and stern in the Polaroid, earrings in, shot in the Annex. His Sox shirt is the only one in the county. It's been noted."
+          ]
+        }
+      ]
     }
   ]
 }
