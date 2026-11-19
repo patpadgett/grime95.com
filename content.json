@@ -2271,6 +2271,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "adrian-lowe",
+      "first": "Adrian",
+      "last": "Lowe",
+      "name": "Adrian Lowe",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0066",
+          "date": "1995-12-02",
+          "time": "11:35 AM",
+          "charge": "Theft (Legion craft fair, one wreath); returned it to the wrong table",
+          "location": "Legion Hall craft fair",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250613_132202547.jpg",
+          "tags": [
+            "craft fair",
+            "american legion",
+            "wreath",
+            "theft"
+          ],
+          "story": [
+            "Adrian Lowe figured he could straighten out the craft fair with one wreath. At 11:20 he took it off Eli Hostetler's mother's table, two tables down from Eli's fake Amish bread, carried it to the Amish ladies' table and left it there.",
+            "\"Fixing the fair,\" he called it. Nobody had asked him to fix a damn thing.",
+            "Twenty-two, center part tucked behind his ears, off-white tee, chin down. Stern as a man inspecting hail damage. The Amish ladies had endured Eli, Yolanda Brisbane with Sister Miriam's fur collar, and Amos hitting a boy with a pound cake right in front of them. All that bullshit, and they'd sold four loaves.",
+            "Eli's mother had thirty actual wreaths. Those ladies needed something folks would buy. Adrian said \"the math was obvious.\" His heart was in the right place. His hands were two tables off.",
+            "\"Adrian, that's not yours to move.\"",
+            "\"Nothing's anybody's, Deputy. It's a craft fair. It's all just on tables.\"",
+            "Hell of a way to run retail. Stotts explained ownership. Adrian listened, chin down, giving her a fair hearing for somebody who'd just discovered property law.",
+            "Eli's mother said he could've asked. Then she said the ladies could have it anyway, walked over and gave them four more. They looked at her, then Adrian. One nodded. There now. He'd done the asking ass-backwards, but somebody understood.",
+            "He's stern in the Polaroid. Right about the math, wrong about the fair. Both are on the sheet. The wreaths sold out."
+          ]
+        }
+      ]
     }
   ]
 }
