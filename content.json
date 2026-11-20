@@ -2306,6 +2306,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "jeremy-fusco",
+      "first": "Jeremy",
+      "last": "Fusco",
+      "name": "Jeremy Fusco",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0067",
+          "date": "1995-12-02",
+          "time": "11:40 AM",
+          "charge": "Puppetry without consent; harassment of a Santa",
+          "location": "Walmart Santa station",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_020028951.jpg",
+          "tags": [
+            "walmart",
+            "christmas",
+            "santa",
+            "puppet"
+          ],
+          "story": [
+            "Jeremy Fusco brought his own puppet to sit on Walmart Santa's lap. Nineteen years old, and apparently the regular line wasn't enough trouble without carry-on baggage.",
+            "The doll was named Bucky. Had a face like he'd heard something through the bathroom wall and was saving it for supper. Jeremy waited forty minutes with him on his arm, then set him on Santa's knee and started making requests in Bucky's voice.",
+            "Bucky wanted a lot. Specific things about Santa's marriage. Things you don't put in a damn letter unless you want a lawyer answering it.",
+            "Walmart Santa, also the mail carrier, lasted two minutes. Give the man that. Then he grabbed Bucky by the head, Jeremy grabbed Santa by the beard, and off came the beard. Eleven children learned something a hell of a lot earlier than scheduled.",
+            "Deputy Hargrove booked Jeremy with Bucky in his lap because the boy wouldn't let go. Bless his heart, Jeremy would take a charge before he'd abandon his little troublemaker. Loyalty's worth something, even when it's attached to bullshit.",
+            "In the Polaroid Jeremy's mouth is open mid-sentence. Bucky's head is down at the bottom of the frame, looking like he's fixin' to contribute.",
+            "He was. Dwight says he ain't putting it in the report."
+          ]
+        }
+      ]
     }
   ]
 }
