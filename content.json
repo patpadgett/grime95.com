@@ -2339,6 +2339,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "stacy-delgado",
+      "first": "Stacy",
+      "last": "Delgado",
+      "name": "Stacy Delgado",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0068",
+          "date": "1995-12-02",
+          "time": "11:45 AM",
+          "charge": "Accessory (poinsettias); aiding a romantic gesture",
+          "location": "Ponder Floral & Gift",
+          "officer": "Deputy Lula Mae Stotts",
+          "mugshot": "assets/mugshots/IMG_20250613_125834380.jpg",
+          "tags": [
+            "florist",
+            "theft",
+            "family"
+          ],
+          "story": [
+            "Stacy Delgado loves her brother Ronnie Delgado enough to help him and not quite enough to keep her mouth shut afterward. That's family, sure as shit.",
+            "She works the counter at Ponder Floral & Gift. At 11:30 that morning she told Ronnie on the phone the loading dock “wasn't locked till five.” He stole sixty poinsettias off it at 4:45 that afternoon. Stacy got booked before he did. Around here we can be ahead of schedule in the worst damn ways.",
+            "Deputy Stotts came in at 11:40 about something else: the wreaths Hank Oberlin bought for the VFW came from Ponder Floral, and the invoice needed explaining. Stacy, striped top and red lipstick, volunteered, “If this is about Ronnie, I didn't tell him anything.”",
+            "“What about Ronnie?”",
+            "“Nothing.”",
+            "“Stacy.”",
+            "“He's got a girl in Sedalia. It's a whole thing. He's fine. He hasn't done it yet.”",
+            "Hell of a defense. The crime was still fixin' to happen and already had a witness statement.",
+            "Stotts wrote it down and waited. At 4:45, Ronnie did it. Stacy's neutral in the Polaroid, dark eyes under the shadow bands from the blinds. She ain't proud of the paperwork, but she isn't withdrawing her support for her brother, either. That's a sister for you.",
+            "She says she's not sorry. Denise didn't deserve him. Denise, reached in Sedalia, agreed."
+          ]
+        }
+      ]
     }
   ]
 }
