@@ -2374,6 +2374,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "landon-meeks",
+      "first": "Landon",
+      "last": "Meeks",
+      "name": "Landon Meeks",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0069",
+          "date": "1995-12-02",
+          "time": "11:50 AM",
+          "charge": "Vandalism (Sunset Lanes, shoe rental); took shoes to the parade",
+          "location": "Sunset Lanes / Main Street",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250613_132207825.jpg",
+          "tags": [
+            "bowling alley",
+            "parade",
+            "shoes"
+          ],
+          "story": [
+            "Landon Meeks is nineteen and he went to the Christmas parade in bowling shoes. Bowling shoes. In the sleet. God love him, the boy's dumber than a bag of hammers and twice as sweet.",
+            "Sunset Lanes rental shoes. Red and blue. Size 11, with the 11 on the heel. He'd been at open bowling Friday night and walked out in 'em and nobody stopped him, and he figured Saturday morning that they were the only clean shoes he owned and a parade was a nice occasion.",
+            "He stood on the curb in front of the Rexall in a Nike tank over a white tee and an LA cap and rental shoes, and watched Santa go by and the Shriners and DeShawn Pickett's Cutlass with the fifteens rattling the Rexall windows, and them shoes were on the wet sidewalk the whole while, which is the one thing about bowling shoes: you cannot do that. The soles just go.",
+            "The man who owns Sunset Lanes was at the parade too. He looked down.",
+            "\"Son, those are mine.\"",
+            "\"Hell, I'm bringin' 'em back.\"",
+            "\"They're WET, Landon. They're soaked through. You've ruint 'em. Those are eleven-dollar shoes, you little shit.\"",
+            "\"They're real comfortable, though.\"",
+            "\"Well, they WOULD be. They're bowling shoes.\"",
+            "Hargrove booked him for the shoes because the owner stood there till he did. Landon's got a little half-smile in the Polaroid, lips parted, the cap. Standing next to him with a mustache and a face is a man nobody has ever identified -- not booked, not named, just in the frame, God knows why -- and Dwight didn't crop him and Landon swears he don't know him and the man says nothing because he's a Polaroid.",
+            "The shoes went back. The soles were gone. Landon owes eleven dollars and is paying it a dollar a week, in person, every Friday, and then he bowls. Owner says he's gotten pretty good. Says he's got the shoes for it."
+          ]
+        }
+      ]
     }
   ]
 }
