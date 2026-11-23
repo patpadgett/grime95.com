@@ -2410,6 +2410,41 @@
           ]
         }
       ]
+    },
+    {
+      "id": "vince-corrado",
+      "first": "Vince",
+      "last": "Corrado",
+      "name": "Vince Corrado",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0070",
+          "date": "1995-12-02",
+          "time": "12:00 PM",
+          "charge": "Receiving and concealing stolen property (one nacho cart, in transit)",
+          "location": "Gas-N-Go",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250105_020034989.jpg",
+          "tags": [
+            "nacho cart",
+            "gas station",
+            "conspiracy"
+          ],
+          "story": [
+            "Dwight took exactly one Polaroid outside. The nacho cart wouldn't fit through the door, and hell, even our jail has limits.",
+            "That's Vince Corrado in the car: cap, mustache, burgundy pants, forearm tattoo of a woman who left. His brother-in-law Mitch is standing over him in glasses and a black jacket. Mitch ain't under arrest. Mitch is just always there, like the extra bolt after you fix something.",
+            "At noon Deputy Hargrove found Tammy Jo Carter's stolen bingo-hall nacho cart in the bed of Vince's Datsun at the Gas-N-Go. It was plugged into the outdoor outlet beside the ice machine. Cheese at temperature. Whatever else Vince was doing wrong, he wasn't serving folks cold goddamn nachos.",
+            "“Tammy Jo asked me to hold it,” Vince said.",
+            "“You're selling out of it.”",
+            "“Still holding it. Ain't let it go nowhere.”",
+            "He'd sold nineteen orders to the parade crowd at two dollars apiece. That, he explained, was “separate.” A fine distinction if your bookkeeping consists of two pants pockets.",
+            "God love him, Vince would keep the cheese hot through a bankruptcy. Doesn't make the shit legal, but it does make lunch.",
+            "Mitch said nothing. He was holding a tire gauge. Nobody knows why.",
+            "The cart moved on. It always does."
+          ]
+        }
+      ]
     }
   ]
 }
