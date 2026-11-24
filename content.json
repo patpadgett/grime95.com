@@ -2445,6 +2445,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "deshawn-pickett",
+      "first": "DeShawn",
+      "last": "Pickett",
+      "name": "DeShawn Pickett",
+      "alias": "DJ Pick",
+      "arrests": [
+        {
+          "booking": "95-12-0071",
+          "date": "1995-12-02",
+          "time": "12:00 PM",
+          "charge": "Noise violation; operating a sound system from a moving vehicle in a parade (unregistered entry)",
+          "location": "Main Street",
+          "officer": "Reserve Deputy Toad",
+          "mugshot": "assets/mugshots/IMG_20250613_125848105.jpg",
+          "tags": [
+            "parade",
+            "hip hop",
+            "noise"
+          ],
+          "story": [
+            "The Ponder County Christmas Parade had forty-one registered entries and DeShawn Pickett. His Cutlass, two fifteens in the trunk, fell in behind Santa's tractor at 9:15 and stayed. Registration apparently hadn't covered a man bringing his own damn thunder.",
+            "He called it “a mix.” It was Bone Thugs. Forty feet ahead, the high school band played “Joy to the World.” They fought eleven blocks. The band lost. Fifteen-year-olds against fifteens ain't a fair fight; one side's got homework.",
+            "Reserve Deputy Toad waved him out at Church Street. DeShawn waved back. Friendly as hell. At Oak, Toad tried again and DeShawn turned it up. Some folks can't hear authority without more bass.",
+            "Toad gave up and marched. Says he “kind of got into it.” God love him, if your parade's getting hijacked, might as well find the beat.",
+            "They finally booked DeShawn at noon at the Legion, where the parade ended, after he'd played the whole crowd out of their cars. Grinning in the Polaroid, one eye squinted, red jersey saying HIP HOP. No bullshit about what department he represented.",
+            "“I was the closer.”",
+            "The band director filed the complaint. The band didn't. The band wants him back next year. Hell, they know when they've got a good closer."
+          ]
+        }
+      ]
     }
   ]
 }
