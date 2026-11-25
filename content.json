@@ -2477,6 +2477,45 @@
           ]
         }
       ]
+    },
+    {
+      "id": "eugene-halvorsen",
+      "first": "Eugene",
+      "last": "Halvorsen",
+      "name": "Eugene Halvorsen",
+      "alias": "The Editor",
+      "arrests": [
+        {
+          "booking": "95-12-0072",
+          "date": "1995-12-02",
+          "time": "12:05 PM",
+          "charge": "Interference with an investigation (asking questions); freedom of the press, contested",
+          "location": "Ponder County Ledger office",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250613_132212883.jpg",
+          "tags": [
+            "ledger",
+            "press",
+            "newspaper"
+          ],
+          "story": [
+            "Eugene Halvorsen edits the Ponder County Ledger. Comes out Thursdays. At noon Saturday he was at his desk in a faded tee, with a Coke and a bemused look. Bethany Kuhn, the community columnist, had called at eleven.",
+            "\"Eugene, get down to the jail.\"",
+            "\"Bethany, it's Saturday.\"",
+            "\"That's the story.\"",
+            "He stayed put. The Sheriff came to him, accidentally. Headed to the Rexall for film because Dwight had used every damn bit. Eugene waved him in past the Ledger window.",
+            "\"Marvin, sit down. What the hell is going on?\"",
+            "The Sheriff sat. Eugene asked eleven questions; got four answers. Gordon, his assistant, typed. Gray hair, blue shirt, other man in the frame. Not booked. Merely employed, though the distinction was getting thin.",
+            "\"You can't print this, Eugene.\"",
+            "\"It's a newspaper.\"",
+            "\"It's a Saturday.\"",
+            "\"That's what Bethany said.\"",
+            "The Sheriff booked him right at his desk. For asking. He ain't proud. Says the Ledger would've printed the cow, and the cow \"didn't need that.\" Well, shit. A free press had run up against livestock privacy.",
+            "Eugene's leaning on the desk in the Polaroid, glasses, Coke, that look. He came to jail later, saw the pile, printed none of it. Decent man. Knows these folks have to buy groceries after Thursday.",
+            "Says he's \"holding it for the right week.\" Thirty years. Still holding it."
+          ]
+        }
+      ]
     }
   ]
 }
