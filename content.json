@@ -2516,6 +2516,40 @@
           ]
         }
       ]
+    },
+    {
+      "id": "preston-whitfield",
+      "first": "Preston",
+      "last": "Whitfield",
+      "name": "Preston Whitfield",
+      "alias": "The Banker",
+      "arrests": [
+        {
+          "booking": "95-12-0073",
+          "date": "1995-12-02",
+          "time": "12:15 PM",
+          "charge": "Fraud (bake sale); misapplication of church funds",
+          "location": "First Methodist fellowship hall",
+          "officer": "Sheriff Ponder",
+          "mugshot": "assets/mugshots/IMG_20250105_020056693.jpg",
+          "tags": [
+            "church",
+            "fraud",
+            "bake sale"
+          ],
+          "story": [
+            "Preston Whitfield runs the loan desk at Citizens State Bank and the First Methodist finance committee. At noon he came to the church bake sale wearing a beige blazer over a sweater over a collared shirt. Three layers of being right, and not a damn one waterproof.",
+            "The sale was for the new roof. Preston bought the lot for “the bank's Christmas party”: forty-one pies, sixty dozen cookies, a sheet cake shaped like Jesus. Then he paid with a check on the Methodist roof fund.",
+            "Bless his heart, he wanted everybody fed. He'd just worked out a way to make the roof buy its own supper.",
+            "“It's a wash,” he told the Sheriff. “Money goes to the roof, roof pays for pies, bank gets pies. Everybody eats.”",
+            "“The roof doesn't eat, Preston.”",
+            "“The roof is a metaphor.”",
+            "“The hell it is. It leaks over the choir.”",
+            "You can't tell a wet alto she's standing under a metaphor. She'll tell you precisely where to put that bullshit, and she'll do it in harmony.",
+            "Preston's neutral in the Polaroid, still certain about the math. Ain't no sense arguing with a man dressed in that many answers. The pies went to the drunk tank. Everybody ate."
+          ]
+        }
+      ]
     }
   ]
 }
