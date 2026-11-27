@@ -2550,6 +2550,42 @@
           ]
         }
       ]
+    },
+    {
+      "id": "leigh-anne-castor",
+      "first": "Leigh",
+      "last": "Anne Castor",
+      "name": "Leigh Anne Castor",
+      "alias": null,
+      "arrests": [
+        {
+          "booking": "95-12-0074",
+          "date": "1995-12-02",
+          "time": "12:15 PM",
+          "charge": "Theft (one leather jacket, off a Shriner)",
+          "location": "American Legion Hall coat room",
+          "officer": "Deputy Hargrove",
+          "mugshot": "assets/mugshots/IMG_20250613_125853195.jpg",
+          "tags": [
+            "american legion",
+            "coat room",
+            "theft",
+            "shriners"
+          ],
+          "story": [
+            "Leigh Anne Castor went into the Legion coat room at noon wearing a pale top and came out wearing Phil the dentist's black leather biker jacket. Phil's a Shriner. His fez had already had a day, and now his damn sleeves were at the craft fair.",
+            "By Saturday that coat room was a casino, an overflow jail, and, if you could squeeze past the arrested people, a coat room. Leigh Anne said she thought it was the coat check. Hard to blame a gal for getting confused when the county's storing felons with the scarves.",
+            "\"Ma'am, the coat check doesn't GIVE you coats,\" Deputy Hargrove said.",
+            "\"Well, hell. It gave me one.\"",
+            "He found her looking at wreaths. Everybody agreed she looked fantastic. Phil came over to identify his property and took his sweet time.",
+            "\"Looks different on her.\"",
+            "\"It's still your jacket.\"",
+            "\"She can keep it till the dance.\"",
+            "Hargrove said that wasn't how theft worked. Phil said he was a dentist, not a lawyer, and left. You could about hear Hargrove deciding how much bullshit would fit on the form.",
+            "The flash washed her face clean out of the Polaroid. Just zippers, snaps, lapels, and the SHERIFF door behind her. God love her, she wore it to the dance. Phil danced with her. He's getting divorced, but that ain't this story."
+          ]
+        }
+      ]
     }
   ]
 }
